@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row header">
+      <div class="col-sm col-header">Họ và tên</div>
+      <div class="col-sm col-header">Email</div>
+      <div class="col-sm col-header">Mật khẩu</div>
+    </div>
+    <div class="row" *ngFor=" let user of dataUser">
+        <div class="col-sm col-header col-body">{{user.fullname}}</div>
+        <div class="col-sm col-header col-body">{{user.email}}</div>
+        <div class="col-sm col-header col-body">{{user.password}}</div>
+      </div>
+  </div>

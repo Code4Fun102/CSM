@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Đăng ký</h1>
+                    <h6>Nhập thông tin đăng ký !!</h6>
+                </div>
+                <form >
+                    <form [formGroup] = 'signupForm' (ngSubmit)="signUp()" >
+                        <div class="mb-3">
+                            <label for="fullname" class="form-label">Họ và Tên</label>
+                            <input formControlName = 'fullname' type="text" class="form-control" id="fullname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Địa chỉ Email</label>
+                            <input formControlName = 'email' type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input formControlName = 'password' type="password" class="form-control" id="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Đăng ký</button>
+                    </form>
+                    <a style="color: #fff; margin-top: 10%;" routerLink="/login">Bạn đã đăng ký, quay lại đăng
+                        nhập.</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
