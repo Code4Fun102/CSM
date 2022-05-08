@@ -1,0 +1,51 @@
+<div class="container-upload-main">
+  <div class="file-category">
+    <span class="margin-right-8">Loại nhóm</span>
+    <select >
+      <option value="1">catgory 1</option>
+      <option value="2">catgory 2</option>
+      <option value="3">catgory 3</option>
+    </select>
+  </div>
+  
+  <div class="file-type-container">
+    <span class="margin-right-8">Loại file</span>
+    <div class="form-check form-check-inline">
+      <input
+        mdbRadio
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio1"
+        value="option1"
+      />
+      <label class="form-check-label" for="inlineRadio1">mp4</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        mdbRadio
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio2"
+        value="option2"
+      />
+      <label class="form-check-label" for="inlineRadio2">mp3</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        mdbRadio
+        class="form-check-input"
+        type="radio"
+        name="inlineRadioOptions"
+        id="inlineRadio3"
+        value="option3"
+      />
+      <label class="form-check-label" for="inlineRadio3">image</label>
+    </div>
+  </div>
+  
+  <div class="upload-section">
+    <router-outlet></router-outlet>
+  </div>
+</div>

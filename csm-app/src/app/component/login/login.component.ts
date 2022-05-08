@@ -24,15 +24,15 @@ export class LoginComponent implements OnInit {
     });
   }
   login() {
-    this.http.get<any>("http://localhost:3000/signupUser").subscribe(rs => {
-      const user = rs.find((e: any) => {
-        return e.email === this.loginForm.value.email && e.password === this.loginForm.value.password
-      });
-      if(user)
-      {
-        this.loginForm.reset();
-        this.router.navigate(["charging"])
-      }
-    });
+    this.router.navigate(["charging"])
+    // this.http.get<any>("http://localhost:3000/signupUser").subscribe(rs => {
+    //   const user = rs.find((e: any) => {
+    //     return e.email === this.loginForm.value.email && e.password === this.loginForm.value.password
+    //   });
+    //   if(user)
+    //   {
+    //     this.loginForm.reset();
+    //   }
+    // });
   }
 }
