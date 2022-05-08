@@ -14,8 +14,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { UserComponent } from './component/user/user.component';
 import { UploadModule } from './component/upload/upload.module';
 import { SharedModule } from './share/share.module';
-import { HeaderComponent } from './share/component/header/header.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { ChargingListCategoryComponent } from './component/charging-list-category/charging-list-category.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { AgGridModule } from 'ag-grid-angular';
     ChargingListComponent,
     LiveWallpaperListComponent,
     StaticWallpaperListComponent,
-    UserComponent
+    UserComponent,
+    ChargingListCategoryComponent
   ],
   imports: [
     BrowserModule,
