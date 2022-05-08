@@ -15,6 +15,7 @@ import { UserComponent } from './component/user/user.component';
 import { UploadModule } from './component/upload/upload.module';
 import { SharedModule } from './share/share.module';
 import { HeaderComponent } from './share/component/header/header.component';
+import { ChargingListCategoryComponent } from './component/charging-list-category/charging-list-category.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { HeaderComponent } from './share/component/header/header.component';
     ChargingListComponent,
     LiveWallpaperListComponent,
     StaticWallpaperListComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChargingListCategoryComponent
   ],
   imports: [
     BrowserModule,

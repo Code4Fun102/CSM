@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row row-cols-4 header">
+        <div class="col-sm col-header">links</div>
+        <div class="col-sm col-header">icon</div>
+        <div class="col-sm col-header">name</div>
+        <div class="col-sm col-header">background</div>
+    </div>
+    <div class="body-cms">
+        <div class="row row-cols-4" *ngFor=" let category of dataCategory">
+            <div class="col-sm col-header col-body">
+                <a href="{{link}}" *ngFor=" let link of category.links;">
+                    {{link}}
+                </a>
+            </div>
+            <div class="col-sm col-header col-body">
+                <a href="{{icon}}" *ngFor=" let icon of category.icon;">
+                    {{icon}}
+                </a>
+            </div>
+            <div class="col-sm col-header col-body">{{category.name}}</div>
+            <div class="col-sm col-header col-body">
+                <a href="{{background}}" *ngFor=" let background of category.background;">
+                    {{background}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

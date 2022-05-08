@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ChargingListCategoryComponent } from './component/charging-list-category/charging-list-category.component';
 import { ChargingListComponent } from './component/charging-list/charging-list.component';
 import { LiveWallpaperListComponent } from './component/live-wallpaper-list/live-wallpaper-list.component';
 import { LoginComponent } from './component/login/login.component';
@@ -14,8 +15,9 @@ const routes: Routes = [
   { path: 'charging', component: ChargingListComponent },
   { path: 'static-wallpaper', component: StaticWallpaperListComponent },
   { path: 'live-wallpaper', component: LiveWallpaperListComponent },
-  { path: 'upload', loadChildren:() => import('./component/upload/upload.module').then(m => m.UploadModule) },
+  { path: 'upload', loadChildren: () => import('./component/upload/upload.module').then(m => m.UploadModule) },
   { path: 'user', component: UserComponent },
+  { path: "charging-category", component: ChargingListCategoryComponent }
 ];
 
 @NgModule({
