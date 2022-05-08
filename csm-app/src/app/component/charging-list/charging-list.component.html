@@ -1,1 +1,12 @@
-123123
+<app-header></app-header>
+<div class="list-charging-container">
+  <ag-grid-angular
+    style="width: 100%; height: calc(100vh - 120px)"
+    class="ag-theme-alpine"
+    [rowData]="data"
+    [columnDefs]="columnDefs"
+    [domLayout]="'autoHeight'"
+    (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
+</div>

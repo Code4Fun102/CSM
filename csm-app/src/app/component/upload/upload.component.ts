@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-upload',
@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./upload.component.scss']
 })
 export class UploadComponent implements OnInit {
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {

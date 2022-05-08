@@ -9,7 +9,7 @@ import { UserComponent } from './component/user/user.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, },
   { path: 'signup', component: SignupComponent },
   { path: 'charging', component: ChargingListComponent },
   { path: 'static-wallpaper', component: StaticWallpaperListComponent },
