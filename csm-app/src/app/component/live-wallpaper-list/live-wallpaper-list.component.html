@@ -1,1 +1,14 @@
-<app-header></app-header>
+<app-header></app-header> 
+<div class="live-wallpaper-container">
+  <ag-grid-angular
+    style="width: 100%; height: calc(100vh - 120px)"
+    class="ag-theme-alpine"
+    [rowData]="data"
+    [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)"
+    [getRowHeight]="getRowHeight"
+    [tooltipShowDelay]="tooltipShowDelay"
+    [tooltipHideDelay]="tooltipHideDelay"
+  >
+  </ag-grid-angular>
+</div>

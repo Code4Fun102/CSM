@@ -15,16 +15,16 @@ import { UploadModule } from './component/upload/upload.module';
 import { SharedModule } from './share/share.module';
 import { ChargingListCategoryComponent } from './component/charging-list-category/charging-list-category.component';
 import { CommonModule } from '@angular/common';
+import { ChargingCategoryAddComponent } from './component/charging-list-category/charging-category-add/charging-category-add.component';
+import { ChargingCategoryEditComponent } from './component/charging-list-category/charging-category-edit/charging-category-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    LiveWallpaperListComponent,
     StaticWallpaperListComponent,
-    UserComponent,
-    ChargingListCategoryComponent
+    UserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,21 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+/**
+ * đăng nhập
+ * @param param 
+ * @returns 
+ */
+  login(param: any) {
+    return this.http.post<boolean>("http://localhost:3000/signupUser1", param)
+  }
+  /**
+   * đăng ký
+   * @param param 
+   * @returns 
+   */
+  signup(param:any){
+    return this.http.post<boolean>("http://localhost:3000/signupUser1", param)
+  }
 }

@@ -11,4 +11,11 @@ export class ChargingService {
   getListCharging(){
     return this.http.get<any>("http://localhost:3000/list-item")
   }
+
+  getListLiveWallpaper(){
+    return this.http.get<any>("http://localhost:3000/live-wallpaper")
+  }
+  getListchargingCategory(){
+    return this.http.get<any>("http://localhost:3000/list-category")
+  }
 }
