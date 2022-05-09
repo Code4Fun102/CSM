@@ -1,0 +1,184 @@
+[
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Trending.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Trending.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_trending.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_trending.png"
+    ],
+    "name": "Trending",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Trending.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Easter.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Easter.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_easter.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_easter.png"
+    ],
+    "name": "Easter",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Easter.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Battery.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Battery.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_battery.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_battery.png"
+    ],
+    "name": "Battery",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Battery.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Energy.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Energy.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_energy.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_energy.png"
+    ],
+    "name": "Energy",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Energy.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Movie.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Movie.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_movie.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_movie.png"
+    ],
+    "name": "Movie",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Movie.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Progress.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Progress.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_progress.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_progress.png"
+    ],
+    "name": "Progress",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Progress.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Unique.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Unique.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_unique.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_unique.png"
+    ],
+    "name": "Unique",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Unique.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Anime.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Anime.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_anime.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_anime.png"
+    ],
+    "name": "Anime",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Anime.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Cartoon.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Cartoon.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_cartoon.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_cartoon.png"
+    ],
+    "name": "Cartoon",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Cartoon.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Abstract&Neon.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Abstract&Neon.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_abstract&neon.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_abstract&neon.png"
+    ],
+    "name": "Abstract & Neon",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Abstract&Neon.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Prank.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Prank.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_prank.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_prank.png"
+    ],
+    "name": "Prank",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Prank.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Valentine.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Valentine.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_valentine.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_valentine.png"
+    ],
+    "name": "Valentine",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Valentine.png"
+    ]
+  },
+  {
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Other.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Other.json"
+    ],
+    "icon": [
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_other.png",
+      "https://cdn.roku-universal-remote-tv.com/icon/animation_other.png"
+    ],
+    "name": "Other",
+    "background": [
+      "https://cdn.roku-universal-remote-tv.com/background/Other.png"
+    ]
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "name": "PREMIUM",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/PREMIUM.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/PREMIUM.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_premium.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_premium.png"
+      ]
+  },
+  {
+    "name": "VANS",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/VANS.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/VANS.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_vans.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_vans.png"
+      ]
+  },
+  {
+    "name": "VAPORWAVE",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/VAPORWAVE.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/VAPORWAVE.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_vaporwave.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_vaporwave.png"
+      ]
+  },
+  {
+    "name": "NATURE & ANIMAL",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/NATURE & ANIMAL.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/NATURE & ANIMAL.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_nature_animal.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_nature_animal.png"
+      ]
+  },
+  {
+    "name": "MINIMAL",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/MINIMAL.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/MINIMAL.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_minimal.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_minimal.png"
+      ]
+  },
+  {
+    "name": "LOVE",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/LOVE.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/LOVE.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_love.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_love.png"
+      ]
+  },
+  {
+    "name": "CUTIE",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/CUTIE.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/CUTIE.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_cutie.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_cutie.png"
+      ]
+  },
+  {
+    "name": "ANIME",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/ANIME.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/ANIME.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_anime.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_anime.png"
+      ]
+  },
+  {
+    "name": "AMOLED",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/AMOLED.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/AMOLED.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_amoled.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_amoled.png"
+      ]
+  },
+  {
+    "name": "CHRISTMAS",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/CHRISTMAS.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/CHRISTMAS.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_christmas.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_christmas.png"
+      ]
+  },
+  {
+    "name": "FLAGS",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/FLAGS.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/FLAGS.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_flags.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_flags.png"
+      ]
+  },
+  {
+    "name": "GAMES",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/GAMES.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/GAMES.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_game.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_game.png"
+      ]
+  },
+  {
+    "name": "KIROKAZE",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/KIROKAZE.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/KIROKAZE.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_kirokaze.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_kirokaze.png"
+      ]
+  },
+  {
+    "name": "HD+",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/HD+.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/HD+.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_hd+.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_hd+.png"
+      ]
+  },
+  {
+    "name": "MISC",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/MISC.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/MISC.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_mics.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_mics.png"
+      ]
+  },
+  {
+    "name": "PSYCHEDELIC",
+    "links": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v2.2/livewallpager/PSYCHEDELIC.json",
+      "https://fitnesstrainingglobal.com/charinganimationdata/api/v2.2/livewallpager/PSYCHEDELIC.json"
+    ],
+    "icon": [
+      "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/icon/live_psychedelic.png",
+      "https://fitnesstrainingglobal.com/charinganimationdata/icon/live_psychedelic.png"
+      ]
+  }
+]
