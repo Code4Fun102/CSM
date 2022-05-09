@@ -5,8 +5,10 @@
     class="ag-theme-alpine"
     [rowData]="data"
     [columnDefs]="columnDefs"
-    [domLayout]="'autoHeight'"
     (gridReady)="onGridReady($event)"
+    [getRowHeight]="getRowHeight"
+    [tooltipShowDelay]="tooltipShowDelay"
+    [tooltipHideDelay]="tooltipHideDelay"
   >
   </ag-grid-angular>
 </div>

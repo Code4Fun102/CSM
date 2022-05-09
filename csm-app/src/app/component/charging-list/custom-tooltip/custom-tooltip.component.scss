@@ -1,0 +1,17 @@
+:host {
+  position: absolute;
+  width: 120px;
+  pointer-events: none;
+
+  .custom-tooltip{
+    display: flex;
+    flex-direction: row;
+  }
+  .image-tooltip{
+    margin: 0 8px;
+  }
+}
+
+:host.ag-tooltip-hiding {
+  opacity: 0;
+}

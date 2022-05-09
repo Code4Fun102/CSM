@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent, },
   { path: 'signup', component: SignupComponent },
-  { path: 'charging', component: ChargingListComponent },
+  { path: 'charging', loadChildren: () => import('./component/charging-list/charging.module').then(m => m.ChargingModule) },
   { path: 'static-wallpaper', component: StaticWallpaperListComponent },
   { path: 'live-wallpaper', component: LiveWallpaperListComponent },
   { path: 'upload', loadChildren: () => import('./component/upload/upload.module').then(m => m.UploadModule) },
