@@ -101,9 +101,9 @@ export class ChargingListComponent implements OnInit {
     this.chargingService.getListCharging().subscribe((res) => {
       res.datas.forEach(function (dataItem: any, index: number) {
         dataItem.rowHeight =
-          dataItem.thumbs.length > dataItem.videos.length
-            ? dataItem.thumbs.length * 48
-            : dataItem.videos.length * 48;
+          dataItem.thumbs?.length > dataItem.videos?.length
+            ? dataItem.thumbs?.length * 48
+            : dataItem.videos?.length * 48;
       });
       this.data = res.datas;
     });
