@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ChargingService } from 'src/app/service/charging.service';
 import { CustomTooltipComponent } from './custom-tooltip/custom-tooltip.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { environment } from 'src/environments/environment';
 
 declare const $: any;
 @Component({
@@ -145,19 +146,20 @@ export class ChargingListComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingService.getListCharging().subscribe((res) => {
-      if (res) {
-        let dataStr = JSON.stringify(this.data);
-        let dataUri =
-          'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    // this.chargingService.getListCharging().subscribe((res) => {
+    //   if (res) {
+    //     let dataStr = JSON.stringify(this.data);
+    //     let dataUri =
+    //       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
-        let exportFileDefaultName = 'data.json';
+    //     let exportFileDefaultName = 'data.json';
 
-        let linkElement = document.createElement('a');
-        linkElement.setAttribute('href', dataUri);
-        linkElement.setAttribute('download', exportFileDefaultName);
-        linkElement.click();
-      }
-    });
+    //     let linkElement = document.createElement('a');
+    //     linkElement.setAttribute('href', dataUri);
+    //     linkElement.setAttribute('download', exportFileDefaultName);
+    //     linkElement.click();
+    //   }
+    // });
+    this.chargingService.export();
   }
 }

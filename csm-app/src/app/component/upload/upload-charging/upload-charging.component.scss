@@ -1,5 +1,6 @@
 .file-type-container {
   display: flex;
+  flex-direction: column;
 }
 .form-check {
   display: block;
@@ -10,11 +11,14 @@
 .form-check-inline {
   display: inline-block;
   margin-right: 1rem;
+  width: 90px;
 }
-.form-check-input[type="radio"] {
-  border-radius: 50%;
+.form-check-input[type="checkbox"] {
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 0.125em;
   margin-right: 6px;
+}
+.file-type-group {
+  margin: 8px 0;
 }

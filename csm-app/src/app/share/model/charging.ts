@@ -1,11 +1,10 @@
 export class ChargingModel{
-  thumbs?: string[];
+  category?: string;
+  isPremium?: boolean[];
+  priority?: number;
+  thumbs?:string[];
   thumbvideos?: string[];
   videos?: string[];
   id?:number;
-  isPremium?: boolean;
-  priority?: number;
-  charing?: any;
   sounds?: string[];
-  isDeleted?: boolean;
 }
