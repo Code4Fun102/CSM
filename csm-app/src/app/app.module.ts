@@ -14,6 +14,7 @@ import { UserComponent } from './component/user/user.component';
 import { SharedModule } from './share/share.module';
 import { ToastrModule } from 'ngx-toastr';
 
+
 @NgModule({
   declarations: [
     AppComponent,
