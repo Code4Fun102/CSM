@@ -13,7 +13,7 @@ export class AuthService {
  * @returns 
  */
   login(param: any) {
-    return this.http.post<boolean>("http://localhost:3000/signupUser1", param)
+    return this.http.post<boolean>("http://localhost:3000/signupUser", param)
   }
   /**
    * đăng ký
@@ -21,6 +21,6 @@ export class AuthService {
    * @returns 
    */
   signup(param:any){
-    return this.http.post<boolean>("http://localhost:3000/signupUser1", param)
+    return this.http.post<boolean>("http://localhost:3000/signupUser", param)
   }
 }

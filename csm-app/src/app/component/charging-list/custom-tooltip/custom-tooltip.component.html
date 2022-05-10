@@ -1,5 +1,13 @@
 <div class="custom-tooltip" [style.background-color]="color">
   <ng-container *ngFor="let item of data">
-    <img class="image-tooltip" [src]="item" width="120px">
+    <ng-container *ngIf="type===1">
+      <img class="image-tooltip" [src]="item" width="120px">
+    </ng-container>
+    <ng-container *ngIf="type===2">
+      <video class="video-tooltip" height="240px" autoplay>
+        <source [src]="item" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </ng-container>
   </ng-container>
 </div>

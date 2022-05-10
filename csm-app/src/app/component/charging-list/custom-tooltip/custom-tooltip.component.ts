@@ -5,16 +5,16 @@ import { ITooltipParams } from 'ag-grid-community';
 @Component({
   selector: 'app-custom-tooltip',
   templateUrl: './custom-tooltip.component.html',
-  styleUrls: ['./custom-tooltip.component.scss']
+  styleUrls: ['./custom-tooltip.component.scss'],
 })
 export class CustomTooltipComponent implements ITooltipAngularComp {
-  private params!: { color: string } & ITooltipParams;
   public data!: any;
   public color!: string;
+  type: number;
+  constructor() {}
 
-  constructor() { }
-
-  agInit(params: { color: string } & ITooltipParams): void {
+  agInit(params: { type: number } & ITooltipParams): void {
     this.data = params.value;
+    this.type = params.type;
   }
 }

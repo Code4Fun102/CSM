@@ -1,1570 +1,1644 @@
 {
-	"posts": [
-		{
-			"id": 1,
-			"fullname": "fullname",
-			"emaill": "email",
-			"password": "password"
-		}
-	],
-	"signupUser": [
-		{
-			"fullname": "Nguyễn văn hòa",
-			"email": "hoavntb16@gmail.com",
-			"password": "12345aA@",
-			"id": 1
-		},
-		{
-			"fullname": "Nguyễn văn hòa",
-			"email": "hoavntb16@gmail.com",
-			"password": "12345aA@",
-			"id": 2
-		},
-		{
-			"fullname": "Nguyễn văn hòa",
-			"email": "hoavntb16@gmail.com",
-			"password": "12345aA@",
-			"id": 3
-		}
-	],
-	"profile": {
-		"name": "typicode"
-	},
-	"list-category": [
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Trending.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Trending.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_trending.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_trending.png"
-			],
-			"name": "Trending",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Trending.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Easter.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Easter.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_easter.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_easter.png"
-			],
-			"name": "Easter",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Easter.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Battery.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Battery.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_battery.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_battery.png"
-			],
-			"name": "Battery",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Battery.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Energy.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Energy.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_energy.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_energy.png"
-			],
-			"name": "Energy",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Energy.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Movie.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Movie.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_movie.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_movie.png"
-			],
-			"name": "Movie",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Movie.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Progress.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Progress.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_progress.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_progress.png"
-			],
-			"name": "Progress",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Progress.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Unique.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Unique.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_unique.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_unique.png"
-			],
-			"name": "Unique",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Unique.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Anime.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Anime.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_anime.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_anime.png"
-			],
-			"name": "Anime",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Anime.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Cartoon.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Cartoon.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_cartoon.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_cartoon.png"
-			],
-			"name": "Cartoon",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Cartoon.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Abstract&Neon.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Abstract&Neon.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_abstract&neon.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_abstract&neon.png"
-			],
-			"name": "Abstract & Neon",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Abstract&Neon.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Prank.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Prank.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_prank.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_prank.png"
-			],
-			"name": "Prank",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Prank.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Valentine.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Valentine.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_valentine.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_valentine.png"
-			],
-			"name": "Valentine",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Valentine.png"
-			]
-		},
-		{
-			"links": [
-				"https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Other.json",
-				"https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Other.json"
-			],
-			"icon": [
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_other.png",
-				"https://cdn.roku-universal-remote-tv.com/icon/animation_other.png"
-			],
-			"name": "Other",
-			"background": [
-				"https://cdn.roku-universal-remote-tv.com/background/Other.png"
-			]
-		}
-	],
-	"list-item": {
-		"idName": "Trending",
-		"datas": [
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_24"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_7.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_7.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_15"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Neon/charge_neon_tdd18.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Neon/charge_neon_tdd18.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_0"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_15"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_25"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_25"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_2.1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_2.1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_19"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_05.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_05.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_12"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection_7.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection_7.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_10"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/chr_cartoon_4.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/chr_cartoon_4.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_8"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/chr_cartoon_5.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/chr_cartoon_5.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_1"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection_8.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection_8.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_5"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection_9.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection_9.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_22"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_01.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_01.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_5"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_02.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_02.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_15"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_22"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_4.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_4.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_22"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_4"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_1.1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_1.1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_4"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_7.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_7.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_12"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_8.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_8.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_icon13.png"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Battery/charge_battery_pnc01.jpg",
-					"https://i.imgur.com/XmqjHqL.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/Battery/charge_battery_pnc01/charge_battery_pnc01.jpg"
-				],
-				"thumbvideos": [
-					"https://i.imgur.com/ruerObf.gif",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/Battery/charge_battery_pnc01/charge_battery_pnc01.gif"
-				],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Battery/charge_battery_pnc01.mp4",
-					"https://i.imgur.com/jXuFFWk.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/Battery/charge_battery_pnc01/charge_battery_pnc01.mp4"
-				],
-				"priority": 10
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_25"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_03.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_03.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_1"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_17"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Progress/CHR_Progres_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Progress/CHR_Progres_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_4"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_6.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_6.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_4"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Progress/CHR_Progres_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Progress/CHR_Progres_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_18"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_6"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_11"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_27"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection4.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection4.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_21"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection5.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection5.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_15"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection6.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection6.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_10"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_18"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_7"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_10"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_4.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_4.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_21"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_5.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_5.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_4"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_2"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Other/CHR_Coin_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Other/CHR_Coin_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_5"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Other/CHR_Coin_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Other/CHR_Coin_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_11"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Other/CHR_other_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Other/CHR_other_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_23"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Anime/CHR_Anime 1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Anime/CHR_Anime 1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_7"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Anime/CHR_Anime 2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Anime/CHR_Anime 2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_6"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Anime/CHR_Anime 3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Anime/CHR_Anime 3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_27"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_12"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_4"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_1"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_1.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_1.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_19"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_22"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_26"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_4.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_4.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_9"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Prank/CHR_Prank_2.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Prank/CHR_Prank_2.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_7"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Prank/CHR_Prank_3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Prank/CHR_Prank_3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			},
-			{
-				"isPremium": true,
-				"charing": {
-					"gravity": "BOTTOM",
-					"icons": [
-						"ic_flash_10"
-					]
-				},
-				"thumbs": [
-					"https://cdn.roku-universal-remote-tv.com/image/Cartoon/[charging] 3D 3.jpg"
-				],
-				"thumbvideos": [],
-				"videos": [
-					"https://cdn.roku-universal-remote-tv.com/video/Cartoon/[charging] 3D 3.mp4"
-				],
-				"priority": 0,
-				"sounds": [
-					"https://linksound"
-				]
-			}
-		]
-	},
-	"live-wallpaper": {
-		"idName": "PSYCHEDELIC",
-		"datas": [
-			{
-				"videos": null,
-				"isPremium": true,
-				"isLiveWallpaper": false,
-				"priority": 0,
-				"thumbs": [
-					"https://i.imgur.com/2Lyt6Yxh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/2Lyt6Yx/2Lyt6Yx.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/6W3y9Ti.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/6W3y9Ti/6W3y9Ti.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 1,
-				"thumbs": [
-					"https://i.imgur.com/6W3y9Tih.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/6W3y9Ti/6W3y9Ti.jpg"
-				]
-			},
-			{
-				"videos": null,
-				"isPremium": true,
-				"isLiveWallpaper": false,
-				"priority": 2,
-				"thumbs": [
-					"https://i.imgur.com/A414fzuh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/A414fzu/A414fzu.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/aCEMHxL.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/aCEMHxL/aCEMHxL.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 3,
-				"thumbs": [
-					"https://i.imgur.com/aCEMHxLh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/aCEMHxL/aCEMHxL.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/AGnJVrI.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/AGnJVrI/AGnJVrI.mp4"
-				],
-				"isPremium": false,
-				"priority": 4,
-				"thumbs": [
-					"https://i.imgur.com/AGnJVrIh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/AGnJVrI/AGnJVrI.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/CkmUR5P.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/CkmUR5P/CkmUR5P.mp4"
-				],
-				"isPremium": false,
-				"priority": 5,
-				"thumbs": [
-					"https://i.imgur.com/CkmUR5Ph.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/CkmUR5P/CkmUR5P.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/D0SCl0Z.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/D0SCl0Z/D0SCl0Z.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 6,
-				"thumbs": [
-					"https://i.imgur.com/D0SCl0Zh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/D0SCl0Z/D0SCl0Z.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/F4csLOV.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/F4csLOV/F4csLOV.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 7,
-				"thumbs": [
-					"https://i.imgur.com/F4csLOVh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/F4csLOV/F4csLOV.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/HH3M1sP.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/HH3M1sP/HH3M1sP.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 8,
-				"thumbs": [
-					"https://i.imgur.com/HH3M1sPh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/HH3M1sP/HH3M1sP.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/IGUh0qd.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/IGUh0qd/IGUh0qd.mp4"
-				],
-				"isPremium": false,
-				"priority": 9,
-				"thumbs": [
-					"https://i.imgur.com/IGUh0qdh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/IGUh0qd/IGUh0qd.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/jwqA8xA.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/jwqA8xA/jwqA8xA.mp4"
-				],
-				"isPremium": false,
-				"priority": 10,
-				"thumbs": [
-					"https://i.imgur.com/jwqA8xAh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/jwqA8xA/jwqA8xA.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/KB9TWlf.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/KB9TWlf/KB9TWlf.mp4"
-				],
-				"isPremium": false,
-				"priority": 11,
-				"thumbs": [
-					"https://i.imgur.com/KB9TWlfh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/KB9TWlf/KB9TWlf.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/nyrP09w.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/nyrP09w/nyrP09w.mp4"
-				],
-				"isPremium": false,
-				"priority": 12,
-				"thumbs": [
-					"https://i.imgur.com/nyrP09wh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/nyrP09w/nyrP09w.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/pMj95d1.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/pMj95d1/pMj95d1.mp4"
-				],
-				"isPremium": false,
-				"priority": 13,
-				"thumbs": [
-					"https://i.imgur.com/pMj95d1h.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/pMj95d1/pMj95d1.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/PWmipxo.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/PWmipxo/PWmipxo.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 14,
-				"thumbs": [
-					"https://i.imgur.com/PWmipxoh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/PWmipxo/PWmipxo.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/qKsGPkB.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/qKsGPkB/qKsGPkB.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 15,
-				"thumbs": [
-					"https://i.imgur.com/qKsGPkBh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/qKsGPkB/qKsGPkB.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/uCvbkbk.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/uCvbkbk/uCvbkbk.mp4"
-				],
-				"isPremium": false,
-				"priority": 16,
-				"thumbs": [
-					"https://i.imgur.com/uCvbkbkh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/uCvbkbk/uCvbkbk.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/v0w4QNF.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v0w4QNF/v0w4QNF.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 17,
-				"thumbs": [
-					"https://i.imgur.com/v0w4QNFh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v0w4QNF/v0w4QNF.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/v2FZrqd.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v2FZrqd/v2FZrqd.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 18,
-				"thumbs": [
-					"https://i.imgur.com/v2FZrqdh.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v2FZrqd/v2FZrqd.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/Zi4QEJ3.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/Zi4QEJ3/Zi4QEJ3.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 19,
-				"thumbs": [
-					"https://i.imgur.com/Zi4QEJ3h.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/Zi4QEJ3/Zi4QEJ3.jpg"
-				]
-			},
-			{
-				"videos": [
-					"https://i.imgur.com/zqZtGo4.mp4",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/zqZtGo4/zqZtGo4.mp4"
-				],
-				"isPremium": true,
-				"isLiveWallpaper": true,
-				"priority": 20,
-				"thumbs": [
-					"https://i.imgur.com/zqZtGo4h.jpg",
-					"https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/zqZtGo4/zqZtGo4.jpg"
-				]
-			}
-		]
-	}
+  "posts": [
+    {
+      "id": 1,
+      "fullname": "fullname",
+      "emaill": "email",
+      "password": "password"
+    }
+  ],
+  "signupUser": [
+    {
+      "fullname": "Nguyễn văn hòa",
+      "email": "hoavntb16@gmail.com",
+      "password": "12345aA@",
+      "id": 1
+    },
+    {
+      "fullname": "Nguyễn văn hòa",
+      "email": "hoavntb16@gmail.com",
+      "password": "12345aA@",
+      "id": 2
+    },
+    {
+      "fullname": "Nguyễn văn hòa",
+      "email": "hoavntb16@gmail.com",
+      "password": "12345aA@",
+      "id": 3
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 6
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "list-category": [
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Trending.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Trending.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_trending.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_trending.png"
+      ],
+      "name": "Trending",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Trending.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Easter.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Easter.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_easter.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_easter.png"
+      ],
+      "name": "Easter",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Easter.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Battery.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Battery.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_battery.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_battery.png"
+      ],
+      "name": "Battery",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Battery.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Energy.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Energy.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_energy.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_energy.png"
+      ],
+      "name": "Energy",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Energy.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Movie.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Movie.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_movie.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_movie.png"
+      ],
+      "name": "Movie",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Movie.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Progress.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Progress.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_progress.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_progress.png"
+      ],
+      "name": "Progress",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Progress.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Unique.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Unique.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_unique.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_unique.png"
+      ],
+      "name": "Unique",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Unique.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Anime.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Anime.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_anime.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_anime.png"
+      ],
+      "name": "Anime",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Anime.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Cartoon.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Cartoon.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_cartoon.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_cartoon.png"
+      ],
+      "name": "Cartoon",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Cartoon.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Abstract&Neon.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Abstract&Neon.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_abstract&neon.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_abstract&neon.png"
+      ],
+      "name": "Abstract & Neon",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Abstract&Neon.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Prank.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Prank.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_prank.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_prank.png"
+      ],
+      "name": "Prank",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Prank.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Valentine.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Valentine.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_valentine.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_valentine.png"
+      ],
+      "name": "Valentine",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Valentine.png"
+      ]
+    },
+    {
+      "links": [
+        "https://charinganimationdata-1a212.kxcdn.com/charinganimationdata/api/v3.1/Other.json",
+        "https://fitnesstrainingglobal.com/charinganimationdata/api/v3.1/Other.json"
+      ],
+      "icon": [
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_other.png",
+        "https://cdn.roku-universal-remote-tv.com/icon/animation_other.png"
+      ],
+      "name": "Other",
+      "background": [
+        "https://cdn.roku-universal-remote-tv.com/background/Other.png"
+      ]
+    }
+  ],
+  "list-item": {
+    "idName": "Trending",
+    "datas": [
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_24"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_7.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_7.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 0
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_15"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Neon/charge_neon_tdd18.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Neon/charge_neon_tdd18.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 1
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_0"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 2
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_15"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 3
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_25"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 4
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_25"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_2.1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_2.1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 5
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_19"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_05.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_05.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 6
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_12"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection_7.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection_7.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 7
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_10"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/chr_cartoon_4.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/chr_cartoon_4.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 8
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_8"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/chr_cartoon_5.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/chr_cartoon_5.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 9
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_1"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection_8.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection_8.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 10
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_5"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection_9.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection_9.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 11
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_22"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_01.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_01.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 12
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_5"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_02.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_02.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 13
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_15"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 14
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_22"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_4.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_4.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 15
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_22"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 16
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_4"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Valentine/chr_couple_1.1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Valentine/chr_couple_1.1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 17
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_4"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_7.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_7.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 18
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_12"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Easter/chr_easter_8.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Easter/chr_easter_8.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 19
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_icon13.png"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Battery/charge_battery_pnc01.jpg",
+          "https://i.imgur.com/XmqjHqL.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/Battery/charge_battery_pnc01/charge_battery_pnc01.jpg"
+        ],
+        "thumbvideos": [
+          "https://i.imgur.com/ruerObf.gif",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/Battery/charge_battery_pnc01/charge_battery_pnc01.gif"
+        ],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Battery/charge_battery_pnc01.mp4",
+          "https://i.imgur.com/jXuFFWk.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/Battery/charge_battery_pnc01/charge_battery_pnc01.mp4"
+        ],
+        "priority": 10,
+        "id": 20
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_25"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Battery/CHR_Battery_03.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Battery/CHR_Battery_03.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 21
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_1"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 22
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_17"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Progress/CHR_Progres_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Progress/CHR_Progres_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 23
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_4"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_6.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_6.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 24
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_4"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Progress/CHR_Progres_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Progress/CHR_Progres_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 25
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_18"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 26
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_6"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 27
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_11"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 28
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_27"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection4.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection4.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 29
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_21"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection5.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection5.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 30
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_15"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Relaxation&Perfection/CHR_Relaxation&Perfection6.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Relaxation&Perfection/CHR_Relaxation&Perfection6.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 31
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_10"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 32
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_18"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 33
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_7"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 34
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_10"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_4.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_4.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 35
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_21"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Unique/CHR_Unique_5.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Unique/CHR_Unique_5.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 36
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_4"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 37
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_2"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Other/CHR_Coin_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Other/CHR_Coin_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 38
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_5"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Other/CHR_Coin_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Other/CHR_Coin_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 39
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_11"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Other/CHR_other_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Other/CHR_other_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 40
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_23"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Anime/CHR_Anime 1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Anime/CHR_Anime 1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 41
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_7"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Anime/CHR_Anime 2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Anime/CHR_Anime 2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 42
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_6"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Anime/CHR_Anime 3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Anime/CHR_Anime 3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 43
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_27"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 44
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_12"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 45
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_4"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/CHR_cartoon_3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/CHR_cartoon_3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 46
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_1"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_1.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_1.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 47
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_19"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 48
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_22"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 49
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_26"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Movie/CHR_movie_4.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Movie/CHR_movie_4.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 50
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_9"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Prank/CHR_Prank_2.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Prank/CHR_Prank_2.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 51
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_7"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Prank/CHR_Prank_3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Prank/CHR_Prank_3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 52
+      },
+      {
+        "isPremium": true,
+        "charing": {
+          "gravity": "BOTTOM",
+          "icons": [
+            "ic_flash_10"
+          ]
+        },
+        "thumbs": [
+          "https://cdn.roku-universal-remote-tv.com/image/Cartoon/[charging] 3D 3.jpg"
+        ],
+        "thumbvideos": [],
+        "videos": [
+          "https://cdn.roku-universal-remote-tv.com/video/Cartoon/[charging] 3D 3.mp4"
+        ],
+        "priority": 0,
+        "sounds": [
+          "https://linksound"
+        ],
+        "id": 53
+      }
+    ]
+  },
+  "live-wallpaper": {
+    "idName": "PSYCHEDELIC",
+    "datas": [
+      {
+        "videos": null,
+        "isPremium": true,
+        "isLiveWallpaper": false,
+        "priority": 0,
+        "thumbs": [
+          "https://i.imgur.com/2Lyt6Yxh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/2Lyt6Yx/2Lyt6Yx.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/6W3y9Ti.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/6W3y9Ti/6W3y9Ti.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 1,
+        "thumbs": [
+          "https://i.imgur.com/6W3y9Tih.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/6W3y9Ti/6W3y9Ti.jpg"
+        ]
+      },
+      {
+        "videos": null,
+        "isPremium": true,
+        "isLiveWallpaper": false,
+        "priority": 2,
+        "thumbs": [
+          "https://i.imgur.com/A414fzuh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/A414fzu/A414fzu.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/aCEMHxL.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/aCEMHxL/aCEMHxL.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 3,
+        "thumbs": [
+          "https://i.imgur.com/aCEMHxLh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/aCEMHxL/aCEMHxL.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/AGnJVrI.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/AGnJVrI/AGnJVrI.mp4"
+        ],
+        "isPremium": false,
+        "priority": 4,
+        "thumbs": [
+          "https://i.imgur.com/AGnJVrIh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/AGnJVrI/AGnJVrI.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/CkmUR5P.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/CkmUR5P/CkmUR5P.mp4"
+        ],
+        "isPremium": false,
+        "priority": 5,
+        "thumbs": [
+          "https://i.imgur.com/CkmUR5Ph.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/CkmUR5P/CkmUR5P.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/D0SCl0Z.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/D0SCl0Z/D0SCl0Z.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 6,
+        "thumbs": [
+          "https://i.imgur.com/D0SCl0Zh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/D0SCl0Z/D0SCl0Z.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/F4csLOV.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/F4csLOV/F4csLOV.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 7,
+        "thumbs": [
+          "https://i.imgur.com/F4csLOVh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/F4csLOV/F4csLOV.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/HH3M1sP.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/HH3M1sP/HH3M1sP.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 8,
+        "thumbs": [
+          "https://i.imgur.com/HH3M1sPh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/HH3M1sP/HH3M1sP.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/IGUh0qd.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/IGUh0qd/IGUh0qd.mp4"
+        ],
+        "isPremium": false,
+        "priority": 9,
+        "thumbs": [
+          "https://i.imgur.com/IGUh0qdh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/IGUh0qd/IGUh0qd.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/jwqA8xA.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/jwqA8xA/jwqA8xA.mp4"
+        ],
+        "isPremium": false,
+        "priority": 10,
+        "thumbs": [
+          "https://i.imgur.com/jwqA8xAh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/jwqA8xA/jwqA8xA.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/KB9TWlf.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/KB9TWlf/KB9TWlf.mp4"
+        ],
+        "isPremium": false,
+        "priority": 11,
+        "thumbs": [
+          "https://i.imgur.com/KB9TWlfh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/KB9TWlf/KB9TWlf.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/nyrP09w.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/nyrP09w/nyrP09w.mp4"
+        ],
+        "isPremium": false,
+        "priority": 12,
+        "thumbs": [
+          "https://i.imgur.com/nyrP09wh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/nyrP09w/nyrP09w.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/pMj95d1.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/pMj95d1/pMj95d1.mp4"
+        ],
+        "isPremium": false,
+        "priority": 13,
+        "thumbs": [
+          "https://i.imgur.com/pMj95d1h.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/pMj95d1/pMj95d1.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/PWmipxo.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/PWmipxo/PWmipxo.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 14,
+        "thumbs": [
+          "https://i.imgur.com/PWmipxoh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/PWmipxo/PWmipxo.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/qKsGPkB.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/qKsGPkB/qKsGPkB.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 15,
+        "thumbs": [
+          "https://i.imgur.com/qKsGPkBh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/qKsGPkB/qKsGPkB.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/uCvbkbk.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/uCvbkbk/uCvbkbk.mp4"
+        ],
+        "isPremium": false,
+        "priority": 16,
+        "thumbs": [
+          "https://i.imgur.com/uCvbkbkh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/uCvbkbk/uCvbkbk.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/v0w4QNF.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v0w4QNF/v0w4QNF.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 17,
+        "thumbs": [
+          "https://i.imgur.com/v0w4QNFh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v0w4QNF/v0w4QNF.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/v2FZrqd.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v2FZrqd/v2FZrqd.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 18,
+        "thumbs": [
+          "https://i.imgur.com/v2FZrqdh.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/v2FZrqd/v2FZrqd.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/Zi4QEJ3.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/Zi4QEJ3/Zi4QEJ3.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 19,
+        "thumbs": [
+          "https://i.imgur.com/Zi4QEJ3h.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/Zi4QEJ3/Zi4QEJ3.jpg"
+        ]
+      },
+      {
+        "videos": [
+          "https://i.imgur.com/zqZtGo4.mp4",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/zqZtGo4/zqZtGo4.mp4"
+        ],
+        "isPremium": true,
+        "isLiveWallpaper": true,
+        "priority": 20,
+        "thumbs": [
+          "https://i.imgur.com/zqZtGo4h.jpg",
+          "https://fitnesstrainingglobal.com/charinganimationdata/data/datafilter/PSYCHEDELIC/zqZtGo4/zqZtGo4.jpg"
+        ]
+      }
+    ]
+  }
 }

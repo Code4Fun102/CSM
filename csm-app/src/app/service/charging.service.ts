@@ -11,6 +11,9 @@ export class ChargingService {
   getListCharging(){
     return this.http.get<any>("http://localhost:3000/list-item")
   }
+  deleteCharging(id){
+    return this.http.delete<any>(`http://localhost:3000/list-item/${id}`);
+  }
 
   getListLiveWallpaper(){
     return this.http.get<any>("http://localhost:3000/live-wallpaper")

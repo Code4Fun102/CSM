@@ -5,18 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
-import { LiveWallpaperListComponent } from './component/live-wallpaper-list/live-wallpaper-list.component';
 import { StaticWallpaperListComponent } from './component/static-wallpaper-list/static-wallpaper-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {  ModalModule } from 'ngx-bootstrap/modal';
 import { UserComponent } from './component/user/user.component';
-import { UploadModule } from './component/upload/upload.module';
 import { SharedModule } from './share/share.module';
-import { ChargingListCategoryComponent } from './component/charging-list-category/charging-list-category.component';
-import { CommonModule } from '@angular/common';
-import { ChargingCategoryAddComponent } from './component/charging-list-category/charging-category-add/charging-category-add.component';
-import { ChargingCategoryEditComponent } from './component/charging-list-category/charging-category-edit/charging-category-edit.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -34,6 +30,8 @@ import { ChargingCategoryEditComponent } from './component/charging-list-categor
     HttpClientModule,
     MDBBootstrapModule.forRoot(),
     SharedModule,
+    ToastrModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
