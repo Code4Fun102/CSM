@@ -35,7 +35,7 @@ export class ChargingListCategoryComponent implements OnInit {
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
-          me.router.navigate([`charging-edit/${data.data.id}`], {
+          me.router.navigate([`charging-category-edit/${data.data.id}`], {
             relativeTo: me.route,
           });
         });

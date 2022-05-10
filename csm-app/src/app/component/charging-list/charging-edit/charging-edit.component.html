@@ -5,7 +5,7 @@
       Quay lại
     </button>
   </div>
-  <div class="form-charging">    
+  <div class="form-charging">
     <div class="form-group">
       <div class="url-input flex">
         <div class="label">thumbs</div>
@@ -21,66 +21,103 @@
         </div>
       </div>
       <div class="btn-section">
-        <button
-          class="btn btn-success"
-          style="margin-right: 8px"
-          (click)="addThumb()"
-        >
+        <button class="btn btn-success" style="margin-right: 8px" (click)="addThumb()">
           Thêm
         </button>
       </div>
     </div>
 
-    <div class="form-group">
-      <div class="url-input flex">
-        <div class="label">videos</div>
-        <div class="list-input flex">
-          <ng-container *ngFor="let video of model.videos; let i = index">
-            <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" placeholder="videos" />
-              <button class="btn btn-danger" (click)="deleteVideo(i)">
-                Xoá
-              </button>
-            </div>
-          </ng-container>
+    <div class="form-charging">
+      <div class="form-group">
+        <div class="url-input flex">
+          <div class="label">Thumb Videos</div>
+          <div class="list-input flex">
+            <ng-container *ngFor="let thumb of model.thumbvideos; let i = index">
+              <div class="flex" style="margin: 0 4px 8px 4px;">
+                <input type="text" class="form-control" placeholder="thumb videos" />
+                <button class="btn btn-danger" (click)="deleteThumbvideos(i)">
+                  Xoá
+                </button>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="btn-section">
+          <button class="btn btn-success" style="margin-right: 8px" (click)="addhumbvideos()">
+            Thêm
+          </button>
         </div>
       </div>
-      <div class="btn-section">
-        <button
-          class="btn btn-success"
-          style="margin-right: 8px"
-          (click)="addVideo()"
-        >
-          Thêm
-        </button>
-      </div>
-    </div>
 
-    
-    <div class="form-group">
-      <div class="url-input flex">
-        <div class="label">sounds</div>
-        <div class="list-input flex">
-          <ng-container *ngFor="let sound of model.sounds; let i = index">
-            <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" placeholder="sounds" />
-              <button class="btn btn-danger" (click)="deleteSound(i)">
-                Xoá
-              </button>
-            </div>
-          </ng-container>
+      <div class="form-group">
+        <div class="url-input flex">
+          <div class="label">videos</div>
+          <div class="list-input flex">
+            <ng-container *ngFor="let video of model.videos; let i = index">
+              <div class="flex" style="margin: 0 4px 8px 4px;">
+                <input type="text" class="form-control" placeholder="videos" />
+                <button class="btn btn-danger" (click)="deleteVideo(i)">
+                  Xoá
+                </button>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="btn-section">
+          <button class="btn btn-success" style="margin-right: 8px" (click)="addVideo()">
+            Thêm
+          </button>
         </div>
       </div>
-      <div class="btn-section">
-        <button
-          class="btn btn-success"
-          style="margin-right: 8px"
-          (click)="addSound()"
-        >
-          Thêm
-        </button>
+
+
+      <div class="form-group">
+        <div class="url-input flex">
+          <div class="label">sounds</div>
+          <div class="list-input flex">
+            <ng-container *ngFor="let sound of model.sounds; let i = index">
+              <div class="flex" style="margin: 0 4px 8px 4px;">
+                <input type="text" class="form-control" placeholder="sounds" />
+                <button class="btn btn-danger" (click)="deleteSound(i)">
+                  Xoá
+                </button>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="btn-section">
+          <button class="btn btn-success" style="margin-right: 8px" (click)="addSound()">
+            Thêm
+          </button>
+        </div>
       </div>
+
+      <div class="form-group">
+        <div class="url-input flex">
+          <div class="label">IsPremium</div>
+          <div class="list-input flex">
+            <ng-container>
+              <div class="flex" style="margin: 0 4px 8px 4px;">
+                <input type="checkbox" placeholder="isPremium" />
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="url-input flex">
+          <div class="label">Priority</div>
+          <div class="list-input flex">
+            <ng-container>
+              <div class="flex" style="margin: 0 4px 8px 4px;">
+                <input type="number" class="form-control" placeholder="priority" />
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary">Lưu</button>
     </div>
-    <button class="btn btn-primary">Lưu</button>
   </div>
-</div>

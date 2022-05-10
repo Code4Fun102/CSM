@@ -1,0 +1,21 @@
+:host{
+    .form-charging{
+      margin-top: 32px;
+    }
+    .form-group{
+      display: flex;
+      flex-direction: row;
+    }
+    .label{
+      margin-right: 16px;
+      width: 128px;
+  
+    }
+    .form-control{
+      width: 100vh;
+      margin-right: 16px;
+    }
+    .list-input{
+      flex-direction: column;
+    }
+  }

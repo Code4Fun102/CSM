@@ -13,14 +13,17 @@ export class ChargingEditComponent implements OnInit {
   id;
   model: ChargingModel = {
     thumbs: [],
+    thumbvideos: [],
     sounds: [],
     videos: [],
+    priority: null,
+    isPremium: false
   };
   constructor(
     public route: ActivatedRoute,
     private chargingService: ChargingService,
     private location: Location
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -38,6 +41,13 @@ export class ChargingEditComponent implements OnInit {
   }
   deleteVideo(index) {
     this.model.videos.splice(index, 1);
+  }
+
+  addhumbvideos() {
+    this.model.thumbvideos.push('');
+  }
+  deleteThumbvideos(index) {
+    this.model.thumbvideos.splice(index, 1);
   }
 
   addThumb() {

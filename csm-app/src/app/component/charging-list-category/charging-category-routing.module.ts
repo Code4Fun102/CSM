@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChargingListCategoryComponent } from './charging-list-category.component';
 import { ChargingCategoryEditComponent } from './charging-category-edit/charging-category-edit.component';
-import { ChargingCategoryAddComponent } from './charging-category-add/charging-category-add.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
@@ -16,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'charging-category-add',
-    component: ChargingCategoryAddComponent
+    component: ChargingCategoryEditComponent
   }
 ];
 

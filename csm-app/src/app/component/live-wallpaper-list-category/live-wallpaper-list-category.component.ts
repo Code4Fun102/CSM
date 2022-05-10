@@ -36,7 +36,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
-          me.router.navigate([`charging-edit/${data.data.id}`], {
+          me.router.navigate([`live-category-edit/${data.data.id}`], {
             relativeTo: me.route,
           });
         });
