@@ -68,7 +68,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   constructor(private chargingService: ChargingService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.chargingService.getListchargingCategory().subscribe((res) => {
+    this.chargingService.getListliveCategory().subscribe((res) => {
       res.forEach(function (dataItem: any, index: number) {
         dataItem.rowHeight =
           dataItem.links?.length > dataItem.icon?.length
