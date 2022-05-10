@@ -7,6 +7,7 @@ import { ChargingListComponent } from './charging-list.component';
 import { ChargingRoutingModule } from './charging-routing.module';
 import { CustomTooltipComponent } from './custom-tooltip/custom-tooltip.component';
 import { ChargingEditComponent } from './charging-edit/charging-edit.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ChargingListComponent,
@@ -15,6 +16,7 @@ import { ChargingEditComponent } from './charging-edit/charging-edit.component';
   ],
   imports: [
     RouterModule,
+    FormsModule,
     CommonModule,
     AgGridModule,
     SharedModule,

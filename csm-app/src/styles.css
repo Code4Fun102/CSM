@@ -16,3 +16,6 @@
 .margin-bottom-8{
   margin-bottom: 8px;
 }
+.flex{
+  display: flex;
+}
