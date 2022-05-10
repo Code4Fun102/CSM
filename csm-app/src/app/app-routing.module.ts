@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'live-wallpaper', loadChildren: () => import('./component/live-wallpaper-list/live.module').then(m => m.LiveModule) },
   { path: 'upload', loadChildren: () => import('./component/upload/upload.module').then(m => m.UploadModule) },
   { path: 'user', component: UserComponent },
-  { path: "charging-category", loadChildren: () => import('./component/charging-list-category/charging-category.module').then(m => m.ChargingCategoryModule) }
+  { path: "charging-category", loadChildren: () => import('./component/charging-list-category/charging-category.module').then(m => m.ChargingCategoryModule) },
+  { path: "live-category", loadChildren: () => import('./component/live-wallpaper-list-category/live-category.module').then(m => m.LiveCategoryModule) }
 ];
 
 @NgModule({
