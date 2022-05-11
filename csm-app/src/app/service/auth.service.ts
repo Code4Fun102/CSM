@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { result } from '../share/model/result';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class AuthService {
  * @returns 
  */
   login(param: any) {
-    return this.http.post<any>("http://45.77.245.159:3000/v1/auth/login", param)
+    return this.http.post<result>("http://localhost:3000/v1/auth/login", param)
   }
   /**
    * đăng ký
@@ -21,6 +22,6 @@ export class AuthService {
    * @returns 
    */
   signup(param:any){
-    return this.http.post<any>("http://45.77.245.159:3000/v1/auth/register", param)
+    return this.http.post<result>("http://localhost:3000/v1/auth/register", param)
   }
 }
