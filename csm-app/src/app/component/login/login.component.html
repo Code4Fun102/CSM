@@ -9,8 +9,8 @@
                 <form >
                     <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <div class="mb-3">
-                            <label for="username" class="form-label">Email address</label>
-                            <input formControlName= 'username' type="text" class="form-control" id="email" aria-describedby="emailHelp">
+                            <label for="username" class="form-label">Tên đăng nhập</label>
+                            <input formControlName= 'username' type="text" class="form-control" id="username" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text"> {{error}}</div>
                         </div>
                         <div class="mb-3">
