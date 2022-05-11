@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ChargingService } from 'src/app/service/charging.service';
 import { CustomTooltipComponent } from '../charging-list/custom-tooltip/custom-tooltip.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { ChargingCategoryService } from 'src/app/service/charging-category.service';
 declare const $: any;
 @Component({
   selector: 'app-live-wallpaper-list-category',
@@ -88,7 +89,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     return params.data.rowHeight;
   }
   constructor(
-    private chargingService: ChargingService, 
+    private chargingCategory: ChargingCategoryService, 
     public router: Router, 
     public route: ActivatedRoute,
     private toastr: ToastrService,
@@ -96,14 +97,21 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.chargingService.getListliveCategory().subscribe((res) => {
-      res?.data?.forEach(function (dataItem: any, index: number) {
-        dataItem.rowHeight =
-          dataItem.links?.length > dataItem.icon?.length
-            ? dataItem.links?.length * 48
-            : dataItem.icon?.length * 48;
-      });
-      this.data = res.data;
+    this.chargingCategory.getListChargingCategory().subscribe((res) => {
+      if(res && res.data)
+      {
+        res?.data?.forEach(function (dataItem: any, index: number) {
+          dataItem.rowHeight =
+            dataItem.links?.length > dataItem.icon?.length
+              ? dataItem.links?.length * 48
+              : dataItem.icon?.length * 48;
+        });
+        this.data = res.data;
+      }
+      else{
+        this.data = [];
+      }
+      
     });
   }
 
@@ -119,7 +127,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   }
 
   confirm(): void {
-    this.chargingService.deleteCharging(this.selectedID).subscribe(
+    this.chargingCategory.deleteChargingCategory(this.selectedID).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Xoá thành công!');
@@ -144,7 +152,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingService.getListCharging().subscribe((res) => {
+    this.chargingCategory.getListChargingCategory().subscribe((res) => {
       if (res) {
         let dataStr = JSON.stringify(this.data);
         let dataUri =

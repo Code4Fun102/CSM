@@ -50,6 +50,7 @@ export class ChargingListCategoryComponent implements OnInit {
         return eDiv;
       },
     },
+    { field: 'name' },
     {
       field: 'links',
       cellRenderer: (data: ICellRendererParams) => {
@@ -79,7 +80,6 @@ export class ChargingListCategoryComponent implements OnInit {
       tooltipComponentParams: { type: 1 },
       tooltipComponent: CustomTooltipComponent,
     },
-    { field: 'name' },
     {
       field: 'background',
       cellRenderer: (data: ICellRendererParams) => {
@@ -113,15 +113,20 @@ export class ChargingListCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
-      if (res && res.success) {
-        res.data.forEach(function (dataItem: any, index: number) {
-          dataItem.rowHeight =
-            dataItem.links?.length > dataItem.background?.length
-              ? dataItem.links?.length * 48
-              : dataItem.background?.length * 48;
-        });
-        this.data = res.data;
-      }
+        if(res && res.data)
+        {
+          const data = res.data
+          data.forEach(function (dataItem: any, index: number) {
+            dataItem.rowHeight =
+              dataItem.links?.length > dataItem.background?.length
+                ? dataItem.links?.length * 48
+                : dataItem.background?.length * 48;
+          });
+          this.data = data;
+        }
+        else{
+          this.data = []
+        }
     });
   }
 

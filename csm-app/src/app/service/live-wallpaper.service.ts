@@ -8,21 +8,19 @@ import { result } from '../share/model/result';
   providedIn: 'root',
 })
 export class LiveWallPaperService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getListLiveWallPaper() {
-    return this.http.get<any>('http://localhost:3000/LiveWallPaper');
+  getListLiveWallPaper(caregoryId?:number) {
+    return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${caregoryId}/items`);
   }
   getLiveWallPaperByID(id) {
-    return this.http.get<result>(
-      `http://localhost:3000/LiveWallPaper/${id}`
-    );
+    return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
   }
   deleteLiveWallPaper(id) {
-    return this.http.delete<result>(`http://localhost:3000/LiveWallPaper/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
   }
 
-  saveLiveWallPaper(model){
-    return this.http.post<result>(`http://localhost:3000/LiveWallPaper/`, model);
+  saveLiveWallPaper(model) {
+    return this.http.post<result>(`${environment.baseUrl}/LiveWallPaper/`, model);
   }
 }

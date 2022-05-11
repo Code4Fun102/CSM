@@ -102,13 +102,20 @@ export class LiveWallpaperListComponent implements OnInit {
 
   ngOnInit(): void {
     this.liveWallPaperService.getListLiveWallPaper().subscribe((res) => {
-      res.data.datas.forEach(function (dataItem: any, index: number) {
-        dataItem.rowHeight =
-          dataItem.thumbs?.length > dataItem.videos?.length
-            ? dataItem.thumbs?.length * 48
-            : dataItem.videos?.length * 48;
-      });
-      this.data = res.data.datas;
+      if(res && res.data)
+      {
+        const data = res.data.datas;
+        data?.forEach(function (dataItem: any, index: number) {
+          dataItem.rowHeight =
+            dataItem.thumbs?.length > dataItem.videos?.length
+              ? dataItem.thumbs?.length * 48
+              : dataItem.videos?.length * 48;
+        });
+        this.data = data;
+      }
+      else{
+        this.data = [];
+      }
     });
   }
 

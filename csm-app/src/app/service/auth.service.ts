@@ -24,11 +24,14 @@ export class AuthService {
     .pipe(
       catchError(this.handleError),
       tap(resData => {
-        this.handleAuthentication(
-          resData.username, 
-          resData.id,
-          resData.accessToken
-        );
+        if(resData && resData.data)
+        {
+          this.handleAuthentication(
+            resData.data.username, 
+            resData.data.id,
+            resData.data.accessToken
+          );
+        }
       })
     );
   }

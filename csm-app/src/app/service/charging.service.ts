@@ -10,25 +10,23 @@ import { result } from '../share/model/result';
 export class ChargingService {
   constructor(private http: HttpClient) {}
 
-  getListCharging() {
-    return this.http.get<any>('http://localhost:3000/charging-item');
+  getListCharging(categoryId?:number) {
+    return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${categoryId}/items`);
   }
   getChargingByID(id) {
-    return this.http.get<result>(
-      `http://localhost:3000/list-item/${id}`
-    );
+    return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
   }
   deleteCharging(id) {
-    return this.http.delete<result>(`http://localhost:3000/charging-item/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
   }
 
-  getListLiveWallpaper() {
-    return this.http.get<result>('http://localhost:3000/live-item');
-  }
+  // getListLiveWallpaper() {
+  //   return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/2/items`);
+  // }
   
-  getListliveCategory() {
-    return this.http.get<result>('http://localhost:3000/live-category');
-  }
+  // getListliveCategory() {
+  //   return this.http.get<result>(`${environment.baseUrl}/live-category`);
+  // }
 
   export() {
     let url = `${environment.baseUrl}/v1/assets/export-to-json`;
@@ -38,6 +36,6 @@ export class ChargingService {
   }
 
   saveCharging(model){
-    return this.http.post<result>(`http://localhost:3000/charging-item/`, model);
+    return this.http.post<result>(`${environment.baseUrl}charging-item/`, model);
   }
 }
