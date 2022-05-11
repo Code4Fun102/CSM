@@ -11,7 +11,6 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ChargingListComponent,
-    CustomTooltipComponent,
     ChargingEditComponent
   ],
   imports: [

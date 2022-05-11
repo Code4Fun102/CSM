@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CustomTooltipComponent } from '../component/charging-list/custom-tooltip/custom-tooltip.component';
 import { HeaderComponent } from './component/header/header.component';
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    CustomTooltipComponent,
   ],
   imports: [
     FormsModule,
@@ -15,7 +17,8 @@ import { HeaderComponent } from './component/header/header.component';
     MDBBootstrapModule.forRoot(),
     RouterModule
   ],
-  exports:[HeaderComponent],
+  exports:[HeaderComponent,
+    CustomTooltipComponent,],
   providers: []
 })
 export class SharedModule { }

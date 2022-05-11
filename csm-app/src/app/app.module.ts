@@ -7,12 +7,14 @@ import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { StaticWallpaperListComponent } from './component/static-wallpaper-list/static-wallpaper-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {  ModalModule } from 'ngx-bootstrap/modal';
 import { UserComponent } from './component/user/user.component';
 import { SharedModule } from './share/share.module';
 import { ToastrModule } from 'ngx-toastr';
+import { JwtInterceptor } from './interceptor/jwt.interceptor';
+import { AuthGuard } from './guard/auth.guard';
 
 
 @NgModule({
@@ -34,7 +36,10 @@ import { ToastrModule } from 'ngx-toastr';
     ToastrModule.forRoot(),
     ModalModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

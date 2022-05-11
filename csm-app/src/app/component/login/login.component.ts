@@ -29,10 +29,8 @@ export class LoginComponent implements OnInit {
     this.error = "";
     this.loginService.login(this.loginForm.value).subscribe(rs => {
       if (rs) {
-        this.loginForm.reset();
         this.router.navigate(["charging"])
       }
     });
-    this.error = 'Tài khoản hoặc mật khẩu không chính xác';
   }
 }

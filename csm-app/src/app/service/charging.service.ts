@@ -11,7 +11,7 @@ export class ChargingService {
   constructor(private http: HttpClient) {}
 
   getListCharging() {
-    return this.http.get<result>('http://localhost:3000/charging-item');
+    return this.http.get<any>('http://localhost:3000/charging-item');
   }
   getChargingByID(id) {
     return this.http.get<result>(
@@ -26,17 +26,15 @@ export class ChargingService {
     return this.http.get<result>('http://localhost:3000/live-item');
   }
   getListchargingCategory() {
-    return this.http.get<result>('http://localhost:3000/charging-category');
+    return this.http.get<any>(`${environment.baseUrl}/v1/categories`);
   }
   getListliveCategory() {
     return this.http.get<result>('http://localhost:3000/live-category');
   }
 
   export() {
-    let headers = new HttpHeaders();
-    headers.append('Access-Control-Allow-Origin', '*');
     let url = `${environment.baseUrl}/v1/assets/export-to-json`;
-    this.http.get(url, { headers }).subscribe((res) => {
+    this.http.get(url).subscribe((res) => {
       console.log(res);
     });
   }
