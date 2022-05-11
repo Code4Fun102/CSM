@@ -28,7 +28,8 @@ export class LiveCategoryEditComponent implements OnInit {
       if (this.id) {
         this.chargingService.getChargingByID(this.id).subscribe((res) => {
           if (res) {
-            this.model = res;
+            const result = res;
+            this.model = result.data;
           }
         });
       }

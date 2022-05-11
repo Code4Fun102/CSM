@@ -30,7 +30,7 @@ export class LiveEditComponent implements OnInit {
       if (this.id) {
         this.chargingService.getChargingByID(this.id).subscribe((res) => {
           if (res) {
-            this.model = res;
+            this.model = res.data;
           }
         });
       }

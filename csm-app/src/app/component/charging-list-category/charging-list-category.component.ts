@@ -103,22 +103,24 @@ export class ChargingListCategoryComponent implements OnInit {
     return params.data.rowHeight;
   }
   constructor(
-    private chargingService: ChargingService, 
-    public router: Router, 
+    private chargingService: ChargingService,
+    public router: Router,
     public route: ActivatedRoute,
     private toastr: ToastrService,
     private modalService: BsModalService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.chargingService.getListchargingCategory().subscribe((res) => {
-      res.forEach(function (dataItem: any, index: number) {
-        dataItem.rowHeight =
-          dataItem.links?.length > dataItem.background?.length
-            ? dataItem.links?.length * 48
-            : dataItem.background?.length * 48;
-      });
-      this.data = res;
+      if (res && res.success) {
+        res.data.forEach(function (dataItem: any, index: number) {
+          dataItem.rowHeight =
+            dataItem.links?.length > dataItem.background?.length
+              ? dataItem.links?.length * 48
+              : dataItem.background?.length * 48;
+        });
+        this.data = res.data;
+      }
     });
   }
 
@@ -159,7 +161,7 @@ export class ChargingListCategoryComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingService.getListCharging().subscribe((res) => {
+    this.chargingService.getListchargingCategory().subscribe((res) => {
       if (res) {
         let dataStr = JSON.stringify(this.data);
         let dataUri =

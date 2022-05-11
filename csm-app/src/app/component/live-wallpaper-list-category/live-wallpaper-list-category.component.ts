@@ -97,13 +97,13 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.chargingService.getListliveCategory().subscribe((res) => {
-      res.forEach(function (dataItem: any, index: number) {
+      res?.data?.forEach(function (dataItem: any, index: number) {
         dataItem.rowHeight =
           dataItem.links?.length > dataItem.icon?.length
             ? dataItem.links?.length * 48
             : dataItem.icon?.length * 48;
       });
-      this.data = res;
+      this.data = res.data;
     });
   }
 

@@ -28,8 +28,8 @@ export class ChargingCategoryEditComponent implements OnInit {
       this.id = this.route.snapshot.params['id'];
       if (this.id) {
         this.chargingService.getChargingByID(this.id).subscribe((res) => {
-          if (res) {
-            this.model = res;
+          if (res && res.success) {
+            this.model = res.data;
           }
         });
       }

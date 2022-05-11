@@ -100,13 +100,13 @@ export class ChargingListComponent implements OnInit {
 
   ngOnInit(): void {
     this.chargingService.getListCharging().subscribe((res) => {
-      res.datas.forEach(function (dataItem: any, index: number) {
+      res.data.datas.forEach(function (dataItem: any, index: number) {
         dataItem.rowHeight =
           dataItem.thumbs?.length > dataItem.videos?.length
             ? dataItem.thumbs?.length * 48
             : dataItem.videos?.length * 48;
       });
-      this.data = res.datas;
+      this.data = res.data.datas;
     });
   }
   @ViewChild('template')
