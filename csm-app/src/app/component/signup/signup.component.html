@@ -9,13 +9,17 @@
                 <form >
                     <form [formGroup] = 'signupForm' (ngSubmit)="signUp()" >
                         <div class="mb-3">
-                            <label for="fullname" class="form-label">Họ và Tên</label>
-                            <input formControlName = 'fullname' type="text" class="form-control" id="fullname">
+                            <label for="username" class="form-label">Tên đăng nhập</label>
+                            <input formControlName = 'username' type="text" class="form-control" id="username">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Địa chỉ Email</label>
                             <input formControlName = 'email' type="email" class="form-control" id="email" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Số điện thoại</label>
+                            <input formControlName = 'phoneNumber' type="number" class="form-control" id="phoneNumber">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Mật khẩu</label>
