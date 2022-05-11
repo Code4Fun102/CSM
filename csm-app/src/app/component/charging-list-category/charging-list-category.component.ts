@@ -10,6 +10,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ChargingService } from 'src/app/service/charging.service';
 import { CustomTooltipComponent } from '../charging-list/custom-tooltip/custom-tooltip.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { ChargingCategoryService } from 'src/app/service/charging-category.service';
 declare const $: any;
 @Component({
   selector: 'app-charging-list-category',
@@ -103,7 +104,7 @@ export class ChargingListCategoryComponent implements OnInit {
     return params.data.rowHeight;
   }
   constructor(
-    private chargingService: ChargingService,
+    private chargingCategoryService: ChargingCategoryService,
     public router: Router,
     public route: ActivatedRoute,
     private toastr: ToastrService,
@@ -111,7 +112,7 @@ export class ChargingListCategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.chargingService.getListchargingCategory().subscribe((res) => {
+    this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
       if (res && res.success) {
         res.data.forEach(function (dataItem: any, index: number) {
           dataItem.rowHeight =
@@ -136,7 +137,7 @@ export class ChargingListCategoryComponent implements OnInit {
   }
 
   confirm(): void {
-    this.chargingService.deleteCharging(this.selectedID).subscribe(
+    this.chargingCategoryService.deleteChargingCategory(this.selectedID).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Xoá thành công!');
@@ -161,7 +162,7 @@ export class ChargingListCategoryComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingService.getListchargingCategory().subscribe((res) => {
+    this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
       if (res) {
         let dataStr = JSON.stringify(this.data);
         let dataUri =

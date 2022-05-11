@@ -7,9 +7,9 @@ import {
   ValueFormatterParams,
 } from 'ag-grid-community';
 import { ToastrService } from 'ngx-toastr';
-import { ChargingService } from 'src/app/service/charging.service';
 
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { LiveWallPaperService } from 'src/app/service/live-wallpaper.service';
 import { CustomTooltipComponent } from '../charging-list/custom-tooltip/custom-tooltip.component';
 
 declare const $: any;
@@ -93,7 +93,7 @@ export class LiveWallpaperListComponent implements OnInit {
     return params.data.rowHeight;
   }
   constructor(
-    private chargingService: ChargingService, 
+    private liveWallPaperService: LiveWallPaperService, 
     public router: Router, 
     public route: ActivatedRoute,
     private toastr: ToastrService,
@@ -101,7 +101,7 @@ export class LiveWallpaperListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.chargingService.getListLiveWallpaper().subscribe((res) => {
+    this.liveWallPaperService.getListLiveWallPaper().subscribe((res) => {
       res.data.datas.forEach(function (dataItem: any, index: number) {
         dataItem.rowHeight =
           dataItem.thumbs?.length > dataItem.videos?.length
@@ -124,7 +124,7 @@ export class LiveWallpaperListComponent implements OnInit {
   }
 
   confirm(): void {
-    this.chargingService.deleteCharging(this.selectedID).subscribe(
+    this.liveWallPaperService.deleteLiveWallPaper(this.selectedID).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Xoá thành công!');
@@ -149,7 +149,7 @@ export class LiveWallpaperListComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingService.getListCharging().subscribe((res) => {
+    this.liveWallPaperService.getListLiveWallPaper().subscribe((res) => {
       if (res) {
         let dataStr = JSON.stringify(this.data);
         let dataUri =

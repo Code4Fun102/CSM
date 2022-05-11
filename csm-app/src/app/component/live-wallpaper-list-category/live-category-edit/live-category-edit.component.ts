@@ -3,6 +3,8 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { ChargingService } from 'src/app/service/charging.service';
 import { ChargingCategoryModel } from 'src/app/share/model/ChargingCategory';
+import { LiveCategoryModel } from 'src/app/share/model/live-category';
+import { LiveCategoryService } from 'src/app/service/live-category.service';
 
 @Component({
   selector: 'app-live-category-edit',
@@ -12,21 +14,21 @@ import { ChargingCategoryModel } from 'src/app/share/model/ChargingCategory';
 export class LiveCategoryEditComponent implements OnInit {
 
     id;
-    model: ChargingCategoryModel = {
+    model: LiveCategoryModel = {
       links: [],
       icon: [],
       name: ""
     };
     constructor(
       public route: ActivatedRoute,
-      private chargingService: ChargingService,
+      private liveCategoryService: LiveCategoryService,
       private location: Location
     ) {}
   
     ngOnInit(): void {
       this.id = this.route.snapshot.params['id'];
       if (this.id) {
-        this.chargingService.getChargingByID(this.id).subscribe((res) => {
+        this.liveCategoryService.getLiveCategoryByID(this.id).subscribe((res) => {
           if (res) {
             const result = res;
             this.model = result.data;
@@ -36,26 +38,30 @@ export class LiveCategoryEditComponent implements OnInit {
     }
   
     addLinks() {
-      this.model.links.push('');
+      //this.model.links.push('');
     }
     deleteLinks(index) {
       this.model.links.splice(index, 1);
     }
   
     addBackground() {
-      this.model.background.push('');
+      //this.model.background.push('');
     }
     deleteBackground(index) {
-      this.model.background.splice(index, 1);
+      //this.model.background.splice(index, 1);
     }
   
     addIcon() {
-      this.model.icon.push('');
+      //this.model.icon.push('');
     }
     deleteIcon(index) {
       this.model.icon.splice(index, 1);
     }
     back() {
       this.location.back();
+    }
+
+    saveData(){
+      this.liveCategoryService.saveLiveCategory(this.model);
     }
   }

@@ -25,9 +25,7 @@ export class ChargingService {
   getListLiveWallpaper() {
     return this.http.get<result>('http://localhost:3000/live-item');
   }
-  getListchargingCategory() {
-    return this.http.get<any>(`${environment.baseUrl}/v1/categories`);
-  }
+  
   getListliveCategory() {
     return this.http.get<result>('http://localhost:3000/live-category');
   }
@@ -37,5 +35,9 @@ export class ChargingService {
     this.http.get(url).subscribe((res) => {
       console.log(res);
     });
+  }
+
+  saveCharging(model){
+    return this.http.post<result>(`http://localhost:3000/charging-item/`, model);
   }
 }

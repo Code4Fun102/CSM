@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ChargingService } from 'src/app/service/charging.service';
 import { ChargingModel } from 'src/app/share/model/charging';
 import { ChargingCategoryModel } from 'src/app/share/model/ChargingCategory';
+import { ChargingCategoryService } from 'src/app/service/charging-category.service';
 
 @Component({
   selector: 'app-charging-category-edit',
@@ -20,14 +21,14 @@ export class ChargingCategoryEditComponent implements OnInit {
     };
     constructor(
       public route: ActivatedRoute,
-      private chargingService: ChargingService,
+      private chargingCategoryService: ChargingCategoryService,
       private location: Location
     ) {}
   
     ngOnInit(): void {
       this.id = this.route.snapshot.params['id'];
       if (this.id) {
-        this.chargingService.getChargingByID(this.id).subscribe((res) => {
+        this.chargingCategoryService.getChargingCategoryByID(this.id).subscribe((res) => {
           if (res && res.success) {
             this.model = res.data;
           }
@@ -57,5 +58,9 @@ export class ChargingCategoryEditComponent implements OnInit {
     }
     back() {
       this.location.back();
+    }
+
+    saveData(){
+      this.chargingCategoryService.saveChargingCategory(this.model);
     }
   }

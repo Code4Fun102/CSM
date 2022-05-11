@@ -66,4 +66,8 @@ export class ChargingEditComponent implements OnInit {
   back() {
     this.location.back();
   }
+
+  saveData(){
+    this.chargingService.saveCharging(this.model);
+  }
 }
