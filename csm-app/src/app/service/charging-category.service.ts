@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ChargingModel } from '../share/model/charging';
+import { ChargingCategoryModel } from '../share/model/ChargingCategory';
 import { result } from '../share/model/result';
 
 @Injectable({
@@ -23,7 +24,13 @@ export class ChargingCategoryService {
     return this.http.delete<result>(`${environment.baseUrl}/v1/categories/${id}`);
   }
 
-  saveChargingCategory(model){
-    return this.http.put<result>(`${environment.baseUrl}/v1/categories/`, model);
+  saveChargingCategory(model: ChargingCategoryModel, id){
+    const dataSave = {
+      links: JSON.stringify(model.links),
+      icon: JSON.stringify(model.icon),
+      name: model.name,
+      background: JSON.stringify(model.background)
+    }
+    return this.http.put<result>(`${environment.baseUrl}/v1/categories/${id}`, dataSave);
   }
 }

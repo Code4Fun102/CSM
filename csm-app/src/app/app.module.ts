@@ -15,6 +15,7 @@ import { SharedModule } from './share/share.module';
 import { ToastrModule } from 'ngx-toastr';
 import { JwtInterceptor } from './interceptor/jwt.interceptor';
 import { AuthGuard } from './guard/auth.guard';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { AuthGuard } from './guard/auth.guard';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     SharedModule,
     ToastrModule.forRoot(),

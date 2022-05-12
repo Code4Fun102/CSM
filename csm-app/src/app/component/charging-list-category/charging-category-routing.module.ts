@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChargingListCategoryComponent } from './charging-list-category.component';
 import { ChargingCategoryEditComponent } from './charging-category-edit/charging-category-edit.component';

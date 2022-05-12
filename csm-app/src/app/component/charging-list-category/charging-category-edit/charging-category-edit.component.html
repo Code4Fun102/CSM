@@ -6,13 +6,14 @@
     </button>
   </div>
   <div class="form-charging">    
+    <app-loading [loader]="isLoading"></app-loading>
     <div class="form-group">
       <div class="url-input flex">
         <div class="label">Links</div>
         <div class="list-input flex">
           <ng-container *ngFor="let link of model.links; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" [(ngModel)] = "link" placeholder="links" />
+              <input type="text" class="form-control" [value]="link" placeholder="links" (input)="changeLink($event, link, i)" />
               <button class="btn btn-danger" (click)="deleteLinks(i)">
                 Xoá
               </button>
@@ -37,7 +38,7 @@
         <div class="list-input flex">
           <ng-container *ngFor="let background of model.background; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" [(ngModel)] ="background" placeholder="background" />
+              <input type="text" class="form-control" [value]="background" placeholder="background" (input)="changeBackground($event, background, i)" />
               <button class="btn btn-danger" (click)="deleteBackground(i)">
                 Xoá
               </button>
@@ -63,7 +64,7 @@
         <div class="list-input flex">
           <ng-container *ngFor="let icon of model.icon; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" [(ngModel)]="icon" placeholder="icon" />
+              <input type="text" class="form-control" [value]="icon" placeholder="icon" (input)="changeIcon($event, icon, i)"  />
               <button class="btn btn-danger" (click)="deleteIcon(i)">
                 Xoá
               </button>
@@ -87,12 +88,12 @@
           <div class="list-input flex">
             <ng-container>
               <div class="flex" style="margin: 0 4px 8px 4px;">
-                <input type="text" class="form-control" [(ngModel)]="model.name" placeholder="name" />
+                <input type="text" class="form-control" [(ngModel)]="modelToSave.name" placeholder="name" />
               </div>
             </ng-container>
           </div>
         </div>
       </div>
-    <button class="btn btn-primary">Lưu</button>
+    <button class="btn btn-primary" (click)="saveData()">Lưu</button>
   </div>
 </div>

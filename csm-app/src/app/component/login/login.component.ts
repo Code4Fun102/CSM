@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     this.error = "";
     this.loginService.login(this.loginForm.value).subscribe(rs => {
       if (rs) {
-        this.router.navigate(["charging"])
+        this.router.navigate(["charging-category"])
       }
     });
   }
