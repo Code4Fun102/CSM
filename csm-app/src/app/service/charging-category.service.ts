@@ -26,13 +26,13 @@ export class ChargingCategoryService {
 
   saveChargingCategory(model: ChargingCategoryModel, id){
     const dataSave = {
-      links: JSON.stringify(model.links),
-      icon: JSON.stringify(model.icon),
+      links: model.links,
+      icon: model.icon,
       name: model.name,
-      background: JSON.stringify(model.background)
+      background: model.background
     }
     if(!id){
-      return this.http.put<result>(`${environment.baseUrl}/v1/categories`, dataSave);
+      return this.http.post<result>(`${environment.baseUrl}/v1/categories`, dataSave);
     }
     return this.http.put<result>(`${environment.baseUrl}/v1/categories/${id}`, dataSave);
   }

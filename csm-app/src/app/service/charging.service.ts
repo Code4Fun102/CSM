@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { ChargingModel } from '../share/model/charging';
 import { result } from '../share/model/result';
 
 @Injectable({
@@ -36,7 +37,14 @@ export class ChargingService {
     });
   }
 
-  saveCharging(model) {
+  saveCharging(model, id) {
     return this.http.post<result>(`${environment.baseUrl}charging-item/`, model);
+  }
+
+  saveChargingCategory(model: ChargingModel, id){
+    if(!id){
+      return this.http.post<result>(`${environment.baseUrl}/v1/categories`, model);
+    }
+    return this.http.put<result>(`${environment.baseUrl}/v1/categories/${id}`, model);
   }
 }

@@ -42,9 +42,6 @@ export class ChargingCategoryEditComponent implements OnInit {
           if (res) {
             const data = res.data;
             this.model = data;
-            this.model.background = JSON.parse(data.background);
-            this.model.links = JSON.parse(data.links);
-            this.model.icon = JSON.parse(data.icon);
 
             this.modelToSave = JSON.parse(JSON.stringify(this.model));
           }
