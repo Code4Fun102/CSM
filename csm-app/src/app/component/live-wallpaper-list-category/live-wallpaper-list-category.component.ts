@@ -74,8 +74,8 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'links',
-      tooltipComponentParams: { type: 0 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 0 },
+      // tooltipComponent: CustomTooltipComponent,
     }, {
       field: 'icon',
       cellRenderer: (data: ICellRendererParams) => {

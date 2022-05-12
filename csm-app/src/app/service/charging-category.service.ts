@@ -31,6 +31,9 @@ export class ChargingCategoryService {
       name: model.name,
       background: JSON.stringify(model.background)
     }
+    if(!id){
+      return this.http.put<result>(`${environment.baseUrl}/v1/categories`, dataSave);
+    }
     return this.http.put<result>(`${environment.baseUrl}/v1/categories/${id}`, dataSave);
   }
 }
