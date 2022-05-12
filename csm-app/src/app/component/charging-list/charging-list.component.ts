@@ -179,7 +179,6 @@ export class ChargingListComponent implements OnInit {
         linkElement.click();
       }
     });
-    this.chargingService.export();
   }
   back() {
     this.location.back();
