@@ -1,23 +1,35 @@
-<div class="mb-3">
-  <label for="formFile" class="form-label">Thumbs</label>
-  <input class="form-control" type="file" accept="image/*" id="humbs">
+
+<div class="file-category">
+  <span class="margin-right-8">Loại nhóm</span>
+  <select [(ngModel)]="data.category">
+    <option value="Trending">Trending</option>
+    <option value="Trending1">Trending 2</option>
+    <option value="Trending2">Trending 3</option>
+  </select>
 </div>
 
 <div class="mb-3">
-  <label for="formFile" class="form-label">Thumb Videos</label>
-  <input class="form-control" type="file" accept="image/*"  id="thumbvideos">
-</div>
-
-<div class="mb-3">
-  <label for="formFile" class="form-label">Videos</label>
-  <input class="form-control" type="file" accept="video/mp4" id="videos">
-</div>
-
-<div class="mb-3">
-  <label for="formFile" class="form-label">Sounds</label>
-  <input class="form-control" type="file" accept="audio/mp3" id="sounds">
+  <label for="formPriority" class="form-label">Priority</label>
+  <input [(ngModel)]="data.priority" class="form-control" type="number" accept="audio/mp3" id="priority">
 </div>
 <div class="mb-3">
   <label class="form-label">IsPremium</label>
-  <input class="form-control" type="text" accept="image/*" id="isPremium">
+  <input [(ngModel)]="data.isPremium" class="form-check-input" style="margin: 3px 8px;" type="checkbox" id="isPremium">
 </div>
+
+<div class="mb-3">
+  <label for="formFile1" class="form-label">Thumbs</label>
+  <input (change)="onFileChange($event, 1)" class="form-control" type="file" accept="image/*" id="thumbs">
+</div>
+
+<div class="mb-3">
+  <label for="formFile2" class="form-label">Thumb Videos</label>
+  <input (change)="onFileChange($event, 2)" class="form-control" type="file" accept="image/*"  id="thumbvideos">
+</div>
+
+<div class="mb-3">
+  <label for="formFile3" class="form-label">Videos</label>
+  <input (change)="onFileChange($event, 3)" class="form-control" type="file" accept="video/mp4" id="videos">
+</div>
+
+<button class="btn btn-primary" (click)="saveData()">Lưu</button>

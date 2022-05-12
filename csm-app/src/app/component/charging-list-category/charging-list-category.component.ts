@@ -87,8 +87,8 @@ export class ChargingListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'icon',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
     },
     {
       field: 'background',
@@ -102,8 +102,8 @@ export class ChargingListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'background',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
     },
 
   ];
