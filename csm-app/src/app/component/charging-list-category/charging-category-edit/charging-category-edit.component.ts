@@ -31,10 +31,10 @@ export class ChargingCategoryEditComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.isLoading = true;
     this.modelToSave = JSON.parse(JSON.stringify(this.model));
     this.id = this.route.snapshot.params['id'];
     if (this.id) {
+      this.isLoading = true;
       this.chargingCategoryService
         .getChargingCategoryByID(this.id)
         .subscribe((res) => {
