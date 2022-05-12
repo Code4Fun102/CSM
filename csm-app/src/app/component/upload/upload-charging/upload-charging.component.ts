@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { ChargingCategoryService } from 'src/app/service/charging-category.service';
 import { UploadChargingService } from 'src/app/service/upload/upload-charging.service';
 import { UploadChargingModel } from 'src/app/share/model/upload/upload-charging';
 
@@ -9,28 +10,37 @@ import { UploadChargingModel } from 'src/app/share/model/upload/upload-charging'
   styleUrls: ['./upload-charging.component.scss'],
 })
 export class UploadChargingComponent implements OnInit {
-
+  chargingCategory = [];
   data: UploadChargingModel = new UploadChargingModel();
 
   formData = new FormData();
-  constructor(private uploadChargingService: UploadChargingService,
-    private toastr: ToastrService) {}
+  constructor(
+    private uploadChargingService: UploadChargingService,
+    private toastr: ToastrService,
+    private chargingCategoryService: ChargingCategoryService
+  ) {}
 
   ngOnInit(): void {
-    this.data.category = "Trending";
+    this.chargingCategoryService.getListChargingCategory().subscribe(res=>{
+      if(res && res.data){
+        this.chargingCategory = res.data;
+      }
+    });
   }
 
   saveData() {
-    this.formData.set("isPremium", this.data.isPremium ? 'true' : 'false');
-    this.formData.set("category", this.data.category);
-    this.formData.set("priority", this.data.priority.toString());
-    this.uploadChargingService.uploadData(this.formData).subscribe((res) => {
-      // console.log(res);
-      this.toastr.success("Lưu thành công");
-    },
-    err=>{
-      this.toastr.error("Có lỗi xảy ra!");
-    });
+    this.formData.set('isPremium', this.data.isPremium ? 'true' : 'false');
+    this.formData.set('category', this.data.category);
+    this.formData.set('priority', this.data.priority.toString());
+    this.uploadChargingService.uploadData(this.formData).subscribe(
+      (res) => {
+        // console.log(res);
+        this.toastr.success('Lưu thành công');
+      },
+      (err) => {
+        this.toastr.error('Có lỗi xảy ra!');
+      }
+    );
   }
 
   onFileChange(event, type) {
@@ -42,5 +52,4 @@ export class UploadChargingComponent implements OnInit {
       this.formData.set('videos', event.target.files[0]);
     }
   }
-
 }

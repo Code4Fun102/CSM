@@ -92,6 +92,8 @@ export class ChargingEditComponent implements OnInit {
   }
 
   saveData() {
+    this.toastr.info("Chức năng đang trong quá trình thi công");
+    return;
     this.isLoading = true;
     console.log(this.model);
     console.log(this.modelToSave);

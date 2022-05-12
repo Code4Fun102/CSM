@@ -6,6 +6,7 @@ import { SharedModule } from 'src/app/share/share.module';
 import { LiveWallpaperListCategoryComponent } from './live-wallpaper-list-category.component';
 import { LiveCategoryEditComponent } from './live-category-edit/live-category-edit.component';
 import { LiveCategoryRoutingModule } from './live-category-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LiveCategoryRoutingModule } from './live-category-routing.module';
     CommonModule,
     AgGridModule,
     LiveCategoryRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
   ],
   providers: []
 })

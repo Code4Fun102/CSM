@@ -2,9 +2,7 @@
 <div class="file-category">
   <span class="margin-right-8">Loại nhóm</span>
   <select [(ngModel)]="data.category">
-    <option value="Trending">Trending</option>
-    <option value="Trending1">Trending 2</option>
-    <option value="Trending2">Trending 3</option>
+    <option *ngFor="let category of chargingCategory" [value]="category.id">{{category.name}}</option>
   </select>
 </div>
 

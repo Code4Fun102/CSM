@@ -1,10 +1,8 @@
 
 <div class="file-category">
   <span class="margin-right-8">Loại nhóm</span>
-  <select >
-    <option value="1">catgory 1</option>
-    <option value="2">catgory 2</option>
-    <option value="3">catgory 3</option>
+  <select [(ngModel)]="data.category">
+    <option *ngFor="let category of chargingCategory" [value]="category.id">{{category.name}}</option>
   </select>
 </div>
 
@@ -19,10 +17,6 @@
 </div>
 
 <div class="mb-3">
-  <label class="form-label">IsLiveWallpaper</label>
-  <input class="form-control" type="checkbox" id="isLiveWallpaper">
-</div>
-<div class="mb-3">
   <label class="form-label">IsPremium</label>
-  <input class="form-control" type="text" accept="image/*" id="isPremium">
-</div>
+  <input [(ngModel)]="data.isPremium" class="form-check-input" style="margin: 3px 8px;" type="checkbox" id="isPremium">
+</div> 

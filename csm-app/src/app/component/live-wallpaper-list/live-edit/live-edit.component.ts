@@ -3,6 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { LiveWallPaperModel } from 'src/app/share/model/live-wallpaper';
 import { LiveWallPaperService } from 'src/app/service/live-wallpaper.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-live-edit',
@@ -22,7 +23,8 @@ export class LiveEditComponent implements OnInit {
     constructor(
       public route: ActivatedRoute,
       private liveWallPaperService: LiveWallPaperService,
-      private location: Location
+      private location: Location,
+      private toastr: ToastrService
     ) {}
   
     ngOnInit(): void {
@@ -54,6 +56,8 @@ export class LiveEditComponent implements OnInit {
     }
 
     saveData(){
+      this.toastr.info("Chức năng đang trong quá trình thi công");
+      return;
       this.liveWallPaperService.saveLiveWallPaper(this.model);
     }
   }

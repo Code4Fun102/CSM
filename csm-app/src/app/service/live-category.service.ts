@@ -14,7 +14,7 @@ export class LiveCategoryService {
   }
   getLiveCategoryByID(id) {
     return this.http.get<result>(
-      `${environment.baseUrl}/LiveCategory/${id}`
+      `${environment.baseUrl}/v1/assets/categories/${id}`
     );
   }
   deleteLiveCategory(id) {

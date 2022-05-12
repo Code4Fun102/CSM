@@ -1,5 +1,6 @@
 export class LiveCategoryModel {
-  links: [];
-  icon: [];
+  links: string[];
+  icon: string[];
+  background: string[];
   name: string
 }

@@ -99,7 +99,7 @@
           <div class="list-input flex">
             <ng-container>
               <div class="flex" style="margin: 0 4px 8px 4px;">
-                <input type="checkbox" placeholder="isPremium" />
+                <input [(ngModel)]="modelToSave.isPremium" type="checkbox" placeholder="isPremium" />
               </div>
             </ng-container>
           </div>
@@ -112,7 +112,7 @@
           <div class="list-input flex">
             <ng-container>
               <div class="flex" style="margin: 0 4px 8px 4px;">
-                <input type="number" class="form-control" placeholder="priority" />
+                <input [(ngModel)]="modelToSave.priority" type="number" class="form-control" placeholder="priority" />
               </div>
             </ng-container>
           </div>
