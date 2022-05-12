@@ -1,7 +1,7 @@
 export class LiveWallPaperModel {
-  videos: [];
+  videos: string[];
   isPremium: boolean;
   isLiveWallpaper: boolean;
   priority: number;
-  thumbs: [];
+  thumbs: string[];
 }

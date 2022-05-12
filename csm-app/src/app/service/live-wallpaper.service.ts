@@ -14,7 +14,7 @@ export class LiveWallPaperService {
     return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${caregoryId}/items`);
   }
   getLiveWallPaperByID(id) {
-    return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
+    return this.http.get<result>(`${environment.baseUrl}/v1/assets/items/${id}`);
   }
   deleteLiveWallPaper(id) {
     return this.http.delete<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
