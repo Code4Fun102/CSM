@@ -28,12 +28,13 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   columnDefs: ColDef[] = [
     {
       headerName: '',
-      width: 110,
+      width: 150,
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
         eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
-          <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>`;
+          <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
+          <span class="my-css-class"><button class="btn btn-info btn-view">Xem</button></span>`;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
@@ -48,6 +49,15 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
           me.selectedID = data.data.id;
           me.openModal();
         });
+
+        let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
+
+        eButtonView.addEventListener('click', function () {
+          me.router.navigate([`live-item/${data.data.id}`], {
+            relativeTo: me.route,
+          });
+        });
+
         return eDiv;
       },
     },

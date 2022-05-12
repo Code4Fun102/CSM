@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { LiveWallpaperListCategoryComponent } from './live-wallpaper-list-category.component';
 import { LiveCategoryEditComponent } from './live-category-edit/live-category-edit.component';
+import { LiveWallpaperListComponent } from '../live-wallpaper-list/live-wallpaper-list.component';
 
 
 
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'live-category-add',
     component: LiveCategoryEditComponent
+  },
+  {
+    path: 'live-item/:id',
+    component: LiveWallpaperListComponent
   }
 ];
 

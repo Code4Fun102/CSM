@@ -28,7 +28,7 @@ export class LiveWallpaperListComponent implements OnInit {
   columnDefs: ColDef[] = [
     {
       headerName: '',
-      width: 110,
+      width: 150,
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
@@ -51,6 +51,9 @@ export class LiveWallpaperListComponent implements OnInit {
         return eDiv;
       },
     },
+    { field: 'isPremium' },
+    { field: 'isLiveWallpaper' },
+    { field: 'priority' },
     {
       field: 'videos',
       cellRenderer: (data: ICellRendererParams) => {
@@ -66,9 +69,6 @@ export class LiveWallpaperListComponent implements OnInit {
       tooltipComponentParams: { type: 2 },
       tooltipComponent: CustomTooltipComponent,
     },
-    { field: 'isPremium' },
-    { field: 'isLiveWallpaper' },
-    { field: 'priority' },
     {
       field: 'thumbs',
       cellRenderer: (data: ICellRendererParams) => {
@@ -101,7 +101,8 @@ export class LiveWallpaperListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.liveWallPaperService.getListLiveWallPaper().subscribe((res) => {
+    const id: number = this.route.snapshot.params["id"];
+    this.liveWallPaperService.getListLiveWallPaper(id).subscribe((res) => {
       if(res && res.data)
       {
         const data = res.data.datas;

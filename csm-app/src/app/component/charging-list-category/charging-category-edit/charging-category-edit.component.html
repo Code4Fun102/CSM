@@ -12,7 +12,7 @@
         <div class="list-input flex">
           <ng-container *ngFor="let link of model.links; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" placeholder="links" />
+              <input type="text" class="form-control" [(ngModel)] = "link" placeholder="links" />
               <button class="btn btn-danger" (click)="deleteLinks(i)">
                 Xoá
               </button>
@@ -37,7 +37,7 @@
         <div class="list-input flex">
           <ng-container *ngFor="let background of model.background; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" placeholder="background" />
+              <input type="text" class="form-control" [(ngModel)] ="background" placeholder="background" />
               <button class="btn btn-danger" (click)="deleteBackground(i)">
                 Xoá
               </button>
@@ -61,9 +61,9 @@
       <div class="url-input flex">
         <div class="label">Icon</div>
         <div class="list-input flex">
-          <ng-container *ngFor="let sound of model.icon; let i = index">
+          <ng-container *ngFor="let icon of model.icon; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <input type="text" class="form-control" placeholder="icon" />
+              <input type="text" class="form-control" [(ngModel)]="icon" placeholder="icon" />
               <button class="btn btn-danger" (click)="deleteIcon(i)">
                 Xoá
               </button>
@@ -87,7 +87,7 @@
           <div class="list-input flex">
             <ng-container>
               <div class="flex" style="margin: 0 4px 8px 4px;">
-                <input type="text" class="form-control" placeholder="name" />
+                <input type="text" class="form-control" [(ngModel)]="model.name" placeholder="name" />
               </div>
             </ng-container>
           </div>

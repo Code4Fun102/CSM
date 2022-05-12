@@ -12,7 +12,7 @@ import { ChargingCategoryService } from 'src/app/service/charging-category.servi
   styleUrls: ['./charging-category-edit.component.scss']
 })
 export class ChargingCategoryEditComponent implements OnInit {
-    id;
+    id: number;
     model: ChargingCategoryModel = {
       links: [],
       background: [],
@@ -29,8 +29,12 @@ export class ChargingCategoryEditComponent implements OnInit {
       this.id = this.route.snapshot.params['id'];
       if (this.id) {
         this.chargingCategoryService.getChargingCategoryByID(this.id).subscribe((res) => {
-          if (res && res.success) {
-            this.model = res.data;
+          if (res) {
+            const data = res.data;
+            this.model = data;
+            this.model.background = JSON.parse(data.background);
+            this.model.links = JSON.parse(data.links);
+            this.model.icon = JSON.parse(data.icon);
           }
         });
       }

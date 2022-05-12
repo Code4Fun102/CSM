@@ -16,14 +16,14 @@ export class ChargingCategoryService {
   
   getChargingCategoryByID(id) {
     return this.http.get<result>(
-      `${environment.baseUrl}/list-Category/${id}`
+      `${environment.baseUrl}/v1/categories/${id}`
     );
   }
   deleteChargingCategory(id) {
-    return this.http.delete<result>(`${environment.baseUrl}/charging-Category/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/categories/${id}`);
   }
 
   saveChargingCategory(model){
-    return this.http.post<result>(`${environment.baseUrl}/charging-Category/`, model);
+    return this.http.put<result>(`${environment.baseUrl}/v1/categories/`, model);
   }
 }

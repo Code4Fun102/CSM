@@ -6,6 +6,7 @@ import { SharedModule } from 'src/app/share/share.module';
 import { ChargingCategoryRoutingModule } from './charging-category-routing.module';
 import { ChargingListCategoryComponent } from './charging-list-category.component';
 import { ChargingCategoryEditComponent } from './charging-category-edit/charging-category-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,6 +18,7 @@ import { ChargingCategoryEditComponent } from './charging-category-edit/charging
   imports: [
     RouterModule,
     CommonModule,
+    FormsModule,
     AgGridModule,
     SharedModule,
     ChargingCategoryRoutingModule

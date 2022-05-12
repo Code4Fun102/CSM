@@ -32,8 +32,10 @@ export class ChargingListComponent implements OnInit {
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
-        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
-          <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>`;
+        eDiv.innerHTML = 
+         `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
+          <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
+          `;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
@@ -48,6 +50,7 @@ export class ChargingListComponent implements OnInit {
           me.selectedID = data.data.id;
           me.openModal();
         });
+
         return eDiv;
       },
     },
@@ -99,7 +102,8 @@ export class ChargingListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.chargingService.getListCharging().subscribe((res) => {
+    const id: number = this.route.snapshot.params["id"];
+    this.chargingService.getListCharging(id).subscribe((res) => {
       if(res && res.data)
       {
         const data = res.data.datas;

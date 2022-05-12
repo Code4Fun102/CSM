@@ -13,7 +13,7 @@ import { LiveCategoryService } from 'src/app/service/live-category.service';
 })
 export class LiveCategoryEditComponent implements OnInit {
 
-    id;
+    id :number;
     model: LiveCategoryModel = {
       links: [],
       icon: [],
@@ -36,7 +36,7 @@ export class LiveCategoryEditComponent implements OnInit {
         });
       }
     }
-  
+  // hoavntb
     addLinks() {
       //this.model.links.push('');
     }
