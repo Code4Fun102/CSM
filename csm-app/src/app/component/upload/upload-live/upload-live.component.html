@@ -10,12 +10,12 @@
 
 <div class="mb-3">
   <label for="formFile" class="form-label">Videos</label>
-  <input class="form-control" type="file" accept="video/mp4" id="videos">
+  <input class="form-control" (change)="onFileChange($event, 3)" type="file" accept="video/mp4" id="videos">
 </div>
 
 <div class="mb-3">
   <label for="formFile" class="form-label">Thumbs</label>
-  <input class="form-control" type="file" accept="image/*" id="thumbs">
+  <input class="form-control" (change)="onFileChange($event, 1)" type="file" accept="image/*" id="thumbs">
 </div>
 
 <div class="mb-3">

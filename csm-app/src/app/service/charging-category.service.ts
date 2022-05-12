@@ -17,7 +17,7 @@ export class ChargingCategoryService {
   
   getChargingCategoryByID(id) {
     return this.http.get<result>(
-      `${environment.baseUrl}/v1/categories/${id}`
+      `${environment.baseUrl}/v1/assets/categories/${id}`
     );
   }
   deleteChargingCategory(id) {

@@ -10,6 +10,7 @@ import { ChargingModel } from 'src/app/share/model/charging';
   styleUrls: ['./charging-edit.component.scss'],
 })
 export class ChargingEditComponent implements OnInit {
+  isLoading = false;
   id;
   model: ChargingModel = {
     thumbs: [],
@@ -19,6 +20,7 @@ export class ChargingEditComponent implements OnInit {
     priority: null,
     isPremium: false
   };
+  modelToSave: ChargingModel;
   constructor(
     public route: ActivatedRoute,
     private chargingService: ChargingService,

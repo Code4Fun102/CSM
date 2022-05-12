@@ -15,7 +15,7 @@ export class ChargingService {
     return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${categoryId}/items`);
   }
   getChargingByID(id) {
-    return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
+    return this.http.get<result>(`${environment.baseUrl}/v1/assets/items/${id}`);
   }
   deleteCharging(id) {
     return this.http.delete<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
