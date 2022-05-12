@@ -55,7 +55,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
 
         eButtonView.addEventListener('click', function () {
-          me.router.navigate([`live-item/${data.data.id}/${data.data.name}`], {
+          me.router.navigate([`live-item/${data.data.id}/${data.data.name||'Default Name'}`], {
             relativeTo: me.route,
           });
         });

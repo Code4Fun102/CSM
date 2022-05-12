@@ -52,7 +52,7 @@ export class ChargingListCategoryComponent implements OnInit {
         let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
 
         eButtonView.addEventListener('click', function () {
-          me.router.navigate([`charging-item/${data.data.id}/${data.data.name}`], {
+          me.router.navigate([`charging-item/${data.data.id}/${data.data.name||'Default Name'}`], {
             relativeTo: me.route,
           });
         });
