@@ -21,7 +21,7 @@ const routes: Routes = [
     component: LiveCategoryEditComponent
   },
   {
-    path: 'live-item/:id',
+    path: 'live-item/:id/:name',
     component: LiveWallpaperListComponent
   }
 ];

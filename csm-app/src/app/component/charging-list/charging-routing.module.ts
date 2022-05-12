@@ -4,10 +4,10 @@ import { ChargingEditComponent } from './charging-edit/charging-edit.component';
 import { ChargingListComponent } from './charging-list.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ChargingListComponent,
-  },
+  // {
+  //   path: '',
+  //   component: ChargingListComponent,
+  // },
   {
     path: 'charging-edit/:id',
     component: ChargingEditComponent

@@ -19,7 +19,7 @@ const routes: Routes = [
     component: ChargingCategoryEditComponent
   },
   {
-    path: 'charging-item/:id',
+    path: 'charging-item/:id/:name',
     component: ChargingListComponent
   }
 ];

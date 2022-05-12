@@ -11,6 +11,8 @@ import { ChargingService } from 'src/app/service/charging.service';
 import { CustomTooltipComponent } from '../charging-list/custom-tooltip/custom-tooltip.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ChargingCategoryService } from 'src/app/service/charging-category.service';
+import { LiveCategoryService } from 'src/app/service/live-category.service';
+import { LiveWallPaperService } from 'src/app/service/live-wallpaper.service';
 declare const $: any;
 @Component({
   selector: 'app-live-wallpaper-list-category',
@@ -53,7 +55,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
 
         eButtonView.addEventListener('click', function () {
-          me.router.navigate([`live-item/${data.data.id}`], {
+          me.router.navigate([`live-item/${data.data.id}/${data.data.name}`], {
             relativeTo: me.route,
           });
         });
@@ -99,7 +101,8 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     return params.data.rowHeight;
   }
   constructor(
-    private chargingCategory: ChargingCategoryService, 
+    private liveCategoryService: LiveCategoryService, 
+    private liveWallPaperService: LiveWallPaperService, 
     public router: Router, 
     public route: ActivatedRoute,
     private toastr: ToastrService,
@@ -107,16 +110,17 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.chargingCategory.getListChargingCategory().subscribe((res) => {
+    this.liveCategoryService.getListLiveCategory().subscribe((res) => {
       if(res && res.data)
       {
-        res?.data?.forEach(function (dataItem: any, index: number) {
+        const result = res.data;
+        result?.forEach(function (dataItem: any, index: number) {
           dataItem.rowHeight =
             dataItem.links?.length > dataItem.icon?.length
               ? dataItem.links?.length * 48
               : dataItem.icon?.length * 48;
         });
-        this.data = res.data;
+        this.data = result;
       }
       else{
         this.data = [];
@@ -137,7 +141,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   }
 
   confirm(): void {
-    this.chargingCategory.deleteChargingCategory(this.selectedID).subscribe(
+    this.liveCategoryService.deleteLiveCategory(this.selectedID).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Xoá thành công!');
@@ -162,13 +166,13 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingCategory.getListChargingCategory().subscribe((res) => {
+    this.liveCategoryService.getListLiveCategory().subscribe((res) => {
       if (res) {
         let dataStr = JSON.stringify(this.data);
         let dataUri =
           'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
-        let exportFileDefaultName = 'data.json';
+        let exportFileDefaultName = 'live_wallpaper_category_list.json';
 
         let linkElement = document.createElement('a');
         linkElement.setAttribute('href', dataUri);
