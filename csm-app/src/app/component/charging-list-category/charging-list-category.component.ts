@@ -52,7 +52,7 @@ export class ChargingListCategoryComponent implements OnInit {
         let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
 
         eButtonView.addEventListener('click', function () {
-          me.router.navigate([`charging-item/${data.data.id}`], {
+          me.router.navigate([`charging-item/${data.data.id}/${data.data.name}`], {
             relativeTo: me.route,
           });
         });
@@ -89,6 +89,7 @@ export class ChargingListCategoryComponent implements OnInit {
       tooltipField: 'icon',
       tooltipComponentParams: { type: 1 },
       tooltipComponent: CustomTooltipComponent,
+
     },
     {
       field: 'background',
@@ -104,6 +105,7 @@ export class ChargingListCategoryComponent implements OnInit {
       tooltipField: 'background',
       tooltipComponentParams: { type: 1 },
       tooltipComponent: CustomTooltipComponent,
+
     },
 
   ];
@@ -115,6 +117,7 @@ export class ChargingListCategoryComponent implements OnInit {
   }
   constructor(
     private chargingCategoryService: ChargingCategoryService,
+    private chargingService: ChargingService,
     public router: Router,
     public route: ActivatedRoute,
     private toastr: ToastrService,
@@ -125,14 +128,14 @@ export class ChargingListCategoryComponent implements OnInit {
     this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
         if(res && res.data)
         {
-          const data = res.data
-          data.forEach(function (dataItem: any, index: number) {
+          const result = res.data
+          result?.forEach(function (dataItem: any, index: number) {
             dataItem.rowHeight =
               dataItem.links?.length > dataItem.background?.length
                 ? dataItem.links?.length * 48
                 : dataItem.background?.length * 48;
           });
-          this.data = data;
+          this.data = result;
         }
         else{
           this.data = []
@@ -183,7 +186,7 @@ export class ChargingListCategoryComponent implements OnInit {
         let dataUri =
           'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
-        let exportFileDefaultName = 'data.json';
+        let exportFileDefaultName = 'charging_category_list.json';
 
         let linkElement = document.createElement('a');
         linkElement.setAttribute('href', dataUri);

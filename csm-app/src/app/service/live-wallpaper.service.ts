@@ -1,16 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { ChargingModel } from '../share/model/charging';
 import { result } from '../share/model/result';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LiveWallPaperService {
-  constructor(private http: HttpClient) { }
 
-  getListLiveWallPaper(caregoryId?:number) {
+  constructor(private http: HttpClient) {
+  }
+  getListLiveWallPaper(caregoryId?: number) {
     return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${caregoryId}/items`);
   }
   getLiveWallPaperByID(id) {

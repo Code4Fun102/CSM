@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import {
   ColDef,
   ICellRendererParams,
@@ -19,6 +20,7 @@ declare const $: any;
   styleUrls: ['./live-wallpaper-list.component.scss']
 })
 export class LiveWallpaperListComponent implements OnInit {
+  name: '';
   data;
   gridApi;
   gridColumnApi;
@@ -92,17 +94,20 @@ export class LiveWallpaperListComponent implements OnInit {
   getRowHeight(params: RowHeightParams): number | undefined | null {
     return params.data.rowHeight;
   }
+  id:number;
   constructor(
     private liveWallPaperService: LiveWallPaperService, 
     public router: Router, 
     public route: ActivatedRoute,
     private toastr: ToastrService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
-    const id: number = this.route.snapshot.params["id"];
-    this.liveWallPaperService.getListLiveWallPaper(id).subscribe((res) => {
+    this.id = this.route.snapshot.params["id"];
+    this.name = this.route.snapshot.params["name"];
+    this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
       if(res && res.data)
       {
         const data = res.data.datas;
@@ -157,13 +162,16 @@ export class LiveWallpaperListComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.liveWallPaperService.getListLiveWallPaper().subscribe((res) => {
+    this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
       if (res) {
-        let dataStr = JSON.stringify(this.data);
+        let dataStr: any = {
+          "idName": this.name,
+          "datas": this.data
+        };
         let dataUri =
-          'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+          'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
 
-        let exportFileDefaultName = 'data.json';
+        let exportFileDefaultName = 'live_wallpaper_list.json';
 
         let linkElement = document.createElement('a');
         linkElement.setAttribute('href', dataUri);
@@ -171,5 +179,9 @@ export class LiveWallpaperListComponent implements OnInit {
         linkElement.click();
       }
     });
+  }
+
+  back() {
+    this.location.back();
   }
 }

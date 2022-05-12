@@ -1,16 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { ChargingModel } from '../share/model/charging';
 import { result } from '../share/model/result';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ChargingService {
-  constructor(private http: HttpClient) {}
 
-  getListCharging(categoryId?:number) {
+  constructor(private http: HttpClient) {
+  }
+  
+  getListCharging(categoryId?: number) {
     return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${categoryId}/items`);
   }
   getChargingByID(id) {
@@ -23,7 +24,7 @@ export class ChargingService {
   // getListLiveWallpaper() {
   //   return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/2/items`);
   // }
-  
+
   // getListliveCategory() {
   //   return this.http.get<result>(`${environment.baseUrl}/live-category`);
   // }
@@ -35,7 +36,7 @@ export class ChargingService {
     });
   }
 
-  saveCharging(model){
+  saveCharging(model) {
     return this.http.post<result>(`${environment.baseUrl}charging-item/`, model);
   }
 }

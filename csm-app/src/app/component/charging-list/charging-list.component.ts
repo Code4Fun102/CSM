@@ -1,5 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 import {
   ColDef,
   ICellRendererParams,
@@ -19,6 +20,7 @@ declare const $: any;
   styleUrls: ['./charging-list.component.scss'],
 })
 export class ChargingListComponent implements OnInit {
+  name: '';
   data;
   gridApi;
   gridColumnApi;
@@ -32,8 +34,8 @@ export class ChargingListComponent implements OnInit {
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
-        eDiv.innerHTML = 
-         `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
+        eDiv.innerHTML =
+          `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
           <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
           `;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
@@ -93,19 +95,22 @@ export class ChargingListComponent implements OnInit {
   getRowHeight(params: RowHeightParams): number | undefined | null {
     return params.data.rowHeight;
   }
+  id:number;
   constructor(
     private chargingService: ChargingService,
     public router: Router,
     public route: ActivatedRoute,
     private toastr: ToastrService,
-    private modalService: BsModalService
-  ) {}
+    private modalService: BsModalService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
-    const id: number = this.route.snapshot.params["id"];
-    this.chargingService.getListCharging(id).subscribe((res) => {
-      if(res && res.data)
-      {
+    this.id= this.route.snapshot.params["id"];
+    this.name = this.route.snapshot.params["name"];
+    this.chargingService.getListCharging(this.id).subscribe((res) => {
+      if (res && res.data) {
+
         const data = res.data.datas;
         data?.forEach(function (dataItem: any, index: number) {
           dataItem.rowHeight =
@@ -115,7 +120,7 @@ export class ChargingListComponent implements OnInit {
         });
         this.data = data;
       }
-      else{
+      else {
         this.data = [];
       }
     });
@@ -157,20 +162,26 @@ export class ChargingListComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    // this.chargingService.getListCharging().subscribe((res) => {
-    //   if (res) {
-    //     let dataStr = JSON.stringify(this.data);
-    //     let dataUri =
-    //       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    this.chargingService.getListCharging(this.id).subscribe((res) => {
+      if (res) {
+        let dataStr: any = {
+          "idName": this.name,
+          "datas": this.data
+        };
+        let dataUri =
+          'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
 
-    //     let exportFileDefaultName = 'data.json';
+        let exportFileDefaultName = 'charging_list.json';
 
-    //     let linkElement = document.createElement('a');
-    //     linkElement.setAttribute('href', dataUri);
-    //     linkElement.setAttribute('download', exportFileDefaultName);
-    //     linkElement.click();
-    //   }
-    // });
+        let linkElement = document.createElement('a');
+        linkElement.setAttribute('href', dataUri);
+        linkElement.setAttribute('download', exportFileDefaultName);
+        linkElement.click();
+      }
+    });
     this.chargingService.export();
+  }
+  back() {
+    this.location.back();
   }
 }
