@@ -5,10 +5,6 @@ import { LiveWallpaperListComponent } from './live-wallpaper-list.component';
 
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: LiveWallpaperListComponent,
-  // },
   {
     path: 'live-edit/:id',
     component: LiveEditComponent
