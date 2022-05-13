@@ -150,6 +150,7 @@ export class ChargingListComponent implements OnInit {
     this.chargingService.deleteCharging(this.selectedID).subscribe(
       (res) => {
         if (res) {
+          this.data = this.data.filter(obj => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
         }
       },
@@ -161,7 +162,7 @@ export class ChargingListComponent implements OnInit {
   }
 
   decline(): void {
-    this.message = 'Declined!';
+    this.message = 'Declined';
     this.modalRef.hide();
   }
 
