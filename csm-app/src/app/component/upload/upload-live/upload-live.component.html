@@ -1,7 +1,7 @@
 
 <div class="file-category">
   <span class="margin-right-8">Loại nhóm</span>
-  <select [(ngModel)]="data.category">
+  <select class="custom-select" [(ngModel)]="data.category">
     <option *ngFor="let category of chargingCategory" [value]="category.id">{{category.name}}</option>
   </select>
 </div>
