@@ -20,6 +20,8 @@ declare const $: any;
   styleUrls: ['./live-wallpaper-list.component.scss']
 })
 export class LiveWallpaperListComponent implements OnInit {
+  idUpdate: number;
+  priority: number;
   name: '';
   data;
   gridApi;
@@ -132,17 +134,14 @@ export class LiveWallpaperListComponent implements OnInit {
   modalTemplateRef;
   modalRef: BsModalRef;
   message: string;
-
-  openModal() {
-    this.modalRef = this.modalService.show(this.modalTemplateRef, {
-      class: 'modal-sm',
-    });
-  }
+  @ViewChild('templateUpdate')
+  modalTemplateUpdate;
 
   confirm(): void {
     this.liveWallPaperService.deleteLiveWallPaper(this.selectedID).subscribe(
       (res) => {
         if (res) {
+          this.data = this.data.filter(obj => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
         }
       },
@@ -154,7 +153,7 @@ export class LiveWallpaperListComponent implements OnInit {
   }
 
   decline(): void {
-    this.message = 'Declined!';
+    this.message = 'Declined';
     this.modalRef.hide();
   }
 
@@ -164,26 +163,41 @@ export class LiveWallpaperListComponent implements OnInit {
 
     this.gridApi.sizeColumnsToFit();
   }
-  // export() {
-  //   this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
-  //     if (res) {
-  //       let dataStr: any = {
-  //         "idName": this.name,
-  //         "datas": this.data
-  //       };
-  //       let dataUri =
-  //         'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
 
-  //       let exportFileDefaultName = 'live_wallpaper_list.json';
+  openModal() {
+    this.modalRef = this.modalService.show(this.modalTemplateRef, {
+      class: 'modal-sm',
+    });
+  }
+  openModalUpdate() {
+    this.modalRef = this.modalService.show(this.modalTemplateUpdate, {
+      class: 'modal-sm',
+    });
+  }
 
-  //       let linkElement = document.createElement('a');
-  //       linkElement.setAttribute('href', dataUri);
-  //       linkElement.setAttribute('download', exportFileDefaultName);
-  //       linkElement.click();
-  //     }
-  //   });
-  // }
-
+  onCellDoubleClicked(e) {
+    if (e && e.colDef && e.colDef["field"] === "priority") {
+      const priority = e.value;
+      this.priority = priority;
+      this.idUpdate = e.data.id;
+      this.openModalUpdate();
+      // this.liveWallPaperService.UpdateOrder().
+      // call api cập nhập lại thứ tự
+    }
+  }
+  confirmUpdate(): void {
+    this.liveWallPaperService.updatePriority(this.idUpdate,this.priority).subscribe(
+      (res) => {
+        if (res) {
+          this.toastr.success('Cập nhật thành công!');
+        }
+      },
+      (err) => {
+        this.toastr.error('Cập nhật thất bại!');
+      }
+    );
+    this.modalRef.hide();
+  }
   back() {
     this.location.back();
   }

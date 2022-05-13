@@ -20,6 +20,8 @@ declare const $: any;
   styleUrls: ['./charging-list.component.scss'],
 })
 export class ChargingListComponent implements OnInit {
+  idUpdate: number;
+  priority:number;
   name: '';
   data;
   gridApi;
@@ -56,6 +58,8 @@ export class ChargingListComponent implements OnInit {
         return eDiv;
       },
     },
+    { field: 'isPremium' },
+    { field: 'priority' },
     {
       field: 'thumbs',
       cellRenderer: (data: ICellRendererParams) => {
@@ -99,7 +103,7 @@ export class ChargingListComponent implements OnInit {
   getRowHeight(params: RowHeightParams): number | undefined | null {
     return params.data.rowHeight;
   }
-  id:number;
+  id: number;
   constructor(
     private chargingService: ChargingService,
     public router: Router,
@@ -110,7 +114,7 @@ export class ChargingListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id= this.route.snapshot.params["id"];
+    this.id = this.route.snapshot.params["id"];
     this.name = this.route.snapshot.params["name"];
     this.chargingService.getListCharging(this.id).subscribe((res) => {
       if (res && res.data) {
@@ -129,11 +133,13 @@ export class ChargingListComponent implements OnInit {
       }
     });
   }
+  
   @ViewChild('template')
   modalTemplateRef;
   modalRef: BsModalRef;
   message: string;
-
+  @ViewChild('templateUpdate')
+  modalTemplateUpdate;
   openModal() {
     this.modalRef = this.modalService.show(this.modalTemplateRef, {
       class: 'modal-sm',
@@ -144,6 +150,7 @@ export class ChargingListComponent implements OnInit {
     this.chargingService.deleteCharging(this.selectedID).subscribe(
       (res) => {
         if (res) {
+          this.data = this.data.filter(obj => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
         }
       },
@@ -155,7 +162,7 @@ export class ChargingListComponent implements OnInit {
   }
 
   decline(): void {
-    this.message = 'Declined!';
+    this.message = 'Declined';
     this.modalRef.hide();
   }
 
@@ -165,25 +172,33 @@ export class ChargingListComponent implements OnInit {
 
     this.gridApi.sizeColumnsToFit();
   }
-  // export() {
-  //   this.chargingService.getListCharging(this.id).subscribe((res) => {
-  //     if (res) {
-  //       let dataStr: any = {
-  //         "idName": this.name,
-  //         "datas": this.data
-  //       };
-  //       let dataUri =
-  //         'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
 
-  //       let exportFileDefaultName = 'charging_list.json';
-
-  //       let linkElement = document.createElement('a');
-  //       linkElement.setAttribute('href', dataUri);
-  //       linkElement.setAttribute('download', exportFileDefaultName);
-  //       linkElement.click();
-  //     }
-  //   });
-  // }
+  openModalUpdate() {
+    this.modalRef = this.modalService.show(this.modalTemplateUpdate, {
+      class: 'modal-sm',
+    });
+  }
+  onCellDoubleClicked(e) {
+    if (e && e.colDef && e.colDef["field"] === "priority") {
+      const priority = e.value;
+      this.priority = priority;
+      this.idUpdate = e.data.id;
+      this.openModalUpdate();
+    }
+  }
+  confirmUpdate(): void {
+    this.chargingService.updatePriority(this.idUpdate,this.priority).subscribe(
+      (res) => {
+        if (res) {
+          this.toastr.success('Cập nhật thành công!');
+        }
+      },
+      (err) => {
+        this.toastr.error('Cập nhật thất bại!');
+      }
+    );
+    this.modalRef.hide();
+  }
   back() {
     this.location.back();
   }

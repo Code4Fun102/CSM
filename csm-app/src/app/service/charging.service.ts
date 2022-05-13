@@ -21,7 +21,9 @@ export class ChargingService {
   deleteCharging(id) {
     return this.http.delete<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
-
+  updatePriority(id, priorityId) {
+    return this.http.post<result>(`${environment.baseUrl}/v1/items/${id}/${priorityId}`,priorityId);
+  }
   export() {
     let url = `${environment.baseUrl}/v1/assets/export-to-json`;
     this.http.get(url).subscribe((res) => {

@@ -144,6 +144,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     this.liveCategoryService.deleteLiveCategory(this.selectedID).subscribe(
       (res) => {
         if (res) {
+          this.data = this.data.filter(obj => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
         }
       },
@@ -155,7 +156,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   }
 
   decline(): void {
-    this.message = 'Declined!';
+    this.message = 'Declined';
     this.modalRef.hide();
   }
 
