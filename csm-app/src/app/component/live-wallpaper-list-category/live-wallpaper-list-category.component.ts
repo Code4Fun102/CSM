@@ -63,7 +63,6 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         return eDiv;
       },
       autoHeight:true,
-      wrapText:true,
       cellClass:'align-center',
     },
     { field: 'name' },
@@ -80,7 +79,6 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
       },
       tooltipField: 'links',
       autoHeight:true,
-      wrapText:true,
       cellClass:'align-center',
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
@@ -97,7 +95,6 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
       },
       tooltipField: 'icon',
       autoHeight:true,
-      wrapText:true,
       cellClass:'align-center',
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,

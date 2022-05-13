@@ -75,7 +75,6 @@ export class ChargingListCategoryComponent implements OnInit {
       },
       tooltipField: 'links',
       autoHeight:true,
-      wrapText:true,
       cellClass:'align-center'
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
@@ -92,7 +91,6 @@ export class ChargingListCategoryComponent implements OnInit {
       },
       tooltipField: 'icon',
       autoHeight:true,
-      wrapText:true,
       cellClass:'align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
@@ -111,7 +109,6 @@ export class ChargingListCategoryComponent implements OnInit {
       },
       tooltipField: 'background',
       autoHeight:true,
-      wrapText:true,
       cellClass:'align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,

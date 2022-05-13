@@ -56,7 +56,6 @@ export class ChargingListComponent implements OnInit {
       },
       cellClass: 'align-center',
       autoHeight: true,
-      wrapText: true,
     },
     { field: 'isPremium' },
     { field: 'priority' },
@@ -75,7 +74,6 @@ export class ChargingListComponent implements OnInit {
       tooltipField: 'thumbs',
       cellClass: 'align-center',
       autoHeight: true,
-      wrapText: true,
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },
@@ -96,11 +94,10 @@ export class ChargingListComponent implements OnInit {
       tooltipField: 'videos',
       cellClass: 'align-center',
       autoHeight: true,
-      wrapText: true,
       // tooltipComponentParams: { type: 2 },
       // tooltipComponent: CustomTooltipComponent,
     },
-    { field: 'sounds', autoHeight: true, wrapText: true },
+    { field: 'sounds', autoHeight: true},
   ];
 
   defaultColumnDef: ColDef = {
