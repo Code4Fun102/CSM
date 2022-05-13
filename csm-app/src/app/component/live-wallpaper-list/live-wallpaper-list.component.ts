@@ -106,6 +106,8 @@ export class LiveWallpaperListComponent implements OnInit {
     return params.data.rowHeight;
   }
   id:number;
+  isPremium: boolean;
+  formData = new FormData();
   constructor(
     private liveWallPaperService: LiveWallPaperService, 
     public router: Router, 
@@ -182,17 +184,20 @@ export class LiveWallpaperListComponent implements OnInit {
   }
 
   onCellDoubleClicked(e) {
-    if (e && e.colDef && e.colDef["field"] === "priority") {
-      const priority = e.value;
-      this.priority = priority;
+    if (e && e.colDef && (e.colDef["field"] === "priority" || e.colDef["field"] === "isPremium")) {
+      this.priority = e.data.priority;;
       this.idUpdate = e.data.id;
+      this.isPremium = e.data.isPremium;
       this.openModalUpdate();
-      // this.liveWallPaperService.UpdateOrder().
-      // call api cập nhập lại thứ tự
     }
   }
   confirmUpdate(): void {
-    this.liveWallPaperService.updatePriority(this.idUpdate,this.priority).subscribe(
+    this.formData.set('isPremium', this.isPremium ? 'true' : 'false');
+    this.formData.set('priority', this.priority?.toString());
+    this.formData.set('thumbs', '');
+    this.formData.set('thumbvideos', '');
+    this.formData.set('videos', '');
+    this.liveWallPaperService.updatePriority(this.idUpdate,this.formData).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Cập nhật thành công!');

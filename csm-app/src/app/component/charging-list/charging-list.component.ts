@@ -107,6 +107,8 @@ export class ChargingListComponent implements OnInit {
     return params.data.rowHeight;
   }
   id: number;
+  isPremium: boolean;
+  formData = new FormData();
   constructor(
     private chargingService: ChargingService,
     public router: Router,
@@ -180,15 +182,21 @@ export class ChargingListComponent implements OnInit {
     });
   }
   onCellDoubleClicked(e) {
-    if (e && e.colDef && e.colDef["field"] === "priority") {
+    if (e && e.colDef && (e.colDef["field"] === "priority" || e.colDef["field"] === "isPremium")) {
       const priority = e.value;
       this.priority = priority;
       this.idUpdate = e.data.id;
+      this.isPremium = e.data.isPremium;
       this.openModalUpdate();
     }
   }
   confirmUpdate(): void {
-    this.chargingService.updatePriority(this.idUpdate,this.priority).subscribe(
+    this.formData.set('isPremium', this.isPremium ? 'true' : 'false');
+    this.formData.set('priority', this.priority.toString());
+    this.formData.set('thumbs', '');
+    this.formData.set('thumbvideos', '');
+    this.formData.set('videos', '');
+    this.chargingService.updatePriority(this.idUpdate,this.formData).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Cập nhật thành công!');

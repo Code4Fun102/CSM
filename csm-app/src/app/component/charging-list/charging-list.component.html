@@ -35,16 +35,29 @@
   <div class="modal-body">
     <div class="form-group">
       <div class="url-input flex">
-          <div class="label" style="margin-top: 6px;margin-right: 20px;">Priority</div>
-          <div class="list-input flex">
-              <ng-container>
-                  <div class="flex" style="margin: 0 4px 8px 4px;">
-                      <input type="number" [(ngModel)]="priority" class="form-control" placeholder="priority" />
-                  </div>
-              </ng-container>
-          </div>
+        <div class="label" style="margin-top: 6px;margin-right: 43px;">Priority</div>
+        <div class="list-input flex">
+          <ng-container>
+            <div class="flex" style="margin: 0 4px 8px 4px;">
+              <input type="number" [(ngModel)]="priority" class="form-control" placeholder="priority" />
+            </div>
+          </ng-container>
+        </div>
       </div>
-  </div>
-    <button type="button" class="btn btn-secondary" (click)="confirmUpdate()" style="margin-right: 8px">Cập nhật</button>
+    </div>
+    <div class="form-group">
+      <div class="url-input flex">
+        <div class="label" style="margin-top: -7px;margin-right: 20px;">IsPremium</div>
+        <div class="list-input flex">
+          <ng-container>
+            <div class="flex" style="margin: 0 4px 8px 4px;">
+              <input type="checkbox" [(ngModel)]="isPremium" placeholder="isLiveWallpaper" />
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn btn-secondary" (click)="confirmUpdate()" style="margin-right: 8px">Cập
+      nhật</button>
   </div>
 </ng-template>
