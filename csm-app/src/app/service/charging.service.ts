@@ -13,13 +13,13 @@ export class ChargingService {
   }
   
   getListCharging(categoryId?: number) {
-    return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories/${categoryId}/items`);
+    return this.http.get<any>(`${environment.baseUrl}/v1/categories/${categoryId}/items`);
   }
   getChargingByID(id) {
-    return this.http.get<result>(`${environment.baseUrl}/v1/assets/items/${id}`);
+    return this.http.get<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
   deleteCharging(id) {
-    return this.http.delete<result>(`${environment.baseUrl}/v1/assets/categories/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/categories/${id}`);
   }
 
   // getListLiveWallpaper() {

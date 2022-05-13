@@ -9,6 +9,6 @@ export class UploadLiveWallpaperService {
   constructor(private http: HttpClient) {}
 
   uploadData(data) {
-    return this.http.post(`${environment.baseUrl}/v1/assets/livewallpaper`, data);
+    return this.http.post(`${environment.baseUrl}/v1/livewallpaper`, data);
   }
 }

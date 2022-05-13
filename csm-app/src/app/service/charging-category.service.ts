@@ -12,12 +12,12 @@ export class ChargingCategoryService {
   constructor(private http: HttpClient) {}
 
   getListChargingCategory() {
-    return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories?collectionTypeId=1`);
+    return this.http.get<any>(`${environment.baseUrl}/v1/categories?collectionTypeId=1`);
   }
   
   getChargingCategoryByID(id) {
     return this.http.get<result>(
-      `${environment.baseUrl}/v1/assets/categories/${id}`
+      `${environment.baseUrl}/v1/categories/${id}`
     );
   }
   deleteChargingCategory(id) {

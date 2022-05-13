@@ -9,6 +9,6 @@ export class UploadChargingService {
   constructor(private http: HttpClient) {}
 
   uploadData(data) {
-    return this.http.post(`${environment.baseUrl}/v1/assets/charging`, data);
+    return this.http.post(`${environment.baseUrl}/v1/charging`, data);
   }
 }

@@ -10,11 +10,11 @@ export class LiveCategoryService {
   constructor(private http: HttpClient) {}
 
   getListLiveCategory() {
-    return this.http.get<any>(`${environment.baseUrl}/v1/assets/categories?collectionTypeId=2`);
+    return this.http.get<any>(`${environment.baseUrl}/v1/categories?collectionTypeId=2`);
   }
   getLiveCategoryByID(id) {
     return this.http.get<result>(
-      `${environment.baseUrl}/v1/assets/categories/${id}`
+      `${environment.baseUrl}/v1/categories/${id}`
     );
   }
   deleteLiveCategory(id) {
