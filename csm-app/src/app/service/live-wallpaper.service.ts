@@ -17,7 +17,7 @@ export class LiveWallPaperService {
     return this.http.get<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
   deleteLiveWallPaper(id) {
-    return this.http.delete<result>(`${environment.baseUrl}/v1/categories/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
 
   saveLiveWallPaper(model) {

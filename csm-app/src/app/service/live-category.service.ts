@@ -18,7 +18,7 @@ export class LiveCategoryService {
     );
   }
   deleteLiveCategory(id) {
-    return this.http.delete<result>(`${environment.baseUrl}/LiveCategory-item/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/categories/${id}`);
   }
 
   saveLiveCategory(model){

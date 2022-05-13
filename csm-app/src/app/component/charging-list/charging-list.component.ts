@@ -35,7 +35,7 @@ export class ChargingListComponent implements OnInit {
         const me = this;
         let eDiv = document.createElement('div');
         eDiv.innerHTML =
-          `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
+          `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
           <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
           `;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
@@ -59,32 +59,36 @@ export class ChargingListComponent implements OnInit {
     {
       field: 'thumbs',
       cellRenderer: (data: ICellRendererParams) => {
-        let tmpl = '';
+        let tmpl = '<div style="display: block;">';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<img style="height: 49px;width: 49px;" src="${item}">`;
           }
         }
+        tmpl = tmpl + '</div>';
         return tmpl;
       },
       tooltipField: 'thumbs',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
     },
     {
       field: 'videos',
       cellRenderer: (data: ICellRendererParams) => {
-        let tmpl = '';
+        let tmpl = '<div style="display: block;">';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<video autoplay muted loop id="myVideo" width="50" height="49">
+            <source src="${item}" type="video/mp4">
+          </video>`;
           }
         }
+        tmpl = tmpl + '</div>';
         return tmpl;
       },
       tooltipField: 'videos',
-      tooltipComponentParams: { type: 2 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 2 },
+      // tooltipComponent: CustomTooltipComponent,
     },
     { field: 'sounds' },
   ];
@@ -161,25 +165,25 @@ export class ChargingListComponent implements OnInit {
 
     this.gridApi.sizeColumnsToFit();
   }
-  export() {
-    this.chargingService.getListCharging(this.id).subscribe((res) => {
-      if (res) {
-        let dataStr: any = {
-          "idName": this.name,
-          "datas": this.data
-        };
-        let dataUri =
-          'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
+  // export() {
+  //   this.chargingService.getListCharging(this.id).subscribe((res) => {
+  //     if (res) {
+  //       let dataStr: any = {
+  //         "idName": this.name,
+  //         "datas": this.data
+  //       };
+  //       let dataUri =
+  //         'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
 
-        let exportFileDefaultName = 'charging_list.json';
+  //       let exportFileDefaultName = 'charging_list.json';
 
-        let linkElement = document.createElement('a');
-        linkElement.setAttribute('href', dataUri);
-        linkElement.setAttribute('download', exportFileDefaultName);
-        linkElement.click();
-      }
-    });
-  }
+  //       let linkElement = document.createElement('a');
+  //       linkElement.setAttribute('href', dataUri);
+  //       linkElement.setAttribute('download', exportFileDefaultName);
+  //       linkElement.click();
+  //     }
+  //   });
+  // }
   back() {
     this.location.back();
   }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ChargingCategoryService } from 'src/app/service/charging-category.service';
 import { UploadChargingService } from 'src/app/service/upload/upload-charging.service';
@@ -17,7 +18,8 @@ export class UploadChargingComponent implements OnInit {
   constructor(
     private uploadChargingService: UploadChargingService,
     private toastr: ToastrService,
-    private chargingCategoryService: ChargingCategoryService
+    private chargingCategoryService: ChargingCategoryService,
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -36,6 +38,7 @@ export class UploadChargingComponent implements OnInit {
       (res) => {
         // console.log(res);
         this.toastr.success('Lưu thành công');
+        this.router.navigate(["charging-category"])
       },
       (err) => {
         this.toastr.error('Có lỗi xảy ra!');

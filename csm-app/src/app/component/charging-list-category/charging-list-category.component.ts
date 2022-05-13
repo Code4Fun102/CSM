@@ -27,13 +27,13 @@ export class ChargingListCategoryComponent implements OnInit {
   columnDefs: ColDef[] = [
     {
       headerName: '',
-      width: 150,
+      width: 200,
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
-        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
+        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
           <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
-          <span class="my-css-class"><button class="btn btn-info btn-view">Xem</button></span>`;
+          <span class="my-css-class"><button class="btn btn-info btn-view">Charging</button></span>`;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
@@ -81,14 +81,14 @@ export class ChargingListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<img src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'icon',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
 
     },
     {
@@ -97,14 +97,14 @@ export class ChargingListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<img style="height: 49px;width: 49px;" src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'background',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
 
     },
 
@@ -180,18 +180,23 @@ export class ChargingListCategoryComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
+    // this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
+    //   if (res) {
+    //     let dataStr = JSON.stringify(this.data);
+    //     let dataUri =
+    //       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+
+    //     let exportFileDefaultName = 'charging_category_list.json';
+
+    //     let linkElement = document.createElement('a');
+    //     linkElement.setAttribute('href', dataUri);
+    //     linkElement.setAttribute('download', exportFileDefaultName);
+    //     linkElement.click();
+    //   }
+    // });
+    this.chargingCategoryService.export().subscribe((res) => {
       if (res) {
-        let dataStr = JSON.stringify(this.data);
-        let dataUri =
-          'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
-
-        let exportFileDefaultName = 'charging_category_list.json';
-
-        let linkElement = document.createElement('a');
-        linkElement.setAttribute('href', dataUri);
-        linkElement.setAttribute('download', exportFileDefaultName);
-        linkElement.click();
+        this.toastr.success('Xuất khẩu thành công');
       }
     });
   }

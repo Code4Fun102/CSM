@@ -19,16 +19,8 @@ export class ChargingService {
     return this.http.get<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
   deleteCharging(id) {
-    return this.http.delete<result>(`${environment.baseUrl}/v1/categories/${id}`);
+    return this.http.delete<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
-
-  // getListLiveWallpaper() {
-  //   return this.http.get<result>(`${environment.baseUrl}/v1/assets/categories/2/items`);
-  // }
-
-  // getListliveCategory() {
-  //   return this.http.get<result>(`${environment.baseUrl}/live-category`);
-  // }
 
   export() {
     let url = `${environment.baseUrl}/v1/assets/export-to-json`;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { LiveCategoryService } from 'src/app/service/live-category.service';
 import { UploadLiveWallpaperService } from 'src/app/service/upload/upload-live-wallpaper.service';
@@ -16,6 +17,7 @@ export class UploadLiveComponent implements OnInit {
   constructor(
     private uploadLiveWallpaperService: UploadLiveWallpaperService,
     private toastr: ToastrService,
+    private router: Router,
     private liveCategoryService: LiveCategoryService) { }
 
   ngOnInit(): void {
@@ -29,10 +31,12 @@ export class UploadLiveComponent implements OnInit {
   saveData() {
     this.formData.set('isPremium', this.data.isPremium ? 'true' : 'false');
     this.formData.set('category', this.data.category);
+    this.formData.set('priority', this.data.priority.toString());
     this.uploadLiveWallpaperService.uploadData(this.formData).subscribe(
       (res) => {
         // console.log(res);
         this.toastr.success('Lưu thành công');
+        this.router.navigate(["live-category"])
       },
       (err) => {
         this.toastr.error('Có lỗi xảy ra!');

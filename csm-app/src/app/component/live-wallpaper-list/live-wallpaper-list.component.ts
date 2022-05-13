@@ -31,10 +31,11 @@ export class LiveWallpaperListComponent implements OnInit {
     {
       headerName: '',
       width: 150,
+      autoHeight:false,
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
-        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
+        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
           <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>`;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
@@ -62,14 +63,16 @@ export class LiveWallpaperListComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<video autoplay muted loop id="myVideo" width="100" height="49">
+            <source src="${item}" type="video/mp4">
+          </video>`;
           }
         }
         return tmpl;
       },
       tooltipField: 'videos',
-      tooltipComponentParams: { type: 2 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 2 },
+      // tooltipComponent: CustomTooltipComponent,
     },
     {
       field: 'thumbs',
@@ -77,14 +80,14 @@ export class LiveWallpaperListComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<img style="height: 49px;width: 49px;" src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'thumbs',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
     },
     
   ];
@@ -161,25 +164,25 @@ export class LiveWallpaperListComponent implements OnInit {
 
     this.gridApi.sizeColumnsToFit();
   }
-  export() {
-    this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
-      if (res) {
-        let dataStr: any = {
-          "idName": this.name,
-          "datas": this.data
-        };
-        let dataUri =
-          'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
+  // export() {
+  //   this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
+  //     if (res) {
+  //       let dataStr: any = {
+  //         "idName": this.name,
+  //         "datas": this.data
+  //       };
+  //       let dataUri =
+  //         'data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(dataStr));
 
-        let exportFileDefaultName = 'live_wallpaper_list.json';
+  //       let exportFileDefaultName = 'live_wallpaper_list.json';
 
-        let linkElement = document.createElement('a');
-        linkElement.setAttribute('href', dataUri);
-        linkElement.setAttribute('download', exportFileDefaultName);
-        linkElement.click();
-      }
-    });
-  }
+  //       let linkElement = document.createElement('a');
+  //       linkElement.setAttribute('href', dataUri);
+  //       linkElement.setAttribute('download', exportFileDefaultName);
+  //       linkElement.click();
+  //     }
+  //   });
+  // }
 
   back() {
     this.location.back();

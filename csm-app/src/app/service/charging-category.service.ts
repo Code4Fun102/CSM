@@ -36,4 +36,9 @@ export class ChargingCategoryService {
     }
     return this.http.put<result>(`${environment.baseUrl}/v1/categories/${id}`, dataSave);
   }
+
+  export() {
+    let url = `${environment.baseUrl}/v1/assets/export-json-files`;
+    return this.http.get<result>(url);
+  }
 }

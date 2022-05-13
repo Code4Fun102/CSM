@@ -21,4 +21,8 @@
   <input [(ngModel)]="data.isPremium" class="form-check-input" style="margin: 3px 8px;" type="checkbox" id="isPremium">
 </div> 
 
+<div class="mb-3">
+  <label class="form-label">Priority</label>
+  <input [(ngModel)]="data.priority" class="form-control" type="number" id="priority">
+</div>
 <button class="btn btn-primary" (click)="saveData()">Lưu</button>

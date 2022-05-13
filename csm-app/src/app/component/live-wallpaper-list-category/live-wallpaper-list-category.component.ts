@@ -30,13 +30,13 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   columnDefs: ColDef[] = [
     {
       headerName: '',
-      width: 150,
+      width: 200,
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
-        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Sửa</button></span>
+        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
           <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
-          <span class="my-css-class"><button class="btn btn-info btn-view">Xem</button></span>`;
+          <span class="my-css-class"><button class="btn btn-info btn-view">Live Wallpaper</button></span>`;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
@@ -84,14 +84,14 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `${item}<br>`;
+            tmpl += `<img src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'icon',
-      tooltipComponentParams: { type: 1 },
-      tooltipComponent: CustomTooltipComponent,
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
     },
   ];
   defaultColumnDef: ColDef = {
@@ -165,20 +165,20 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
 
     this.gridApi.sizeColumnsToFit();
   }
-  export() {
-    this.liveCategoryService.getListLiveCategory().subscribe((res) => {
-      if (res) {
-        let dataStr = JSON.stringify(this.data);
-        let dataUri =
-          'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+  // export() {
+  //   this.liveCategoryService.getListLiveCategory().subscribe((res) => {
+  //     if (res) {
+  //       let dataStr = JSON.stringify(this.data);
+  //       let dataUri =
+  //         'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
-        let exportFileDefaultName = 'live_wallpaper_category_list.json';
+  //       let exportFileDefaultName = 'live_wallpaper_category_list.json';
 
-        let linkElement = document.createElement('a');
-        linkElement.setAttribute('href', dataUri);
-        linkElement.setAttribute('download', exportFileDefaultName);
-        linkElement.click();
-      }
-    });
-  }
+  //       let linkElement = document.createElement('a');
+  //       linkElement.setAttribute('href', dataUri);
+  //       linkElement.setAttribute('download', exportFileDefaultName);
+  //       linkElement.click();
+  //     }
+  //   });
+  // }
 }

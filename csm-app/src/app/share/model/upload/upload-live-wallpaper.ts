@@ -4,5 +4,6 @@ export class UploadLiveWallPaperModel{
   thumbs: any;
   thumbvideos: any;
   videos: any;
-  isPremium: boolean
+  isPremium: boolean;
+  priority : number;
 }
