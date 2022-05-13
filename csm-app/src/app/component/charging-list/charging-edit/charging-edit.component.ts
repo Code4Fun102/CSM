@@ -13,6 +13,8 @@ import { ToastrService } from 'ngx-toastr';
 export class ChargingEditComponent implements OnInit {
   isLoading = false;
   id;
+  categoryid;
+  categoryname;
   model: ChargingModel = {
     thumbs: [],
     thumbvideos: [],
@@ -32,6 +34,8 @@ export class ChargingEditComponent implements OnInit {
   ngOnInit(): void {
     this.modelToSave = JSON.parse(JSON.stringify(this.model));
     this.id = this.route.snapshot.params['id'];
+    this.categoryid = this.route.snapshot.params['categoryid'];
+    this.categoryname = this.route.snapshot.params['categoryname'];
     if (this.id) {
       this.isLoading = true;
       this.chargingService

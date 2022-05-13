@@ -36,16 +36,13 @@ export class ChargingListComponent implements OnInit {
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
-        eDiv.innerHTML =
-          `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
+        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
           <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
           `;
         let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
 
         eButtonEdit.addEventListener('click', function () {
-          me.router.navigate([`/charging/charging-edit/${data.data.id}`], {
-            relativeTo: me.route,
-          });
+          me.router.navigate([`/charging/charging-edit/${data.data.id}/${me.id}/${me.name}`]);
         });
 
         let eButtonDelete = eDiv.querySelectorAll('.btn-danger')[0];
@@ -57,6 +54,9 @@ export class ChargingListComponent implements OnInit {
 
         return eDiv;
       },
+      cellClass: 'align-center',
+      autoHeight: true,
+      wrapText: true,
     },
     { field: 'isPremium' },
     { field: 'priority' },
@@ -66,13 +66,16 @@ export class ChargingListComponent implements OnInit {
         let tmpl = '<div style="display: block;">';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img style="height: 49px;width: 49px;" src="${item}">`;
+            tmpl += `<img class="m-3" height="128" src="${item}">`;
           }
         }
         tmpl = tmpl + '</div>';
         return tmpl;
       },
       tooltipField: 'thumbs',
+      cellClass: 'align-center',
+      autoHeight: true,
+      wrapText: true,
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },
@@ -82,7 +85,7 @@ export class ChargingListComponent implements OnInit {
         let tmpl = '<div style="display: block;">';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<video autoplay muted loop id="myVideo" width="50" height="49">
+            tmpl += `<video class="m-3" autoplay muted loop id="myVideo" height="128">
             <source src="${item}" type="video/mp4">
           </video>`;
           }
@@ -91,10 +94,13 @@ export class ChargingListComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'videos',
+      cellClass: 'align-center',
+      autoHeight: true,
+      wrapText: true,
       // tooltipComponentParams: { type: 2 },
       // tooltipComponent: CustomTooltipComponent,
     },
-    { field: 'sounds' },
+    { field: 'sounds', autoHeight: true, wrapText: true },
   ];
 
   defaultColumnDef: ColDef = {
@@ -111,14 +117,13 @@ export class ChargingListComponent implements OnInit {
     private toastr: ToastrService,
     private modalService: BsModalService,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params["id"];
     this.name = this.route.snapshot.params["name"];
     this.chargingService.getListCharging(this.id).subscribe((res) => {
       if (res && res.data) {
-
         const data = res.data.datas;
         data?.forEach(function (dataItem: any, index: number) {
           dataItem.rowHeight =
@@ -127,8 +132,7 @@ export class ChargingListComponent implements OnInit {
               : dataItem.videos?.length * 48;
         });
         this.data = data;
-      }
-      else {
+      } else {
         this.data = [];
       }
     });

@@ -7,13 +7,27 @@
   </div>
   <div class="form-charging">
     <app-loading [loader]="isLoading"></app-loading>
+  
+    <div class="form-group">
+      <div class="url-input flex">
+        <div class="label">Loại nhóm</div>
+        <div class="list-input flex">
+          <ng-container>
+            <div class="flex" style="margin: 0 4px 8px 4px;">
+              <input [value]="categoryname" type="text" class="form-control" disabled />
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
     <div class="form-group">
       <div class="url-input flex">
         <div class="label">Thumbs</div>
         <div class="list-input flex">
           <ng-container *ngFor="let thumb of model.thumbs; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <img src="{{thumb}}" width="208" height="463">
+              <img class="m-3" src="{{thumb}}" height="260">
               <!-- <input type="text" class="form-control" [value]="thumb" placeholder="thumbs" (input)="changethumbs($event, thumb, i)" /> -->
               <!-- <button class="btn btn-danger" (click)="deleteThumb(i)">
                 Xoá
@@ -36,7 +50,7 @@
           <div class="list-input flex">
             <ng-container *ngFor="let thumb of model.thumbvideos; let i = index">
               <div class="flex" style="margin: 0 4px 8px 4px;">
-                <img src="{{thumb}}" width="208" height="463">
+                <img class="m-3" src="{{thumb}}" height="260">
                 <!-- <input type="text" class="form-control" [value]="thumb" placeholder="thumb videos" (input)="changethumbvideos($event, thumb, i)"  /> -->
                 <!-- <button class="btn btn-danger" (click)="deleteThumbvideos(i)">
                   Xoá
@@ -58,7 +72,7 @@
           <div class="list-input flex">
             <ng-container *ngFor="let video of model.videos; let i = index">
               <div class="flex" style="margin: 0 4px 8px 4px;">
-                <video width="320" height="240" autoplay>
+                <video class="m-3" height="260" autoplay loop>
                   <source src="{{video}}" type="video/mp4">
                 </video>
                 <!-- <input type="text" class="form-control" [value]="video" placeholder="videos" (input)="changevideos($event, video, i)"  /> -->

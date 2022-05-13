@@ -59,6 +59,7 @@ export class ChargingListCategoryComponent implements OnInit {
 
         return eDiv;
       },
+      cellClass:'align-center'
     },
     { field: 'name' },
     {
@@ -73,6 +74,9 @@ export class ChargingListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'links',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center'
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
     }, {
@@ -81,12 +85,15 @@ export class ChargingListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img src="${item}">`;
+            tmpl += `<img class="m-3" style="height: 72px" src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'icon',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
 
@@ -97,12 +104,15 @@ export class ChargingListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img style="height: 49px;width: 49px;" src="${item}">`;
+            tmpl += `<img class="m-3" style="height: 72px" src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'background',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
 
@@ -112,9 +122,6 @@ export class ChargingListCategoryComponent implements OnInit {
   defaultColumnDef: ColDef = {
     resizable: true,
   };
-  getRowHeight(params: RowHeightParams): number | undefined | null {
-    return params.data.rowHeight;
-  }
   constructor(
     private chargingCategoryService: ChargingCategoryService,
     private chargingService: ChargingService,
@@ -129,12 +136,6 @@ export class ChargingListCategoryComponent implements OnInit {
         if(res && res.data)
         {
           const result = res.data
-          result?.forEach(function (dataItem: any, index: number) {
-            dataItem.rowHeight =
-              dataItem.links?.length > dataItem.background?.length
-                ? dataItem.links?.length * 48
-                : dataItem.background?.length * 48;
-          });
           this.data = result;
         }
         else{

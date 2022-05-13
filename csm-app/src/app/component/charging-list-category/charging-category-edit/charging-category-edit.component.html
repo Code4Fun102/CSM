@@ -38,7 +38,7 @@
         <div class="list-input flex">
           <ng-container *ngFor="let background of model.background; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <img src="{{background}}" width="208" height="463">
+              <img class="m-3" src="{{background}}" width="208" height="463">
               <!-- <input type="text" class="form-control" [value]="background" placeholder="background" (input)="changeBackground($event, background, i)" />
               <button class="btn btn-danger" (click)="deleteBackground(i)">
                 Xoá
@@ -65,7 +65,7 @@
         <div class="list-input flex">
           <ng-container *ngFor="let icon of model.icon; let i = index">
             <div class="flex" style="margin: 0 4px 8px 4px;">
-              <img src="{{icon}}">
+              <img class="m-3" src="{{icon}}">
               <!-- <input type="text" class="form-control" [value]="icon" placeholder="icon" (input)="changeIcon($event, icon, i)"  />
               <button class="btn btn-danger" (click)="deleteIcon(i)">
                 Xoá

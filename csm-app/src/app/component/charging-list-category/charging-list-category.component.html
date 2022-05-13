@@ -13,10 +13,11 @@
     [rowData]="data"
     [columnDefs]="columnDefs"
     (gridReady)="onGridReady($event)"
-    [getRowHeight]="getRowHeight"
     [tooltipShowDelay]="tooltipShowDelay"
     [defaultColDef]="defaultColumnDef"
     [enableCellTextSelection]="true"
+    [pagination]="true"
+    [paginationPageSize]="20"
   >
   </ag-grid-angular>
 </div>

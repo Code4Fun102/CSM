@@ -8,7 +8,7 @@
   </div>
   
   <ag-grid-angular
-    style="width: 100%; height: calc(100vh - 216px)"
+    style="width: 100%; height: calc(100vh - 190px)"
     class="ag-theme-alpine"
     [rowData]="data"
     [columnDefs]="columnDefs"
@@ -17,6 +17,8 @@
     [tooltipShowDelay]="tooltipShowDelay"
     [defaultColDef]="defaultColumnDef"
     [enableCellTextSelection]="true"
+    [pagination]="true"
+    [paginationPageSize]="20"
   >
   </ag-grid-angular>
 </div>

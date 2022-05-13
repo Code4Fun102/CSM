@@ -33,7 +33,6 @@ export class LiveWallpaperListComponent implements OnInit {
     {
       headerName: '',
       width: 150,
-      autoHeight:false,
       cellRenderer: (data: ICellRendererParams) => {
         const me = this;
         let eDiv = document.createElement('div');
@@ -55,6 +54,9 @@ export class LiveWallpaperListComponent implements OnInit {
         });
         return eDiv;
       },
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center',
     },
     { field: 'isPremium' },
     { field: 'isLiveWallpaper' },
@@ -65,7 +67,7 @@ export class LiveWallpaperListComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<video autoplay muted loop id="myVideo" width="100" height="49">
+            tmpl += `<video autoplay muted loop id="myVideo" height="128">
             <source src="${item}" type="video/mp4">
           </video>`;
           }
@@ -73,6 +75,9 @@ export class LiveWallpaperListComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'videos',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center',
       // tooltipComponentParams: { type: 2 },
       // tooltipComponent: CustomTooltipComponent,
     },
@@ -82,12 +87,15 @@ export class LiveWallpaperListComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img style="height: 49px;width: 49px;" src="${item}">`;
+            tmpl += `<img height="128" class="m-3" src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'thumbs',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center',
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },

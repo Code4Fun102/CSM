@@ -5,7 +5,7 @@ import { ChargingListComponent } from './charging-list.component';
 
 const routes: Routes = [
   {
-    path: 'charging-edit/:id',
+    path: 'charging-edit/:id/:categoryid/:categoryname',
     component: ChargingEditComponent
   },
   {

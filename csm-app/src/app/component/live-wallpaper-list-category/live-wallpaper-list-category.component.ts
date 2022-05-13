@@ -62,6 +62,9 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
 
         return eDiv;
       },
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center',
     },
     { field: 'name' },
     {
@@ -76,6 +79,9 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'links',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center',
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
     }, {
@@ -84,12 +90,15 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img src="${item}">`;
+            tmpl += `<img height="128" class="m-3" src="${item}">`;
           }
         }
         return tmpl;
       },
       tooltipField: 'icon',
+      autoHeight:true,
+      wrapText:true,
+      cellClass:'align-center',
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },
