@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "docker:login": "docker login ghcr.io",
+    "docker:build": "docker build -t cms-media-client .",
+    "docker:tag": "docker tag cms-media-client ghcr.io/hanhdz025/cms-media:client-latest",
+    "docker:push": "docker push ghcr.io/hanhdz025/cms-media:client-latest",
+    "docker:all": "yarn docker:build && yarn docker:tag && yarn docker:push"
   },
   "private": true,
   "dependencies": {
