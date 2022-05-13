@@ -19,7 +19,9 @@ export class LiveWallPaperService {
   deleteLiveWallPaper(id) {
     return this.http.delete<result>(`${environment.baseUrl}/v1/items/${id}`);
   }
-
+  updatePriority(id, priorityId) {
+    return this.http.post<result>(`${environment.baseUrl}/v1/items/${id}/${priorityId}`, priorityId);
+  }
   saveLiveWallPaper(model) {
     return this.http.post<result>(`${environment.baseUrl}/LiveWallPaper/`, model);
   }
