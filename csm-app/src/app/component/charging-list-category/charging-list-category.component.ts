@@ -63,7 +63,7 @@ export class ChargingListCategoryComponent implements OnInit {
       wrapText: true,
       cellClass:'v-align-center h-align-center'
     },
-    { field: 'name', cellClass: 'h-align-center' },
+    { field: 'name',width: 70, cellClass: 'h-align-center' },
     {
       field: 'links',
       cellRenderer: (data: ICellRendererParams) => {
@@ -87,7 +87,7 @@ export class ChargingListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img class="m-3" style="height: 72px" src="${item}">`;
+            tmpl += `<img onerror="this.onerror=null; this.src='assets/image/default.png'" class="m-3" height="72" src="${item}">`;
           }
         }
         return tmpl;
@@ -106,7 +106,7 @@ export class ChargingListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img class="m-3" style="height: 72px" src="${item}">`;
+            tmpl += `<img onerror="this.onerror=null; this.src='assets/image/default.png'" class="m-3" height="72" src="${item}">`;
           }
         }
         return tmpl;
@@ -134,6 +134,10 @@ export class ChargingListCategoryComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getData();
+  }
+
+  getData(){
     this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
         if(res && res.data)
         {
@@ -163,6 +167,7 @@ export class ChargingListCategoryComponent implements OnInit {
         if (res) {
           this.data = this.data.filter(obj => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
+          this.getData();
         }
       },
       (err) => {

@@ -68,7 +68,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
       wrapText: true,
       cellClass: 'v-align-center h-align-center',
     },
-    { field: 'name', cellClass: 'h-align-center' },
+    { field: 'name',width: 70, cellClass: 'h-align-center' },
     {
       field: 'links',
       cellRenderer: (data: ICellRendererParams) => {
@@ -93,7 +93,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let tmpl = '';
         if (data.value && data.value?.length) {
           for (const item of data.value) {
-            tmpl += `<img height="128" class="m-3" src="${item}">`;
+            tmpl += `<img onerror="this.onerror=null; this.src='assets/image/default.png'" class="m-3" height="72" src="${item}">`;
           }
         }
         return tmpl;
@@ -122,6 +122,10 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.getData();
+  }
+
+  getData(){
     this.liveCategoryService.getListLiveCategory().subscribe((res) => {
       if (res && res.data) {
         const result = res.data;
@@ -155,6 +159,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         if (res) {
           this.data = this.data.filter((obj) => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
+          this.getData();
         }
       },
       (err) => {

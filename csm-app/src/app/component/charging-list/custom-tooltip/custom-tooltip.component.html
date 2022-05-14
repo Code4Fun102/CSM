@@ -6,6 +6,8 @@
     <ng-container *ngIf="type===2">
       <video class="video-tooltip" height="240px" autoplay>
         <source [src]="item" type="video/mp4">
+        <!-- tempvideo nếu k tìm đc -->
+        <source src="assets/video/video_default.mp4" height="240px" autoplay type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </ng-container>
