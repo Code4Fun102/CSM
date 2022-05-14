@@ -17,7 +17,7 @@ declare const $: any;
 @Component({
   selector: 'app-live-wallpaper-list',
   templateUrl: './live-wallpaper-list.component.html',
-  styleUrls: ['./live-wallpaper-list.component.scss']
+  styleUrls: ['./live-wallpaper-list.component.scss'],
 })
 export class LiveWallpaperListComponent implements OnInit {
   idUpdate: number;
@@ -54,13 +54,18 @@ export class LiveWallpaperListComponent implements OnInit {
         });
         return eDiv;
       },
-      autoHeight:true,
-      wrapText:true,
-      cellClass:'align-center',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'v-align-center h-align-center',
     },
-    { field: 'isPremium' },
-    { field: 'isLiveWallpaper' },
-    { field: 'priority' },
+    {
+      field: 'isPremium',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'h-align-center',
+    },
+    { field: 'isLiveWallpaper', cellClass: 'h-align-center' },
+    { field: 'priority', cellClass: 'h-align-center' },
     {
       field: 'videos',
       cellRenderer: (data: ICellRendererParams) => {
@@ -75,8 +80,9 @@ export class LiveWallpaperListComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'videos',
-      autoHeight:true,
-      cellClass:'align-center',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'v-align-center h-align-center',
       // tooltipComponentParams: { type: 2 },
       // tooltipComponent: CustomTooltipComponent,
     },
@@ -92,12 +98,12 @@ export class LiveWallpaperListComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'thumbs',
-      autoHeight:true,
-      cellClass:'align-center',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'v-align-center h-align-center',
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },
-    
   ];
   defaultColumnDef: ColDef = {
     resizable: true,
@@ -105,24 +111,23 @@ export class LiveWallpaperListComponent implements OnInit {
   getRowHeight(params: RowHeightParams): number | undefined | null {
     return params.data.rowHeight;
   }
-  id:number;
+  id: number;
   isPremium: boolean;
   formData = new FormData();
   constructor(
-    private liveWallPaperService: LiveWallPaperService, 
-    public router: Router, 
+    private liveWallPaperService: LiveWallPaperService,
+    public router: Router,
     public route: ActivatedRoute,
     private toastr: ToastrService,
     private modalService: BsModalService,
     private location: Location
-  ) { }
+  ) {}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.params["id"];
-    this.name = this.route.snapshot.params["name"];
+    this.id = this.route.snapshot.params['id'];
+    this.name = this.route.snapshot.params['name'];
     this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
-      if(res && res.data)
-      {
+      if (res && res.data) {
         const data = res.data.datas;
         data?.forEach(function (dataItem: any, index: number) {
           dataItem.rowHeight =
@@ -131,8 +136,7 @@ export class LiveWallpaperListComponent implements OnInit {
               : dataItem.videos?.length * 48;
         });
         this.data = data;
-      }
-      else{
+      } else {
         this.data = [];
       }
     });
@@ -149,7 +153,7 @@ export class LiveWallpaperListComponent implements OnInit {
     this.liveWallPaperService.deleteLiveWallPaper(this.selectedID).subscribe(
       (res) => {
         if (res) {
-          this.data = this.data.filter(obj => obj.id !== this.selectedID);
+          this.data = this.data.filter((obj) => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
         }
       },
@@ -184,8 +188,12 @@ export class LiveWallpaperListComponent implements OnInit {
   }
 
   onCellDoubleClicked(e) {
-    if (e && e.colDef && (e.colDef["field"] === "priority" || e.colDef["field"] === "isPremium")) {
-      this.priority = e.data.priority;;
+    if (
+      e &&
+      e.colDef &&
+      (e.colDef['field'] === 'priority' || e.colDef['field'] === 'isPremium')
+    ) {
+      this.priority = e.data.priority;
       this.idUpdate = e.data.id;
       this.isPremium = e.data.isPremium;
       this.openModalUpdate();
@@ -197,16 +205,18 @@ export class LiveWallpaperListComponent implements OnInit {
     this.formData.set('thumbs', '');
     this.formData.set('thumbvideos', '');
     this.formData.set('videos', '');
-    this.liveWallPaperService.updatePriority(this.idUpdate,this.formData).subscribe(
-      (res) => {
-        if (res) {
-          this.toastr.success('Cập nhật thành công!');
+    this.liveWallPaperService
+      .updatePriority(this.idUpdate, this.formData)
+      .subscribe(
+        (res) => {
+          if (res) {
+            this.toastr.success('Cập nhật thành công!');
+          }
+        },
+        (err) => {
+          this.toastr.error('Cập nhật thất bại!');
         }
-      },
-      (err) => {
-        this.toastr.error('Cập nhật thất bại!');
-      }
-    );
+      );
     this.modalRef.hide();
   }
   back() {

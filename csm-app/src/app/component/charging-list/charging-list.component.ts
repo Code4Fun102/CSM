@@ -54,12 +54,12 @@ export class ChargingListComponent implements OnInit {
 
         return eDiv;
       },
-      cellClass: 'align-center',
+      cellClass: 'v-align-center h-align-center',
       autoHeight: true,
       wrapText: true,
     },
-    { field: 'isPremium' },
-    { field: 'priority' },
+    { field: 'isPremium', cellClass: 'h-align-center' },
+    { field: 'priority', cellClass: 'h-align-center' },
     {
       field: 'thumbs',
       cellRenderer: (data: ICellRendererParams) => {
@@ -73,8 +73,9 @@ export class ChargingListComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'thumbs',
-      cellClass: 'align-center',
+      cellClass: 'v-align-center h-align-center',
       autoHeight: true,
+      wrapText: true,
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },
@@ -93,13 +94,13 @@ export class ChargingListComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'videos',
-      cellClass: 'align-center',
+      cellClass: 'v-align-center h-align-center',
       autoHeight: true,
       wrapText: true,
       // tooltipComponentParams: { type: 2 },
       // tooltipComponent: CustomTooltipComponent,
     },
-    { field: 'sounds', autoHeight: true},
+    { field: 'sounds', autoHeight: true, cellClass: 'h-align-center'},
   ];
 
   defaultColumnDef: ColDef = {

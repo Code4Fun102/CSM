@@ -59,9 +59,11 @@ export class ChargingListCategoryComponent implements OnInit {
 
         return eDiv;
       },
-      cellClass:'align-center'
+      autoHeight:true,
+      wrapText: true,
+      cellClass:'v-align-center h-align-center'
     },
-    { field: 'name' },
+    { field: 'name', cellClass: 'h-align-center' },
     {
       field: 'links',
       cellRenderer: (data: ICellRendererParams) => {
@@ -75,7 +77,8 @@ export class ChargingListCategoryComponent implements OnInit {
       },
       tooltipField: 'links',
       autoHeight:true,
-      cellClass:'align-center'
+      wrapText: true,
+      cellClass:'v-align-center h-align-center'
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
     }, {
@@ -91,7 +94,8 @@ export class ChargingListCategoryComponent implements OnInit {
       },
       tooltipField: 'icon',
       autoHeight:true,
-      cellClass:'align-center'
+      wrapText: true,
+      cellClass:'v-align-center h-align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
 
@@ -109,7 +113,8 @@ export class ChargingListCategoryComponent implements OnInit {
       },
       tooltipField: 'background',
       autoHeight:true,
-      cellClass:'align-center'
+      wrapText: true,
+      cellClass:'v-align-center h-align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
 

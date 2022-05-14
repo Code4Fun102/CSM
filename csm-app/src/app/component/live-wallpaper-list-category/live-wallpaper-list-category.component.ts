@@ -17,9 +17,8 @@ declare const $: any;
 @Component({
   selector: 'app-live-wallpaper-list-category',
   templateUrl: './live-wallpaper-list-category.component.html',
-  styleUrls: ['./live-wallpaper-list-category.component.scss']
+  styleUrls: ['./live-wallpaper-list-category.component.scss'],
 })
-
 export class LiveWallpaperListCategoryComponent implements OnInit {
   data;
   gridApi;
@@ -55,17 +54,21 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
 
         eButtonView.addEventListener('click', function () {
-          me.router.navigate([`live-item/${data.data.id}/${data.data.name||'Default Name'}`], {
-            relativeTo: me.route,
-          });
+          me.router.navigate(
+            [`live-item/${data.data.id}/${data.data.name || 'Default Name'}`],
+            {
+              relativeTo: me.route,
+            }
+          );
         });
 
         return eDiv;
       },
-      autoHeight:true,
-      cellClass:'align-center',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'v-align-center h-align-center',
     },
-    { field: 'name' },
+    { field: 'name', cellClass: 'h-align-center' },
     {
       field: 'links',
       cellRenderer: (data: ICellRendererParams) => {
@@ -78,11 +81,13 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'links',
-      autoHeight:true,
-      cellClass:'align-center',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'v-align-center h-align-center',
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
-    }, {
+    },
+    {
       field: 'icon',
       cellRenderer: (data: ICellRendererParams) => {
         let tmpl = '';
@@ -94,8 +99,9 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'icon',
-      autoHeight:true,
-      cellClass:'align-center',
+      autoHeight: true,
+      wrapText: true,
+      cellClass: 'v-align-center h-align-center',
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
     },
@@ -107,18 +113,17 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     return params.data.rowHeight;
   }
   constructor(
-    private liveCategoryService: LiveCategoryService, 
-    private liveWallPaperService: LiveWallPaperService, 
-    public router: Router, 
+    private liveCategoryService: LiveCategoryService,
+    private liveWallPaperService: LiveWallPaperService,
+    public router: Router,
     public route: ActivatedRoute,
     private toastr: ToastrService,
     private modalService: BsModalService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.liveCategoryService.getListLiveCategory().subscribe((res) => {
-      if(res && res.data)
-      {
+      if (res && res.data) {
         const result = res.data;
         result?.forEach(function (dataItem: any, index: number) {
           dataItem.rowHeight =
@@ -127,11 +132,9 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
               : dataItem.icon?.length * 48;
         });
         this.data = result;
-      }
-      else{
+      } else {
         this.data = [];
       }
-      
     });
   }
 
@@ -150,7 +153,7 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
     this.liveCategoryService.deleteLiveCategory(this.selectedID).subscribe(
       (res) => {
         if (res) {
-          this.data = this.data.filter(obj => obj.id !== this.selectedID);
+          this.data = this.data.filter((obj) => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
         }
       },
