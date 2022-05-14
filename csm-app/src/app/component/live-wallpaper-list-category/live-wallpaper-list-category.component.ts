@@ -139,6 +139,9 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
       } else {
         this.data = [];
       }
+      if (!this.data || this.data.length === 0) {
+        this.toastr.success('Dữ liệu trống!');
+      }
     });
   }
 
@@ -180,20 +183,26 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
 
     this.gridApi.sizeColumnsToFit();
   }
-  // export() {
-  //   this.liveCategoryService.getListLiveCategory().subscribe((res) => {
-  //     if (res) {
-  //       let dataStr = JSON.stringify(this.data);
-  //       let dataUri =
-  //         'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+  viewLive(e)
+  {
+    this.router.navigate([`live-category-edit/${e.id}`],{
+      relativeTo: this.route,
+    });
+  }
 
-  //       let exportFileDefaultName = 'live_wallpaper_category_list.json';
-
-  //       let linkElement = document.createElement('a');
-  //       linkElement.setAttribute('href', dataUri);
-  //       linkElement.setAttribute('download', exportFileDefaultName);
-  //       linkElement.click();
-  //     }
-  //   });
-  // }
+  deleteLive(e)
+  {
+    const me = this;
+    me.selectedID = e.id;
+    me.openModal();
+  }
+  detailLive(e){
+    const me = this;
+    me.router.navigate(
+      [`live-item/${e.id}/${e.name || 'Default Name'}`],
+      {
+        relativeTo: me.route,
+      }
+    );
+  }
 }

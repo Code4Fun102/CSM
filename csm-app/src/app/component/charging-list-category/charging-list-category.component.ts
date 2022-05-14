@@ -52,18 +52,18 @@ export class ChargingListCategoryComponent implements OnInit {
         let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
 
         eButtonView.addEventListener('click', function () {
-          me.router.navigate([`charging-item/${data.data.id}/${data.data.name||'Default Name'}`], {
+          me.router.navigate([`charging-item/${data.data.id}/${data.data.name || 'Default Name'}`], {
             relativeTo: me.route,
           });
         });
 
         return eDiv;
       },
-      autoHeight:true,
+      autoHeight: true,
       wrapText: true,
-      cellClass:'v-align-center h-align-center'
+      cellClass: 'v-align-center h-align-center'
     },
-    { field: 'name',width: 70, cellClass: 'h-align-center' },
+    { field: 'name', width: 70, cellClass: 'h-align-center' },
     {
       field: 'links',
       cellRenderer: (data: ICellRendererParams) => {
@@ -76,9 +76,9 @@ export class ChargingListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'links',
-      autoHeight:true,
+      autoHeight: true,
       wrapText: true,
-      cellClass:'v-align-center h-align-center'
+      cellClass: 'v-align-center h-align-center'
       // tooltipComponentParams: { type: 0 },
       // tooltipComponent: CustomTooltipComponent,
     }, {
@@ -93,9 +93,9 @@ export class ChargingListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'icon',
-      autoHeight:true,
+      autoHeight: true,
       wrapText: true,
-      cellClass:'v-align-center h-align-center'
+      cellClass: 'v-align-center h-align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
 
@@ -112,9 +112,9 @@ export class ChargingListCategoryComponent implements OnInit {
         return tmpl;
       },
       tooltipField: 'background',
-      autoHeight:true,
+      autoHeight: true,
       wrapText: true,
-      cellClass:'v-align-center h-align-center'
+      cellClass: 'v-align-center h-align-center'
       // tooltipComponentParams: { type: 1 },
       // tooltipComponent: CustomTooltipComponent,
 
@@ -137,16 +137,18 @@ export class ChargingListCategoryComponent implements OnInit {
     this.getData();
   }
 
-  getData(){
+  getData() {
     this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
-        if(res && res.data)
-        {
-          const result = res.data
-          this.data = result;
-        }
-        else{
-          this.data = []
-        }
+      if (res && res.data) {
+        const result = res.data
+        this.data = result;
+      }
+      else {
+        this.data = []
+      }
+      if (!this.data || this.data.length === 0) {
+        this.toastr.success('Dữ liệu trống!');
+      }
     });
   }
 
@@ -189,24 +191,27 @@ export class ChargingListCategoryComponent implements OnInit {
     this.gridApi.sizeColumnsToFit();
   }
   export() {
-    // this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
-    //   if (res) {
-    //     let dataStr = JSON.stringify(this.data);
-    //     let dataUri =
-    //       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
-
-    //     let exportFileDefaultName = 'charging_category_list.json';
-
-    //     let linkElement = document.createElement('a');
-    //     linkElement.setAttribute('href', dataUri);
-    //     linkElement.setAttribute('download', exportFileDefaultName);
-    //     linkElement.click();
-    //   }
-    // });
     this.chargingCategoryService.export().subscribe((res) => {
       if (res) {
         this.toastr.success('Xuất khẩu thành công');
       }
+    });
+  }
+
+  viewCharging(e) {
+    const me = this;
+    this.router.navigate([`charging-category-edit/${e.id}`]);
+  }
+
+  deleteCharging(e) {
+    const me = this;
+    me.selectedID = e.id;
+    me.openModal();
+  }
+  detailCharging(e) {
+    const me = this;
+    me.router.navigate([`charging-item/${e.id}/${e.name || 'Default Name'}`], {
+      relativeTo: me.route,
     });
   }
 }

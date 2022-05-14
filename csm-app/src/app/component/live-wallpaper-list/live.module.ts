@@ -8,6 +8,10 @@ import { LiveEditComponent } from './live-edit/live-edit.component';
 import { LiveWallpaperListComponent } from './live-wallpaper-list.component';
 import { LiveRoutingModule } from './live-routing.module';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -23,7 +27,11 @@ import { FormsModule } from '@angular/forms';
     AgGridModule,
     SharedModule,
     LiveRoutingModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
   ],
   providers: []
 })

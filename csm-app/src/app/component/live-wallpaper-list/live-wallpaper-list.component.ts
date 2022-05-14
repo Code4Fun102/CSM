@@ -115,7 +115,7 @@ export class LiveWallpaperListComponent implements OnInit {
   }
   id: number;
   isPremium: boolean;
-  formData = new FormData();
+  formData = new FormData() ;
   constructor(
     private liveWallPaperService: LiveWallPaperService,
     public router: Router,
@@ -143,6 +143,9 @@ export class LiveWallpaperListComponent implements OnInit {
         this.data = data;
       } else {
         this.data = [];
+      }
+      if (!this.data || this.data.length === 0) {
+        this.toastr.success('Dữ liệu trống!');
       }
     });
   }
@@ -205,18 +208,26 @@ export class LiveWallpaperListComponent implements OnInit {
       this.openModalUpdate();
     }
   }
-  confirmUpdate(): void {
-    this.formData.set('isPremium', this.isPremium ? 'true' : 'false');
-    this.formData.set('priority', this.priority?.toString());
+  updateLive(e)
+  {
     this.formData.set('thumbs', '');
     this.formData.set('thumbvideos', '');
     this.formData.set('videos', '');
+    this.priority = e.priority;
+      this.idUpdate = e.id;
+      this.isPremium = e.isPremium;
+      this.openModalUpdate();
+  }
+  confirmUpdate(): void {
+    this.formData.set('isPremium', this.isPremium ? 'true' : 'false');
+    this.formData.set('priority', this.priority?.toString());
     this.liveWallPaperService
       .updatePriority(this.idUpdate, this.formData)
       .subscribe(
         (res) => {
           if (res) {
             this.toastr.success('Cập nhật thành công!');
+            this.getData();
           }
         },
         (err) => {
@@ -227,5 +238,26 @@ export class LiveWallpaperListComponent implements OnInit {
   }
   back() {
     this.location.back();
+  }
+  viewLive(e)
+  {
+    this.router.navigate([`/live-wallpaper/live-edit/${e.id}`]);
+  }
+
+  deleteLive(e)
+  {
+    const me = this;
+    me.selectedID = e.id;
+    me.openModal();
+  }
+
+  onFileChange(event, type) {
+    if (type == 1) {
+      this.formData.set('thumbs', event.target.files[0]);
+    } else if (type == 2) {
+      this.formData.set('thumbvideos', event.target.files[0]);
+    } else if (type == 3) {
+      this.formData.set('videos', event.target.files[0]);
+    }
   }
 }

@@ -21,7 +21,7 @@ declare const $: any;
 })
 export class ChargingListComponent implements OnInit {
   idUpdate: number;
-  priority:number;
+  priority: number;
   name: '';
   data;
   gridApi;
@@ -58,8 +58,8 @@ export class ChargingListComponent implements OnInit {
       autoHeight: true,
       wrapText: true,
     },
-    { field: 'isPremium',width: 70, cellClass: 'h-align-center' },
-    { field: 'priority',width: 70, cellClass: 'h-align-center' },
+    { field: 'isPremium', width: 70, cellClass: 'h-align-center' },
+    { field: 'priority', width: 70, cellClass: 'h-align-center' },
     {
       field: 'thumbs',
       cellRenderer: (data: ICellRendererParams) => {
@@ -101,7 +101,7 @@ export class ChargingListComponent implements OnInit {
       // tooltipComponentParams: { type: 2 },
       // tooltipComponent: CustomTooltipComponent,
     },
-    { field: 'sounds', autoHeight: true, cellClass: 'h-align-center'},
+    { field: 'sounds', autoHeight: true, cellClass: 'h-align-center' },
   ];
 
   defaultColumnDef: ColDef = {
@@ -120,7 +120,7 @@ export class ChargingListComponent implements OnInit {
     private toastr: ToastrService,
     private modalService: BsModalService,
     private location: Location
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params["id"];
@@ -128,7 +128,7 @@ export class ChargingListComponent implements OnInit {
     this.getData();
   }
 
-  getData(){
+  getData() {
     this.chargingService.getListCharging(this.id).subscribe((res) => {
       if (res && res.data) {
         const data = res.data.datas;
@@ -142,9 +142,12 @@ export class ChargingListComponent implements OnInit {
       } else {
         this.data = [];
       }
+      if (!this.data || this.data.length === 0) {
+        this.toastr.success('Dữ liệu trống!');
+      }
     });
   }
-  
+
   @ViewChild('template')
   modalTemplateRef;
   modalRef: BsModalRef;
@@ -202,13 +205,11 @@ export class ChargingListComponent implements OnInit {
   confirmUpdate(): void {
     this.formData.set('isPremium', this.isPremium ? 'true' : 'false');
     this.formData.set('priority', this.priority.toString());
-    this.formData.set('thumbs', '');
-    this.formData.set('thumbvideos', '');
-    this.formData.set('videos', '');
-    this.chargingService.updatePriority(this.idUpdate,this.formData).subscribe(
+    this.chargingService.updatePriority(this.idUpdate, this.formData).subscribe(
       (res) => {
         if (res) {
           this.toastr.success('Cập nhật thành công!');
+          this.getData();
         }
       },
       (err) => {
@@ -219,5 +220,37 @@ export class ChargingListComponent implements OnInit {
   }
   back() {
     this.location.back();
+  }
+
+  viewCharging(e) {
+    const me = this;
+    this.router.navigate([`/charging/charging-edit/${e.id}/${me.id}/${me.name}`]);
+  }
+
+  deleteCharging(e) {
+    const me = this;
+    me.selectedID = e.id;
+    me.openModal();
+  }
+
+  updateCharging(e)
+  {
+    this.formData.set('thumbs', '');
+    this.formData.set('thumbvideos', '');
+    this.formData.set('videos', '');
+    this.priority = e.priority;
+      this.idUpdate = e.id;
+      this.isPremium = e.isPremium;
+      this.openModalUpdate();
+  }
+
+  onFileChange(event, type) {
+    if (type == 1) {
+      this.formData.set('thumbs', event.target.files[0]);
+    } else if (type == 2) {
+      this.formData.set('thumbvideos', event.target.files[0]);
+    } else if (type == 3) {
+      this.formData.set('videos', event.target.files[0]);
+    }
   }
 }

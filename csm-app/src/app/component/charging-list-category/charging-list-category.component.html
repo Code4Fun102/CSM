@@ -1,25 +1,30 @@
 <app-header></app-header> 
 <div class="charging-category-container">
   
-  <h2 class="title-grid">Danh sách</h2>
   <div class="add-chargin">
     <!-- <button (click)="router.navigate(['charging-category-add'], { relativeTo: route })" class="btn btn-success" style="margin-bottom: 8px">Thêm</button> -->
     <button class="btn btn-success" style="margin: 0 0 8px 8px" (click)="export()">Xuất khẩu</button>
   </div>
 
-  <ag-grid-angular
-    style="width: 100%; height: calc(100vh - 216px)"
-    class="ag-theme-alpine"
-    [rowData]="data"
-    [columnDefs]="columnDefs"
-    (gridReady)="onGridReady($event)"
-    [tooltipShowDelay]="tooltipShowDelay"
-    [defaultColDef]="defaultColumnDef"
-    [enableCellTextSelection]="true"
-    [pagination]="true"
-    [paginationPageSize]="20"
-  >
-  </ag-grid-angular>
+  <div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let item of data">
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header>
+            <mat-card-title>{{item.name}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image onerror="this.onerror=null; this.src='assets/image/background.png'" src="{{item.background[0]}}">
+          <mat-card-content>
+          </mat-card-content>
+          <mat-card-actions style="text-align: center;">
+            <button (click)="viewCharging(item)" mat-button>Xem</button>
+            <button (click)="deleteCharging(item)" mat-button>Xóa</button>
+            <button (click)="detailCharging(item)" mat-button>Charging</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
 </div>
 
 <ng-template #template>

@@ -32,5 +32,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(["charging-category"])
       }
     });
+    this.error = "Username or password incorrect";
   }
 }

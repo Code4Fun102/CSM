@@ -5,9 +5,12 @@ import { AgGridModule } from 'ag-grid-angular';
 import { SharedModule } from 'src/app/share/share.module';
 import { ChargingListComponent } from './charging-list.component';
 import { ChargingRoutingModule } from './charging-routing.module';
-import { CustomTooltipComponent } from './custom-tooltip/custom-tooltip.component';
 import { ChargingEditComponent } from './charging-edit/charging-edit.component';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     ChargingListComponent,
@@ -19,7 +22,12 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     AgGridModule,
     SharedModule,
-    ChargingRoutingModule
+    ChargingRoutingModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatButtonModule,
+    FlexLayoutModule,
+
   ],
   providers: []
 })

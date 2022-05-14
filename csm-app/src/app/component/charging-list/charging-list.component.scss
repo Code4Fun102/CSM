@@ -1,4 +1,4 @@
-.list-charging-container{
+.list-charging-container {
   margin: 32px;
 }
 
@@ -9,9 +9,27 @@
       display: flex;
       align-items: center;
     }
-    .ag-row .ag-cell.v-align-center{
+
+    .ag-row .ag-cell.v-align-center {
       display: flex;
-      justify-content: center; 
+      justify-content: center;
     }
+  }
+
+  mat-toolbar {
+    justify-content: space-between;
+  }
+
+  .content {
+    padding: 16px;
+  }
+
+  .content>mat-card {
+    margin-bottom: 16px;
+  }
+
+  .column-label {
+    margin-right: 8px;
+    font-size: 1rem;
   }
 }
