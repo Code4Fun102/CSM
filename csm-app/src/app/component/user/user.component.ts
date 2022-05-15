@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-user',
@@ -14,18 +15,20 @@ export class UserComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
-    this.toastr.success('Tính năng đang trong quá trình thành công!');
-    this.router.navigate(["charging-category"])
+    // this.toastr.success('Tính năng đang trong quá trình thành công!');
+    // this.router.navigate(["charging-category"])
     this.GetAllUser();
   }
+
   GetAllUser() {
-    this.http.get<any>("http://localhost:3000/signupUser").subscribe(rs => {
-      if (rs) {
-        this.dataUser = rs;
+    this.userService.getListUser().subscribe(rs => {
+      if (rs && rs.data) {
+        this.dataUser = rs.data;
       }
     });
   }
