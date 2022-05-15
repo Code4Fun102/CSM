@@ -24,4 +24,8 @@ export class LiveCategoryService {
   saveLiveCategory(model){
     return this.http.post<result>(`${environment.baseUrl}/LiveCategory-item/`, model);
   }
+  export() {
+    let url = `${environment.baseUrl}/v1/assets/export-json-files`;
+    return this.http.get<result>(url);
+  }
 }

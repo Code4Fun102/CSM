@@ -16,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { JwtInterceptor } from './interceptor/jwt.interceptor';
 import { AuthGuard } from './guard/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VersionComponent } from './component/version/version.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     SignupComponent,
     StaticWallpaperListComponent,
-    UserComponent
+    UserComponent,
+    VersionComponent
   ],
   imports: [
     BrowserModule,

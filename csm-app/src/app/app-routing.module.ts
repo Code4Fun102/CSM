@@ -6,12 +6,14 @@ import { LoginComponent } from './component/login/login.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { StaticWallpaperListComponent } from './component/static-wallpaper-list/static-wallpaper-list.component';
 import { UserComponent } from './component/user/user.component';
+import { VersionComponent } from './component/version/version.component';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'charging-category', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
+  { path: 'version', component: VersionComponent },
   {
     path: 'charging',
     loadChildren: () =>
