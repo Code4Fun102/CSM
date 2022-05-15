@@ -1,20 +1,18 @@
-:host {
-    .container {
-        margin-top: 28px;
+.live-category-container {
+    margin: 32px;
+  }
+  
+  
+  :host {
+    ::ng-deep {
+      .ag-row .ag-cell.h-align-center {
+        display: flex;
+        align-items: center;
+      }
+      .ag-row .ag-cell.v-align-center{
+        display: flex;
+        justify-content: center; 
+      }
     }
-
-    .header {
-        font-family: Roboto, Arial, Helvetica, sans-serifsans-serif;
-        font-weight: bold;
-        margin-bottom: 19px;
-        background: #f0f2f4;
-    }
-
-    .col-header {
-        border: 1px solid #eee;
-    }
-
-    .col-body {
-        margin-bottom: 10px;
-    }
-}
+  }
+  

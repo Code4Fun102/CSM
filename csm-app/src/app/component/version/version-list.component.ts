@@ -1,18 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ColDef } from 'ag-grid-community';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ColDef, ICellRendererParams } from 'ag-grid-community';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
-import { UserService } from 'src/app/service/user.service';
+import { LiveCategoryService } from 'src/app/service/live-category.service';
+import { LiveWallPaperService } from 'src/app/service/live-wallpaper.service';
 import { VersionService } from 'src/app/service/version.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: 'app-version-list',
+  templateUrl: './version-list.component.html',
+  styleUrls: ['./version-list.component.scss']
 })
-export class UserComponent implements OnInit {
+export class VersionListComponent implements OnInit {
   data;
   gridApi;
   isLoading = false;
@@ -22,9 +22,8 @@ export class UserComponent implements OnInit {
   selectedID;
   columnDefs: ColDef[] = [
     {
-      field: 'username',
-      headerName: 'Tài khoản',
-      tooltipField: 'username',
+      field: 'version',
+      tooltipField: 'version',
       autoHeight: true,
       wrapText: true,
       cellClass: 'h-align-center',
@@ -32,9 +31,15 @@ export class UserComponent implements OnInit {
       // tooltipComponent: CustomTooltipComponent,
     },
     {
-      field: 'email',
-      headerName: 'Email',
-      tooltipField: 'email',
+      field: 'contentJsonString',
+      tooltipField: 'contentJsonString',
+      // tooltipComponentParams: { type: 1 },
+      // tooltipComponent: CustomTooltipComponent,
+    },
+    {
+      field: 'updatedAtStr',
+      headerName: 'Ngày sửa',
+      tooltipField: 'updatedAt',
       autoHeight: true,
       wrapText: true,
       cellClass: 'h-align-center',
@@ -42,39 +47,9 @@ export class UserComponent implements OnInit {
       // tooltipComponent: CustomTooltipComponent,
     },
     {
-      field: 'role',
-      headerName: 'Vai trò',
-      tooltipField: 'role',
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'h-align-center',
-      // tooltipComponentParams: { type: 1 },
-      // tooltipComponent: CustomTooltipComponent,
-    },
-    {
-      field: 'status',
-      headerName: 'Trạng thái',
-      tooltipField: 'status',
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'h-align-center',
-      // tooltipComponentParams: { type: 1 },
-      // tooltipComponent: CustomTooltipComponent,
-    },
-    {
-      field: 'phoneNumber',
-      headerName: 'Số điện thoại',
-      tooltipField: 'phoneNumber',
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'h-align-center',
-      // tooltipComponentParams: { type: 1 },
-      // tooltipComponent: CustomTooltipComponent,
-    },
-    {
-      field: 'lastLoginStr',
-      headerName: 'Lần đăng nhập gần nhất',
-      tooltipField: 'lastLoginStr',
+      field: 'createdAtStr',
+      headerName: 'Ngày tạo',
+      tooltipField: 'createdAtStr',
       autoHeight: true,
       wrapText: true,
       cellClass: 'h-align-center',
@@ -90,22 +65,24 @@ export class UserComponent implements OnInit {
     public route: ActivatedRoute,
     private toastr: ToastrService,
     private modalService: BsModalService,
-    private userService: UserService
+    private versionService: VersionService
   ) {}
 
   ngOnInit(): void {
     this.getData();
   }
-  
 
   getData(){
     this.isLoading = true;
-    this.userService.getUser().subscribe((res) => {
+    this.versionService.getVersion().subscribe((res) => {
       this.isLoading = false;
       if (res && res.data) {
         const result = res.data;
         result?.forEach(function (dataItem: any, index: number) {
-          dataItem.lastLoginStr = new Date(dataItem.lastLogin).toLocaleTimeString() + ' ' +  new Date(dataItem.lastLogin).toLocaleDateString();
+          dataItem.contentJsonString =
+            JSON.stringify(dataItem.contentJson);
+          dataItem.createdAtStr = new Date(dataItem.createdAt).toLocaleTimeString() + ' ' +  new Date(dataItem.createdAt).toLocaleDateString();
+          dataItem.updatedAtStr = new Date(dataItem.updatedAt).toLocaleTimeString() + ' ' +  new Date(dataItem.updatedAt).toLocaleDateString();
         });
         this.data = result;
       } else {

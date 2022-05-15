@@ -56,6 +56,14 @@ const routes: Routes = [
       ).then((m) => m.LiveCategoryModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'version',
+    loadChildren: () =>
+      import(
+        './component/version/version.module'
+      ).then((m) => m.VersionModule),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

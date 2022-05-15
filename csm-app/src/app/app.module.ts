@@ -16,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { JwtInterceptor } from './interceptor/jwt.interceptor';
 import { AuthGuard } from './guard/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgGridModule } from 'ag-grid-angular';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MDBBootstrapModule.forRoot(),
     SharedModule,
     ToastrModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AgGridModule
   ],
   providers: [
     AuthGuard,

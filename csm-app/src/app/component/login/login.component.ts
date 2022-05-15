@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private http: HttpClient,
     private router: Router,
-    private loginService: AuthService
+    private loginService: AuthService,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -31,7 +33,10 @@ export class LoginComponent implements OnInit {
       if (rs) {
         this.router.navigate(["charging-category"])
       }
+    }
+    ,err=>{
+      this.error = err;
+      this.toastr.error(err);
     });
-    this.error = "Username or password incorrect";
   }
 }
