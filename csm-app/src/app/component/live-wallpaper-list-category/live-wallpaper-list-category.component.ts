@@ -212,4 +212,11 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
       }
     );
   }
+  export() {
+    this.liveCategoryService.export().subscribe((res) => {
+      if (res) {
+        this.toastr.success('Xuất khẩu thành công');
+      }
+    });
+  }
 }

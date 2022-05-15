@@ -25,4 +25,8 @@ export class LiveWallPaperService {
   saveLiveWallPaper(model) {
     return this.http.post<result>(`${environment.baseUrl}/LiveWallPaper/`, model);
   }
+  export() {
+    let url = `${environment.baseUrl}/v1/assets/export-json-files`;
+    return this.http.get<result>(url);
+  }
 }

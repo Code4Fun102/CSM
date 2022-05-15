@@ -41,7 +41,7 @@ import { AgGridModule } from 'ag-grid-angular';
     AgGridModule
   ],
   providers: [
-    AuthGuard,
+    AuthGuard, 
     {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]

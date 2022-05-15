@@ -267,4 +267,11 @@ export class LiveWallpaperListComponent implements OnInit {
       this.formData.set('videos', event.target.files[0]);
     }
   }
+  export() {
+    this.liveWallPaperService.export().subscribe((res) => {
+      if (res) {
+        this.toastr.success('Xuất khẩu thành công');
+      }
+    });
+  }
 }

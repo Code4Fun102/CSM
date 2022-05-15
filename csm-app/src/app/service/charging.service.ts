@@ -25,10 +25,8 @@ export class ChargingService {
     return this.http.put<result>(`${environment.baseUrl}/v1/items/charging/${id}`,data);
   }
   export() {
-    let url = `${environment.baseUrl}/v1/assets/export-to-json`;
-    this.http.get(url).subscribe((res) => {
-      console.log(res);
-    });
+    let url = `${environment.baseUrl}/v1/assets/export-json-files`;
+    return this.http.get<result>(url);
   }
 
   saveCharging(model, id) {

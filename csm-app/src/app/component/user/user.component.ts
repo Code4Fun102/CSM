@@ -5,7 +5,6 @@ import { ColDef } from 'ag-grid-community';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/service/user.service';
-import { VersionService } from 'src/app/service/version.service';
 
 @Component({
   selector: 'app-user',

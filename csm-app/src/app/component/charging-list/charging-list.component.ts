@@ -260,4 +260,12 @@ export class ChargingListComponent implements OnInit {
       this.formData.set('videos', event.target.files[0]);
     }
   }
+
+  export() {
+    this.chargingService.export().subscribe((res) => {
+      if (res) {
+        this.toastr.success('Xuất khẩu thành công');
+      }
+    });
+  }
 }
