@@ -65,7 +65,8 @@ export class VersionListComponent implements OnInit {
     public route: ActivatedRoute,
     private toastr: ToastrService,
     private modalService: BsModalService,
-    private versionService: VersionService
+    private versionService: VersionService,
+    private liveCategoryService: LiveCategoryService,
   ) {}
 
   ngOnInit(): void {
@@ -102,5 +103,14 @@ export class VersionListComponent implements OnInit {
     this.gridColumnApi = params.columnApi;
 
     this.gridApi.sizeColumnsToFit();
+  }
+
+  export() {
+    this.liveCategoryService.export().subscribe((res) => {
+      if (res) {
+        this.toastr.success('Xuất khẩu thành công');
+        this.getData();
+      }
+    });
   }
 }
