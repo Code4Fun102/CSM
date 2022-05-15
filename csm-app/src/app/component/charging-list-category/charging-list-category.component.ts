@@ -21,6 +21,7 @@ export class ChargingListCategoryComponent implements OnInit {
   data;
   gridApi;
   gridColumnApi;
+  isLoading = false;
   public tooltipShowDelay = 0;
   public rowData!: any[];
   selectedID;
@@ -138,7 +139,9 @@ export class ChargingListCategoryComponent implements OnInit {
   }
 
   getData() {
+    this.isLoading = true;
     this.chargingCategoryService.getListChargingCategory().subscribe((res) => {
+      this.isLoading = false;
       if (res && res.data) {
         const result = res.data
         this.data = result;
@@ -149,6 +152,9 @@ export class ChargingListCategoryComponent implements OnInit {
       if (!this.data || this.data.length === 0) {
         this.toastr.success('Dữ liệu trống!');
       }
+    },err=>{
+      this.isLoading = false;
+      this.toastr.error("Error!");
     });
   }
 
@@ -200,7 +206,9 @@ export class ChargingListCategoryComponent implements OnInit {
 
   viewCharging(e) {
     const me = this;
-    this.router.navigate([`charging-category-edit/${e.id}`]);
+    this.router.navigate([`charging-category-edit/${e.id}`],{
+      relativeTo: me.route,
+    });
   }
 
   deleteCharging(e) {

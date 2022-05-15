@@ -24,6 +24,7 @@ export class ChargingListComponent implements OnInit {
   priority: number;
   name: '';
   data;
+  isLoading = false;
   gridApi;
   gridColumnApi;
   public tooltipShowDelay = 0;
@@ -129,7 +130,9 @@ export class ChargingListComponent implements OnInit {
   }
 
   getData() {
+    this.isLoading = true;
     this.chargingService.getListCharging(this.id).subscribe((res) => {
+      this.isLoading = false;
       if (res && res.data) {
         const data = res.data.datas;
         data?.forEach(function (dataItem: any, index: number) {
@@ -145,6 +148,10 @@ export class ChargingListComponent implements OnInit {
       if (!this.data || this.data.length === 0) {
         this.toastr.success('Dữ liệu trống!');
       }
+    },
+    err=>{
+      this.isLoading = false;
+      this.toastr.error("Error");
     });
   }
 

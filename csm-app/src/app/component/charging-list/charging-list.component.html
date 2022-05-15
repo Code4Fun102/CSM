@@ -1,5 +1,6 @@
 <app-header></app-header>
 <div class="list-charging-container">
+  <app-loading [loader]="isLoading"></app-loading>
   <h2 class="title-grid">Danh sách Charging</h2>
   <div class="add-chargin">
     <button class="btn btn-secondary" (click)="back()" style="margin-bottom: 8px">Quay lại</button>

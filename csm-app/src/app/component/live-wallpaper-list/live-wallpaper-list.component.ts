@@ -25,6 +25,7 @@ export class LiveWallpaperListComponent implements OnInit {
   name: '';
   data;
   gridApi;
+  isLoading = false;
   gridColumnApi;
   public tooltipShowDelay = 0;
   public rowData!: any[];
@@ -131,7 +132,9 @@ export class LiveWallpaperListComponent implements OnInit {
     this.getData();
   }
   getData(){
+    this.isLoading = true;
     this.liveWallPaperService.getListLiveWallPaper(this.id).subscribe((res) => {
+      this.isLoading = false;
       if (res && res.data) {
         const data = res.data.datas;
         data?.forEach(function (dataItem: any, index: number) {
@@ -147,6 +150,10 @@ export class LiveWallpaperListComponent implements OnInit {
       if (!this.data || this.data.length === 0) {
         this.toastr.success('Dữ liệu trống!');
       }
+    },
+    err=>{
+      this.isLoading = false;
+      this.toastr.error("Error");
     });
   }
 

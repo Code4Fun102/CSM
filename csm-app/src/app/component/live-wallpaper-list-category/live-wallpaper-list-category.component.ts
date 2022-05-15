@@ -22,6 +22,7 @@ declare const $: any;
 export class LiveWallpaperListCategoryComponent implements OnInit {
   data;
   gridApi;
+  isLoading = false;
   gridColumnApi;
   public tooltipShowDelay = 0;
   public rowData!: any[];
@@ -126,7 +127,9 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
   }
 
   getData(){
+    this.isLoading = true;
     this.liveCategoryService.getListLiveCategory().subscribe((res) => {
+      this.isLoading = false;
       if (res && res.data) {
         const result = res.data;
         result?.forEach(function (dataItem: any, index: number) {
@@ -142,6 +145,10 @@ export class LiveWallpaperListCategoryComponent implements OnInit {
       if (!this.data || this.data.length === 0) {
         this.toastr.success('Dữ liệu trống!');
       }
+    },
+    err=>{
+      this.isLoading = false;
+      this.toastr.error("Error");
     });
   }
 
