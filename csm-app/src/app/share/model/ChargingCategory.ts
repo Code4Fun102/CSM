@@ -1,3 +1,5 @@
+import { ChargingModel } from "./charging";
+
 export class ChargingCategoryModel{
     links?: string[];
     icon?: string[];
@@ -5,4 +7,5 @@ export class ChargingCategoryModel{
     id?:number;
     background?: string[];
     isDeleted?: boolean;
+    listCharging?: ChargingModel[];
   }

@@ -11,9 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
-
-
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     ChargingListCategoryComponent,
@@ -30,6 +28,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatToolbarModule,
     MatButtonModule,
     FlexLayoutModule,
+    MatMenuModule
   ]
 })
 export class ChargingCategoryModule { }

@@ -12,7 +12,7 @@ export class ChargingCategoryService {
   constructor(private http: HttpClient) {}
 
   getListChargingCategory() {
-    return this.http.get<any>(`${environment.baseUrl}/v1/categories?collectionTypeId=1`);
+    return this.http.get<{data:ChargingCategoryModel[]}>(`${environment.baseUrl}/v1/categories?collectionTypeId=1`);
   }
   
   getChargingCategoryByID(id) {

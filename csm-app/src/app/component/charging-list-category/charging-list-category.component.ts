@@ -11,6 +11,7 @@ import { ChargingService } from 'src/app/service/charging.service';
 import { CustomTooltipComponent } from '../charging-list/custom-tooltip/custom-tooltip.component';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ChargingCategoryService } from 'src/app/service/charging-category.service';
+import { ChargingCategoryModel } from 'src/app/share/model/ChargingCategory';
 declare const $: any;
 @Component({
   selector: 'app-charging-list-category',
@@ -18,113 +19,11 @@ declare const $: any;
   styleUrls: ['./charging-list-category.component.scss']
 })
 export class ChargingListCategoryComponent implements OnInit {
-  data;
-  gridApi;
-  gridColumnApi;
+  dataCategory: ChargingCategoryModel[] = [];
   isLoading = false;
   public tooltipShowDelay = 0;
   public rowData!: any[];
   selectedID;
-  columnDefs: ColDef[] = [
-    {
-      headerName: '',
-      width: 200,
-      cellRenderer: (data: ICellRendererParams) => {
-        const me = this;
-        let eDiv = document.createElement('div');
-        eDiv.innerHTML = `<span class="my-css-class"><button class="btn btn-secondary">Xem</button></span>
-          <span class="my-css-class"><button class="btn btn-danger">Xoá</button></span>
-          <span class="my-css-class"><button class="btn btn-info btn-view">Charging</button></span>`;
-        let eButtonEdit = eDiv.querySelectorAll('.btn-secondary')[0];
-
-        eButtonEdit.addEventListener('click', function () {
-          me.router.navigate([`charging-category-edit/${data.data.id}`], {
-            relativeTo: me.route,
-          });
-        });
-
-        let eButtonDelete = eDiv.querySelectorAll('.btn-danger')[0];
-
-        eButtonDelete.addEventListener('click', function () {
-          me.selectedID = data.data.id;
-          me.openModal();
-        });
-
-        let eButtonView = eDiv.querySelectorAll('.btn-view')[0];
-
-        eButtonView.addEventListener('click', function () {
-          me.router.navigate([`charging-item/${data.data.id}/${data.data.name || 'Default Name'}`], {
-            relativeTo: me.route,
-          });
-        });
-
-        return eDiv;
-      },
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'v-align-center h-align-center'
-    },
-    { field: 'name', width: 70, cellClass: 'h-align-center' },
-    {
-      field: 'links',
-      cellRenderer: (data: ICellRendererParams) => {
-        let tmpl = '';
-        if (data.value && data.value?.length) {
-          for (const item of data.value) {
-            tmpl += `${item}<br>`;
-          }
-        }
-        return tmpl;
-      },
-      tooltipField: 'links',
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'v-align-center h-align-center'
-      // tooltipComponentParams: { type: 0 },
-      // tooltipComponent: CustomTooltipComponent,
-    }, {
-      field: 'icon',
-      cellRenderer: (data: ICellRendererParams) => {
-        let tmpl = '';
-        if (data.value && data.value?.length) {
-          for (const item of data.value) {
-            tmpl += `<img onerror="this.onerror=null; this.src='assets/image/default.png'" class="m-3" height="72" src="${item}">`;
-          }
-        }
-        return tmpl;
-      },
-      tooltipField: 'icon',
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'v-align-center h-align-center'
-      // tooltipComponentParams: { type: 1 },
-      // tooltipComponent: CustomTooltipComponent,
-
-    },
-    {
-      field: 'background',
-      cellRenderer: (data: ICellRendererParams) => {
-        let tmpl = '';
-        if (data.value && data.value?.length) {
-          for (const item of data.value) {
-            tmpl += `<img onerror="this.onerror=null; this.src='assets/image/default.png'" class="m-3" height="72" src="${item}">`;
-          }
-        }
-        return tmpl;
-      },
-      tooltipField: 'background',
-      autoHeight: true,
-      wrapText: true,
-      cellClass: 'v-align-center h-align-center'
-      // tooltipComponentParams: { type: 1 },
-      // tooltipComponent: CustomTooltipComponent,
-
-    },
-
-  ];
-  defaultColumnDef: ColDef = {
-    resizable: true,
-  };
   constructor(
     private chargingCategoryService: ChargingCategoryService,
     private chargingService: ChargingService,
@@ -144,17 +43,26 @@ export class ChargingListCategoryComponent implements OnInit {
       this.isLoading = false;
       if (res && res.data) {
         const result = res.data
-        this.data = result;
+        this.dataCategory = result;
+        this.getDataDetails();
       }
       else {
-        this.data = []
+        this.dataCategory = []
       }
-      if (!this.data || this.data.length === 0) {
+      if (!this.dataCategory || this.dataCategory.length === 0) {
         this.toastr.success('Dữ liệu trống!');
       }
     },err=>{
       this.isLoading = false;
       this.toastr.error("Error!");
+    });
+  }
+
+  getDataDetails(){
+    this.dataCategory.forEach(async c => {
+      const d = await this.chargingService.getListCharging(c.id).toPromise();
+      d.data.datas.splice(5);
+      c.listCharging = d.data.datas
     });
   }
 
@@ -173,7 +81,7 @@ export class ChargingListCategoryComponent implements OnInit {
     this.chargingCategoryService.deleteChargingCategory(this.selectedID).subscribe(
       (res) => {
         if (res) {
-          this.data = this.data.filter(obj => obj.id !== this.selectedID);
+          this.dataCategory = this.dataCategory.filter(obj => obj.id !== this.selectedID);
           this.toastr.success('Xoá thành công!');
           this.getData();
         }
@@ -188,13 +96,6 @@ export class ChargingListCategoryComponent implements OnInit {
   decline(): void {
     this.message = 'Declined';
     this.modalRef.hide();
-  }
-
-  onGridReady(params) {
-    this.gridApi = params.api;
-    this.gridColumnApi = params.columnApi;
-
-    this.gridApi.sizeColumnsToFit();
   }
   export() {
     this.chargingCategoryService.export().subscribe((res) => {

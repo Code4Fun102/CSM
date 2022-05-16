@@ -13,7 +13,7 @@ export class ChargingService {
   }
   
   getListCharging(categoryId?: number) {
-    return this.http.get<any>(`${environment.baseUrl}/v1/categories/${categoryId}/items`);
+    return this.http.get<{data: {datas: ChargingModel[], idName: string}}>(`${environment.baseUrl}/v1/categories/${categoryId}/items`);
   }
   getChargingByID(id) {
     return this.http.get<result>(`${environment.baseUrl}/v1/items/${id}`);

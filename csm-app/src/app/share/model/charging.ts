@@ -8,4 +8,5 @@ export class ChargingModel{
   id?:number;
   sounds?: string[];
   isLiveWallpaper?: boolean;
+  showVideo?: boolean = false;
 }

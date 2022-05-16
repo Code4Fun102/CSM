@@ -1,31 +1,93 @@
 <app-header></app-header> 
+<app-loading [loader]="isLoading"></app-loading>
 <div class="charging-category-container">
   
-  <app-loading [loader]="isLoading"></app-loading>
-  <h2 class="title-grid">Danh sách Charging Category</h2>
-  <div class="add-chargin">
-    <!-- <button (click)="router.navigate(['charging-category-add'], { relativeTo: route })" class="btn btn-success" style="margin-bottom: 8px">Thêm</button> -->
-    <button class="btn btn-success" style="margin: 0 0 8px 8px" (click)="export()">Xuất khẩu cho mobile</button>
-  </div>
-
   <div class="content">
-    <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let item of data">
-        <mat-card class="mat-elevation-z4">
-          <mat-card-header>
-            <mat-card-title>{{item.name}}</mat-card-title>
-          </mat-card-header>
-          <img mat-card-image onerror="this.onerror=null; this.src='assets/image/background.png'" src="{{item.background[0]}}">
-          <mat-card-content>
-          </mat-card-content>
-          <mat-card-actions style="text-align: center;">
-            <button (click)="viewCharging(item)" mat-button>Xem</button>
-            <button (click)="deleteCharging(item)" mat-button>Xóa</button>
-            <button (click)="detailCharging(item)" mat-button>Charging</button>
-          </mat-card-actions>
-        </mat-card>
+      <div *ngFor="let category of dataCategory; let first = first" style="margin-bottom: 40px;">
+        <div class="flex-1">
+          <div class="watch-more">{{category.name}}</div>
+          <div class="add-chargin">
+            <img *ngIf="first" src="assets/image/arrow.png" height="36">
+            <!-- <button (click)="router.navigate(['charging-category-add'], { relativeTo: route })" class="btn btn-success" style="margin-bottom: 8px">Thêm</button> -->
+            <div *ngIf="first" class="watch-more" (click)="export()">Xem thêm</div>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%"  *ngFor="let item of category.listCharging;">
+            <mat-card class="mat-elevation-z4">
+              <img *ngIf="!item.showVideo" (click)="item.showVideo=true" mat-card-image onerror="this.onerror=null; this.src='assets/image/background.png'" src="{{item.thumbs[0]}}">
+              <video *ngIf="item.showVideo" onended="item.showVideo=false" mat-card-image autoplay>
+                <source src="{{item.videos[0]}}" type="video/mp4">
+                <source src="assets/video/video_default.mp4" type="video/mp4">
+              </video>
+            <div class="btn-more" mat-button [matMenuTriggerFor]="menu">
+              <img src="assets/image/vertical-dot.png" alt="" height="24">
+            </div>
+              <mat-card-actions style="text-align: center;">
+                <div class="first-row">
+                  <div class="form-group">
+                    <div class="url-input flex">
+                      <div class="label-ct" >Trending</div>
+                      <div class="list-input flex">
+                        <ng-container>
+                          <div class="flex">
+                            <input type="checkbox" style="margin: 0 0 0 4px" placeholder="isLiveWallpaper" />
+                          </div>
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="url-input flex">
+                      <div class="label-ct2">Premium</div>
+                      <div class="list-input flex">
+                        <ng-container>
+                          <div class="flex">
+                            <input type="checkbox" style="margin: 0 0 0 4px" placeholder="isLiveWallpaper" />
+                          </div>
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="first-row">
+                  <div class="form-group">
+                    <div class="url-input flex">
+                      <div class="label-ct" >Priority</div>
+                      <div class="list-input flex">
+                        <ng-container>
+                          <div class="flex">
+                            <input type="checkbox" style="margin: 0 0 0 4px" placeholder="isLiveWallpaper" />
+                          </div>
+                          <div class="flex">
+                            <input type="checkbox" style="margin: 0 0 0 4px" placeholder="isLiveWallpaper" />
+                          </div>
+                          <div class="flex">
+                            <input type="checkbox" style="margin: 0 0 0 4px" placeholder="isLiveWallpaper" />
+                          </div>
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="url-input flex">
+                      <div class="label-ct2">Hide/Unhide</div>
+                      <div class="list-input flex">
+                        <ng-container>
+                          <div class="flex">
+                            <input type="checkbox" style="margin: 0 0 0 4px"  placeholder="isLiveWallpaper" />
+                          </div>
+                        </ng-container>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+        <div class="devider" *ngIf="first"></div>
       </div>
-    </div>
   </div>
 </div>
 
@@ -36,3 +98,8 @@
     <button type="button" class="btn btn-primary" (click)="decline()" >Không</button>
   </div>
 </ng-template>
+
+<mat-menu #menu="matMenu">
+  <button class="btn-mat-menu" mat-menu-item>Edit</button>
+  <button class="btn-mat-menu" mat-menu-item>Delete</button>
+</mat-menu>

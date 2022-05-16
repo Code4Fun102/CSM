@@ -2,16 +2,89 @@
   margin: 32px;
 }
 
-
 :host {
   ::ng-deep {
     .ag-row .ag-cell.h-align-center {
       display: flex;
       align-items: center;
     }
-    .ag-row .ag-cell.v-align-center{
+    .ag-row .ag-cell.v-align-center {
       display: flex;
-      justify-content: center; 
+      justify-content: center;
     }
+  }
+  .form-charging {
+    margin-top: 32px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: row;
+  }
+  .label {
+    margin-right: 16px;
+    width: 128px;
+  }
+  .form-control {
+    width: 70vw;
+    margin-right: 16px;
+  }
+  .list-input {
+    flex-direction: row;
+    align-items: center;
+  }
+  .first-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    .label-ct {
+      width: 58px;
+      text-align: left;
+      line-height: 13px;
+    }
+    .label-ct2 {
+      width: 82px;
+      text-align: left;
+      line-height: 13px;
+    }
+  }
+  .btn-more {
+    position: absolute;
+    right: -4px;
+    bottom: 60px;
+    :hover {
+      cursor: pointer;
+    }
+  }
+  mat-card-actions {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .add-chargin {
+    position: relative;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    cursor: pointer;
+  }
+  .flex-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .trending-name{
+      align-items: center;
+      display: flex;
+    }
+    .watch-more {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .devider{
+    border: 1px solid #ddd;
+    margin-top: 40px;
+  }
+  input[type="chekbox"]{
+    margin: 0 0 0 4px !important;
   }
 }
